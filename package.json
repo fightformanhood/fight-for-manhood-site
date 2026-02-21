@@ -1,0 +1,14 @@
+{
+  "name": "fight-for-manhood-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --quiet",
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "luxon": "^3.5.0"
+  }
+}
