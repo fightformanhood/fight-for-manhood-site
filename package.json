@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
- "scripts": {
-  "dev": "npx @11ty/eleventy --serve --quiet --input=src --output=dist",
-  "build": "npx @11ty/eleventy --input=src --output=dist"
-}
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --quiet --input=src --output=dist",
+    "build": "npx @11ty/eleventy --input=src --output=dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
