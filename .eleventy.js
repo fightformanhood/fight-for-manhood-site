@@ -6,5 +6,6 @@ export default function () {
       layouts: "_includes",
       output: "dist",
     },
+    markdownTemplateEngine: "njk"
   };
 }
