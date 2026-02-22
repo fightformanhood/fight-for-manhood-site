@@ -3,29 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Fight for Manhood Admin</title>
-
-    <!-- Netlify Identity (login) -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- Decap CMS (formerly Netlify CMS) -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <title>FFM Admin</title>
 
     <style>
-      body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    </style>
-  </head>
-  <body>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: #fff;
+        color: #111;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        display: grid;
+        place-items: center;
       }
+      .card {
+        width: min(720px, 92vw);
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 18px 18px;
+      }
+      h1 { margin: 0 0 6px 0; font-size: 18px; }
+      p { margin: 6px 0; line-height: 1.5; }
+      code { background: #f3f4f6; padding: 2px 6px; border-radius: 6px; }
+      .ok { color: #0a7a2f; font-weight: 700; }
+      .bad { color: #b42318; font-weight: 800; }
+      .small { font-size: 13px; color: #374151; }
+    </style>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Fight for Manhood Admin</h1>
+      <p class="small">If this page stays blank, it means the CMS scripts or config are not loading. This page will show the status.</p>
+
+      <p id="cfg">Checking <code>/admin/config.yml</code>…</p>
+      <p id="id">Checking Netlify Identity…</p>
+
+      <p class="small" style="margin-top:12px;">
+        Expected URLs:
+        <br/>• <code>/admin/</code>
+        <br/>• <code>/admin/config.yml</code>
+      </p>
+    </div>
+
+    <script>
+      // Check config exists
+      fetch("/admin/config.yml", { cache: "no-store" })
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(() => {
+          document.getElementById("cfg").innerHTML =
+            '<span class="ok">OK</span> Found <code>/admin/config.yml</code>. Loading CMS…';
+          // Load CMS only after config exists
+          const s = document.createElement("script");
+          s.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
+          document.body.appendChild(s);
+        })
+        .catch(err => {
+          document.getElementById("cfg").innerHTML =
+            '<span class="bad">MISSING</span> <code>/admin/config.yml</code> (' + err.message + '). ' +
+            'Fix: ensure <code>src/admin/config.yml</code> exists and Eleventy copies <code>src/admin</code> to <code>dist</code>.';
+        });
+
+      // Check Identity widget exists
+      window.addEventListener("load", () => {
+        const el = document.getElementById("id");
+        if (window.netlifyIdentity) {
+          el.innerHTML = '<span class="ok">OK</span> Netlify Identity widget loaded.';
+        } else {
+          el.innerHTML = '<span class="bad">MISSING</span> Netlify Identity script did not load (adblock / CSP / network).';
+        }
+      });
     </script>
   </body>
 </html>
