@@ -3,15 +3,220 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ title }} | Fight for Manhood</title>
-  <meta name="description" content="{{ description or 'A 12-week men\'s Christian leadership program in Knoxville, TN.' }}" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <title>{% if title %}{{ title }} | {% endif %}Fight for Manhood</title>
+
+  <style>
+    :root{
+      --navy:#0b1a2b;
+      --navy2:#071424;
+      --gold:#c6a75e;
+      --offwhite:#f5f5f2;
+      --muted:#cbd5e1;
+      --line:rgba(198,167,94,.35);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      background: radial-gradient(1200px 600px at 50% -200px, rgba(198,167,94,.15), transparent 60%),
+                  linear-gradient(180deg, var(--navy2), var(--navy));
+      color:var(--offwhite);
+      line-height:1.65;
+    }
+
+    a{ color:var(--gold); }
+    a:hover{ opacity:.9; }
+
+    .wrap{ min-height:100vh; display:flex; flex-direction:column; }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(7,20,36,.75);
+      border-bottom:1px solid rgba(198,167,94,.2);
+    }
+
+    .topbar-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--offwhite);
+    }
+
+    .mark{
+      width:36px; height:36px;
+      border-radius:8px;
+      border:1px solid rgba(198,167,94,.5);
+      background: radial-gradient(circle at 30% 30%, rgba(198,167,94,.35), transparent 60%);
+      display:grid; place-items:center;
+      font-weight:800;
+      color:var(--gold);
+      letter-spacing:.5px;
+    }
+
+    .brand-title{
+      font-weight:800;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      font-size:.95rem;
+      line-height:1.1;
+    }
+    .brand-sub{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:.8rem;
+      color:rgba(245,245,242,.75);
+      margin-top:2px;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      text-decoration:none;
+      color:rgba(245,245,242,.85);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:.92rem;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .nav a:hover{
+      background: rgba(198,167,94,.12);
+      color:var(--offwhite);
+    }
+
+    .btn{
+      display:inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 12px 18px;
+      text-decoration:none;
+      font-weight:800;
+      border-radius:12px;
+      border:1px solid rgba(198,167,94,.25);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      letter-spacing:.3px;
+    }
+    .btn:hover{ opacity:.95; }
+    .btn-outline{
+      background: transparent;
+      color: var(--gold);
+      border:1px solid rgba(198,167,94,.6);
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding: 50px 20px;
+      width:100%;
+      flex:1;
+    }
+
+    h1,h2,h3{
+      margin:0 0 14px 0;
+      letter-spacing:.4px;
+    }
+
+    h1{
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    h2{
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      display:inline-block;
+      padding-bottom:8px;
+      border-bottom:2px solid var(--gold);
+      margin-top:48px;
+    }
+
+    p{ margin: 0 0 14px 0; color: rgba(245,245,242,.92); }
+
+    .muted{ color: rgba(245,245,242,.72); }
+
+    .card{
+      border:1px solid rgba(198,167,94,.2);
+      background: rgba(7,20,36,.55);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:16px;
+    }
+
+    .footer{
+      border-top:1px solid rgba(198,167,94,.2);
+      background: rgba(7,20,36,.6);
+    }
+    .footer-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:22px 20px;
+      color: rgba(245,245,242,.7);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:.9rem;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+  </style>
 </head>
+
 <body>
-  {% include "nav.njk" %}
-  <main class="container">
-    {{ content | safe }}
-  </main>
-  {% include "footer.njk" %}
+  <div class="wrap">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">
+          <div class="mark">FFM</div>
+          <div>
+            <div class="brand-title">Fight for Manhood</div>
+            <div class="brand-sub">Forge real men • Lead with strength</div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="/about/">About</a>
+          <a href="/program/">Program</a>
+          <a href="/updates/">Updates</a>
+          <a href="/resources/">Resources</a>
+          <a class="btn btn-outline" href="/contact/">Contact</a>
+          <a class="btn" href="/apply/">Apply</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© {{ "now" | date: "%Y" }} Fight for Manhood</div>
+        <div class="muted">Knoxville, TN • Wednesday nights • No cost</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
