@@ -5,15 +5,15 @@ title: Register
 
 <section class="section">
   <h3>Register</h3>
-  <p class="muted" style="max-width:820px;">
-    Fill this out and we’ll contact you with the location and start details. This is a men-only, high-challenge / high-support environment.
+  <p class="muted" style="max-width:860px;">
+    The next cohort starts <strong style="color:var(--gold);">Wednesday, March 11, 2026 at 6:00 PM</strong> (Knoxville).
+    Fill this out and we’ll contact you with the location and start details.
   </p>
 
   <div style="max-width:860px; margin-top:18px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.02); border-radius:16px; padding:24px;">
     <form name="ffm-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success/">
       <input type="hidden" name="form-name" value="ffm-registration" />
 
-      <!-- Honeypot (hidden) -->
       <p style="display:none;">
         <label>Don’t fill this out: <input name="bot-field" /></label>
       </p>
@@ -62,7 +62,7 @@ title: Register
         </label>
 
         <label>
-          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Can you commit to 10 Wednesdays?</div>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Can you commit to 10 Wednesdays at 6:00 PM?</div>
           <select name="commitment" required
             style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;">
             <option value="" selected disabled>Select…</option>
@@ -103,7 +103,8 @@ title: Register
 
       <div style="margin-top:18px; border-top:1px solid rgba(212,175,55,.22); padding-top:14px;">
         <p class="muted" style="margin:0; font-size:14px;">
-          <strong style="color:var(--gold);">Note:</strong> This is a leadership program with real accountability. If you’re willing to be challenged, you’re in the right place.
+          <strong style="color:var(--gold);">Starts:</strong> Wednesday, March 11, 2026 at 6:00 PM.
+          <strong style="color:var(--gold); margin-left:8px;">Commitment:</strong> 10 weeks.
         </p>
       </div>
     </form>
