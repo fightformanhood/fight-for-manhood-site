@@ -101,20 +101,20 @@
       position: relative;
     }
 
-    /* Gold divider line */
+    /* Longer gold divider */
     .section:not(:last-of-type)::after {
       content: "";
       display: block;
-      width: 60px;
+      width: 120px;  /* doubled from 60px */
       height: 2px;
       background: linear-gradient(
         to right,
         transparent,
-        rgba(212,175,55,.6),
+        rgba(212,175,55,.65),
         transparent
       );
       margin: 40px auto 0 auto;
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     .section h3 {
