@@ -1,59 +1,70 @@
-    ---
-    title: "Home"
-    description: "A 12-week men’s Christian leadership program — built to forge strength, clarity, and responsibility."
-    layout: "base.njk"
-    permalink: "/"
-    ---
-    <section class="hero">
-  <div class="kicker">Men’s movement • Knoxville, TN</div>
-  <h1 class="h1">Build a man who stands in the light — without shame.</h1>
-  <p class="lede">
-    Fight for Manhood is a 12-week, no-cost, men’s Christian leadership program.
-    It’s direct. It’s practical. It’s built for real life: family, work, integrity, and purpose.
-  </p>
+---
+layout: base.njk
+title: Fight for Manhood
+---
 
-  <div class="cta-row">
-    <a class="btn btn-primary" href="/join/">Join the next class</a>
-    <a class="btn" href="/program/">See how it works</a>
-  </div>
+<section class="card" style="padding:28px;">
+  <div class="grid" style="align-items:center;">
+    <div style="grid-column:1 / -1;">
+      <div class="muted" style="text-transform:uppercase; letter-spacing:1.5px; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+        Fight or Surrender?
+      </div>
+      <h1 style="margin-top:10px;">Fight for Manhood</h1>
 
-  <div class="rule"></div>
+      <p style="font-size:1.25rem; color: rgba(198,167,94,.95); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin-bottom:10px;">
+        A Christian leadership program that forges real men.
+      </p>
 
-  <div>
-    <span class="badge">12 weeks</span>
-    <span class="badge">Wednesday nights</span>
-    <span class="badge">2 hours</span>
-    <span class="badge">No cost</span>
-  </div>
+      <p class="muted" style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+        10 weeks • Wednesday nights • Knoxville, TN • No cost
+      </p>
 
-  <div class="grid3">
-    <div class="card">
-      <h3>Strength</h3>
-      <p class="muted">A man is not passive. He takes responsibility and moves toward what is right.</p>
-    </div>
-    <div class="card">
-      <h3>Clarity</h3>
-      <p class="muted">No more fog. We name what’s true, confront what’s hidden, and build a plan.</p>
-    </div>
-    <div class="card">
-      <h3>Brotherhood</h3>
-      <p class="muted">You don’t grow in isolation. We fight together, and we finish together.</p>
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" href="/apply/">Apply Now</a>
+        <a class="btn btn-outline" href="/program/">See the Program</a>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="rule"></div>
+<section>
+  <h2>The Problem</h2>
+  <div class="card">
+    <p>Men want to fight for something — but we don’t know what to fight for.</p>
+    <p class="muted">The result is predictable: we either withdraw and do nothing, or we fight the wrong battles — each other, our wives, our work, our future.</p>
+    <p>Everybody knows men and fathers need to be more involved. Most attempts only produce shame and guilt.</p>
+    <p><strong>So what do we do?</strong></p>
+  </div>
+</section>
 
-## Who it’s for
-Men age **18–85** who want to lead with conviction — in their home, their work, and their community.
+<section>
+  <h2>The Solution</h2>
+  <div class="card">
+    <p><strong>Surrender to God — then fight like the man He created you to be.</strong></p>
+    <p class="muted">This isn’t behavior modification. This is identity. Strength without posturing. Clarity without condemnation.</p>
+  </div>
+</section>
 
-## What changes
-- You step into the light without shame.
-- You learn to lead yourself before you try to lead others.
-- You rebuild integrity (the inside matching the outside).
-- You stop repeating the same patterns and start writing a new story.
+<section>
+  <h2>What Happens</h2>
+  <div class="card">
+    <p>Each week includes direct teaching and real conversation — confidential, honest, and respectful.</p>
+    <p class="muted">It sounds weird. It sounds uncomfortable. The men who come quickly realize it isn’t.</p>
+  </div>
+</section>
 
-<div class="cta-row">
-  <a class="btn btn-primary" href="/join/">Apply / RSVP</a>
-  <a class="btn" href="/contact/">Ask a question</a>
-</div>
+<section>
+  <h2>Who It’s For</h2>
+  <div class="card">
+    <p><strong>Men 18–85.</strong> Single or married. Fathers, grandfathers, young men, and men who are successful but still feel unfinished.</p>
+    <p class="muted">This is not for everyone. It’s for men ready to step into the fight.</p>
+  </div>
+</section>
+
+<section class="card" style="text-align:center;">
+  <h2 style="margin-top:0;">Ready?</h2>
+  <p class="muted" style="max-width:750px; margin: 0 auto 18px auto;">
+    The fight doesn’t start when you feel ready. It starts when you say yes.
+  </p>
+  <a class="btn" href="/apply/">Apply Now</a>
+</section>
