@@ -1,111 +1,105 @@
 ---
 layout: base.njk
-title: Apply
+title: Register
 ---
 
-<section class="hero">
-  <h2>Apply</h2>
-  <p style="color:#c9a227; font-weight:700; letter-spacing:.3px;">
-    Take the first step. Show up. Do the work.
-  </p>
-  <p class="muted">
-    10 weeks • Wednesday nights • Knoxville, TN • No cost
-  </p>
-</section>
-
 <section class="section">
-  <h3>Application</h3>
-  <p class="muted">
-    This isn’t a “sign up.” It’s an application — because we want men who are ready.
-    Fill this out and a leader will reach out with next steps.
+  <h3>Register</h3>
+  <p class="muted" style="max-width:820px;">
+    Fill this out and we’ll contact you with the location and start details. This is a men-only, high-challenge / high-support environment.
   </p>
 
-  <!-- Netlify Forms (works automatically when deployed) -->
-  <form name="ffm-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:22px;">
-    <input type="hidden" name="form-name" value="ffm-apply" />
-    <p style="display:none;">
-      <label>Don’t fill this out: <input name="bot-field" /></label>
-    </p>
+  <div style="max-width:860px; margin-top:18px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.02); border-radius:16px; padding:24px;">
+    <form name="ffm-registration" method="POST" data-netlify="true" action="/success/">
+      <input type="hidden" name="form-name" value="ffm-registration" />
 
-    <div style="display:grid; gap:14px; max-width:720px;">
-      <div>
-        <label>Full Name</label><br/>
-        <input name="name" type="text" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">First Name</div>
+          <input name="first_name" required
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+        </label>
+
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Last Name</div>
+          <input name="last_name" required
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+        </label>
       </div>
 
-      <div>
-        <label>Phone</label><br/>
-        <input name="phone" type="tel" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;">
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Email</div>
+          <input type="email" name="email" required
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+        </label>
+
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Phone</div>
+          <input name="phone" required
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+        </label>
       </div>
 
-      <div>
-        <label>Email</label><br/>
-        <input name="email" type="email" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;">
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Age Range</div>
+          <select name="age_range"
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;">
+            <option value="" selected disabled>Select…</option>
+            <option>18–25</option>
+            <option>26–35</option>
+            <option>36–45</option>
+            <option>46–55</option>
+            <option>56–65</option>
+            <option>66+</option>
+          </select>
+        </label>
+
+        <label>
+          <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Can you commit to 10 Wednesdays?</div>
+          <select name="commitment"
+            style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;">
+            <option value="" selected disabled>Select…</option>
+            <option>Yes — I can commit</option>
+            <option>Probably — I’ll prioritize it</option>
+            <option>Not sure — schedule is tough</option>
+          </select>
+        </label>
       </div>
 
-      <div>
-        <label>Age</label><br/>
-        <input name="age" type="number" min="16" max="110" style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
+      <label style="display:block; margin-top:14px;">
+        <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">What are you hoping God changes in you through this?</div>
+        <textarea name="hope_change" rows="5" required
+          placeholder="Be straight. No perfect answers."
+          style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;"></textarea>
+      </label>
+
+      <label style="display:block; margin-top:14px;">
+        <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">How did you hear about Fight for Manhood?</div>
+        <input name="referral"
+          placeholder="Name / church / friend / social"
+          style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+      </label>
+
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <button class="button" type="submit">Submit Registration</button>
+        <span class="muted" style="font-size:14px;">
+          We’ll follow up with details. Your info stays private.
+        </span>
       </div>
 
-      <div>
-        <label>City</label><br/>
-        <input name="city" type="text" style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
+      <div style="margin-top:18px; border-top:1px solid rgba(212,175,55,.22); padding-top:14px;">
+        <p class="muted" style="margin:0; font-size:14px;">
+          <strong style="color:var(--gold);">Note:</strong> This is a leadership program with real accountability. If you’re willing to be challenged, you’re in the right place.
+        </p>
       </div>
-
-      <div>
-        <label>Marital Status</label><br/>
-        <select name="marital_status" style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
-          <option value="">Select…</option>
-          <option>Single</option>
-          <option>Married</option>
-          <option>Separated</option>
-          <option>Divorced</option>
-          <option>Widowed</option>
-        </select>
-      </div>
-
-      <div>
-        <label>What made you apply?</label><br/>
-        <textarea name="why_apply" rows="5" required style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;"></textarea>
-      </div>
-
-      <div>
-        <label>What do you want to be different 10 weeks from now?</label><br/>
-        <textarea name="what_change" rows="5" style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;"></textarea>
-      </div>
-
-      <div>
-        <label>How did you hear about Fight for Manhood?</label><br/>
-        <input name="referral" type="text" style="width:100%; padding:12px; border-radius:8px; border:1px solid #222; background:#0f0f0f; color:#fff;">
-      </div>
-
-      <button class="button" type="submit" style="border:none; cursor:pointer;">
-        Submit Application
-      </button>
-
-      <p class="muted" style="margin-top:6px;">
-        By submitting, you agree to be contacted about next steps.
-      </p>
-    </div>
-  </form>
-</section>
-
-<section class="section" style="padding-top:0;">
-  <h3>What Happens Next</h3>
-  <div style="border:1px solid #222; padding:18px; border-radius:12px; background:#111; max-width:720px;">
-    <p style="margin:0 0 10px 0;"><strong style="color:#c9a227;">1) We review your application</strong></p>
-    <p class="muted" style="margin:0 0 14px 0;">A leader will reach out to confirm details and answer questions.</p>
-
-    <p style="margin:0 0 10px 0;"><strong style="color:#c9a227;">2) You get the start details</strong></p>
-    <p class="muted" style="margin:0 0 14px 0;">Location, time, what to expect, and what to bring.</p>
-
-    <p style="margin:0 0 10px 0;"><strong style="color:#c9a227;">3) You show up and fight</strong></p>
-    <p class="muted" style="margin:0;">No performance. No hiding. No excuses.</p>
+    </form>
   </div>
 </section>
 
 <style>
-  .muted { color:#b7b7b7; }
-  label { font-weight:700; }
+  @media (max-width: 900px) {
+    form div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+  }
 </style>
