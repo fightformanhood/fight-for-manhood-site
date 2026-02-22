@@ -6,7 +6,7 @@ title: Register
 <section class="section">
   <h3>Register</h3>
   <p class="muted" style="max-width:860px;">
-    The next cohort starts <strong style="color:var(--gold);">Wednesday, March 11, 2026 at 6:00 PM</strong> (Knoxville).
+    The next cohort <strong style="color:var(--gold);">{% cohortCountdown %}</strong> — <strong style="color:var(--gold);">{% cohortStartLabel %}</strong> (Knoxville).
     Fill this out and we’ll contact you with the location and start details.
   </p>
 
@@ -103,8 +103,8 @@ title: Register
 
       <div style="margin-top:18px; border-top:1px solid rgba(212,175,55,.22); padding-top:14px;">
         <p class="muted" style="margin:0; font-size:14px;">
-          <strong style="color:var(--gold);">Starts:</strong> Wednesday, March 11, 2026 at 6:00 PM.
-          <strong style="color:var(--gold); margin-left:8px;">Commitment:</strong> 10 weeks.
+          <strong style="color:var(--gold);">Starts:</strong> {% cohortStartLabel %}.
+          <strong style="color:var(--gold); margin-left:8px;">Countdown:</strong> {% cohortCountdown %}.
         </p>
       </div>
     </form>
