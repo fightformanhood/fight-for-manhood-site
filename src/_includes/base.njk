@@ -98,6 +98,23 @@
       padding: 45px 20px;
       max-width: 820px;
       margin: 0 auto;
+      position: relative;
+    }
+
+    /* Gold divider line */
+    .section:not(:last-of-type)::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(212,175,55,.6),
+        transparent
+      );
+      margin: 40px auto 0 auto;
+      opacity: 0.6;
     }
 
     .section h3 {
