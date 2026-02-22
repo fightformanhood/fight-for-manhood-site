@@ -4,87 +4,28 @@ title: Fight for Manhood
 ---
 
 <section class="hero">
-  <h2>Surrender to God.</h2>
-  <h2 style="color:var(--gold); margin-top:-10px;">Fight like a man.</h2>
+  <h2>{{ home.hero_line_1 }}</h2>
+  <h2 style="color:var(--gold); margin-top:-10px;">{{ home.hero_line_2 }}</h2>
 
   <p class="muted" style="margin-top:22px;">
-    A 10-week Christian leadership program that forges real men.
+    {{ home.hero_subhead }}
   </p>
 
   <p class="muted">
-    Wednesday nights • Knoxville, TN • No cost
+    {{ home.hero_details }}
   </p>
 
   <div style="margin-top:28px;">
-    <a class="button" href="/apply/">Apply Now</a>
-    <a class="button" style="background:transparent; color:var(--gold); border:1px solid var(--gold);" href="/program/">See the Program</a>
+    <a class="button" href="{{ home.primary_cta_link }}">{{ home.primary_cta_text }}</a>
+    <a class="button" style="background:transparent; color:var(--gold); border:1px solid var(--gold);" href="{{ home.secondary_cta_link }}">{{ home.secondary_cta_text }}</a>
   </div>
 </section>
 
+{% for s in home.sections %}
 <section class="section">
-  <h3>The Problem</h3>
-  <p>
-    Most men aren’t weak.
-    They’re unfocused.
-  </p>
-  <p>
-    We fight the wrong battles.
-    We withdraw when we should lead.
-    We perform instead of surrender.
-  </p>
-  <p class="muted">
-    Strength without surrender becomes control.
-    Surrender without strength becomes passivity.
-  </p>
+  <h3>{{ s.title }}</h3>
+  {% for p in s.body.split("\n\n") %}
+    <p class="{% if loop.index > 1 %}muted{% endif %}">{{ p }}</p>
+  {% endfor %}
 </section>
-
-<section class="section">
-  <h3>The Fight</h3>
-  <p>
-    This is not about aggression.
-  </p>
-  <p>
-    It’s about surrendering to God — and stepping into the responsibility He already placed on your life.
-  </p>
-  <p class="muted">
-    A real man is not passive.
-    A real man is not abusive.
-    A real man is surrendered — and dangerous to everything that destroys his family.
-  </p>
-</section>
-
-<section class="section">
-  <h3>What Happens</h3>
-
-  <div style="display:grid; gap:18px; margin-top:10px;">
-    <div style="border:1px solid rgba(212,175,55,.2); padding:18px; border-radius:8px; background:rgba(255,255,255,.02);">
-      <strong style="color:var(--gold);">Direct Teaching</strong><br/>
-      Clear, unfiltered instruction for 30–45 minutes.
-    </div>
-
-    <div style="border:1px solid rgba(212,175,55,.2); padding:18px; border-radius:8px; background:rgba(255,255,255,.02);">
-      <strong style="color:var(--gold);">Honest Conversation</strong><br/>
-      Confidential discussion with men who refuse to stay stuck.
-    </div>
-
-    <div style="border:1px solid rgba(212,175,55,.2); padding:18px; border-radius:8px; background:rgba(255,255,255,.02);">
-      <strong style="color:var(--gold);">Real Change</strong><br/>
-      Not hype. Not guilt. Identity-level decisions.
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h3>The Commitment</h3>
-
-  <ul style="padding-left:18px;">
-    <li>10 weeks</li>
-    <li>2 hours per week</li>
-    <li>High challenge / high support</li>
-    <li>No cost</li>
-  </ul>
-
-  <div style="margin-top:24px;">
-    <a class="button" href="/apply/">Step Into the Fight</a>
-  </div>
-</section>
+{% endfor %}
