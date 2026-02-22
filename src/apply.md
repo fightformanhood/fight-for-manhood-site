@@ -10,8 +10,13 @@ title: Register
   </p>
 
   <div style="max-width:860px; margin-top:18px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.02); border-radius:16px; padding:24px;">
-    <form name="ffm-registration" method="POST" data-netlify="true" action="/success/">
+    <form name="ffm-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success/">
       <input type="hidden" name="form-name" value="ffm-registration" />
+
+      <!-- Honeypot (hidden) -->
+      <p style="display:none;">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
 
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
         <label>
@@ -44,7 +49,7 @@ title: Register
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;">
         <label>
           <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Age Range</div>
-          <select name="age_range"
+          <select name="age_range" required
             style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;">
             <option value="" selected disabled>Select…</option>
             <option>18–25</option>
@@ -58,7 +63,7 @@ title: Register
 
         <label>
           <div style="font-weight:900; letter-spacing:.2px; margin-bottom:6px;">Can you commit to 10 Wednesdays?</div>
-          <select name="commitment"
+          <select name="commitment" required
             style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;">
             <option value="" selected disabled>Select…</option>
             <option>Yes — I can commit</option>
@@ -80,6 +85,13 @@ title: Register
         <input name="referral"
           placeholder="Name / church / friend / social"
           style="width:100%; padding:13px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18); background:rgba(0,0,0,.18); color:#fff;" />
+      </label>
+
+      <label style="display:block; margin-top:14px;">
+        <input type="checkbox" name="text_ok" value="yes" />
+        <span class="muted" style="margin-left:8px; font-size:14px;">
+          You can text me program details and reminders.
+        </span>
       </label>
 
       <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
