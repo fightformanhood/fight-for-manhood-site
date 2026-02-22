@@ -10,7 +10,7 @@ title: Fight for Manhood
         Knoxville • Wednesdays • 6:00 PM • No cost
       </div>
       <div style="display:inline-block; padding:6px 12px; border:1px solid rgba(255,255,255,.14); border-radius:999px; font-size:13px; letter-spacing:1px; text-transform:uppercase; color:rgba(255,255,255,.80); background:rgba(0,0,0,.18);">
-        Starts Mar 11, 2026
+        {% cohortCountdown %} • {% cohortStartLabel %}
       </div>
     </div>
 
@@ -21,13 +21,12 @@ title: Fight for Manhood
       A 10-week Christian leadership program that forges real men.
     </p>
 
-    <!-- Capacity / urgency strip -->
     <div style="margin:22px auto 0; max-width:860px; border:1px solid rgba(212,175,55,.22); background:rgba(212,175,55,.06); border-radius:14px; padding:14px 16px;">
       <div style="font-weight:900; letter-spacing:.2px;">
-        Next Cohort: <span style="color:var(--gold);">Wed, Mar 11, 2026 • 6:00 PM</span> • Goal: <span style="color:var(--gold);">20 men</span>
+        Next Cohort: <span style="color:var(--gold);">{% cohortCountdown %}</span> • <span style="color:var(--gold);">{% cohortStartLabel %}</span> • Goal: <span style="color:var(--gold);">20 men</span>
       </div>
       <div class="muted" style="margin-top:6px; font-size:14px;">
-        We’re building the next cohort this week. If you’re in, lock it in.
+        We’re building the next cohort now. If you’re in, lock it in.
       </div>
     </div>
 
@@ -83,73 +82,11 @@ title: Fight for Manhood
   </style>
 </section>
 
-<section class="section">
-  <h3>The Fight</h3>
-  <p style="font-size:22px; max-width:920px;">
-    This is not about aggression.
-  </p>
-  <p class="muted" style="max-width:920px;">
-    It’s about surrendering to God — and stepping into the responsibility He already placed on your life.
-  </p>
-
-  <div style="margin-top:22px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.02); border-radius:14px; padding:18px; max-width:920px;">
-    <div style="color:var(--gold); font-weight:900; letter-spacing:1px; text-transform:uppercase; font-size:13px;">
-      The tone
-    </div>
-    <div style="margin-top:8px; font-size:18px;">
-      High challenge. High support. No shame games.
-    </div>
-    <div class="muted" style="margin-top:6px;">
-      When a man brings his whole life into the light, he becomes free.
-    </div>
-  </div>
-
-  <div style="margin-top:26px; border-top:1px solid rgba(212,175,55,.22);"></div>
-</section>
-
-<section class="section">
-  <h3>What You Get</h3>
-
-  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:10px;">
-    <div style="border:1px solid rgba(255,255,255,.12); padding:20px; border-radius:14px; background:rgba(255,255,255,.02);">
-      <div style="color:var(--gold); font-weight:900; text-transform:uppercase; letter-spacing:1px; font-size:13px;">Clear Teaching</div>
-      <div style="margin-top:8px;">Direct, practical instruction (30–45 minutes).</div>
-      <div class="muted" style="margin-top:8px;">No fluff. No fog. Straight lines.</div>
-    </div>
-
-    <div style="border:1px solid rgba(255,255,255,.12); padding:20px; border-radius:14px; background:rgba(255,255,255,.02);">
-      <div style="color:var(--gold); font-weight:900; text-transform:uppercase; letter-spacing:1px; font-size:13px;">Honest Conversation</div>
-      <div style="margin-top:8px;">Confidential discussion with men who refuse to stay stuck.</div>
-      <div class="muted" style="margin-top:8px;">High challenge. High support.</div>
-    </div>
-
-    <div style="border:1px solid rgba(255,255,255,.12); padding:20px; border-radius:14px; background:rgba(255,255,255,.02);">
-      <div style="color:var(--gold); font-weight:900; text-transform:uppercase; letter-spacing:1px; font-size:13px;">Identity-Level Change</div>
-      <div style="margin-top:8px;">Not hype. Not guilt. Real decisions.</div>
-      <div class="muted" style="margin-top:8px;">Bring your whole life into the light.</div>
-    </div>
-
-    <div style="border:1px solid rgba(255,255,255,.12); padding:20px; border-radius:14px; background:rgba(255,255,255,.02);">
-      <div style="color:var(--gold); font-weight:900; text-transform:uppercase; letter-spacing:1px; font-size:13px;">A Clear Commitment</div>
-      <div style="margin-top:8px;">10 weeks • Wednesdays at 6:00 PM • No cost</div>
-      <div class="muted" style="margin-top:8px;">You show up. We fight forward.</div>
-    </div>
-  </div>
-
-  <style>
-    @media (max-width: 900px) {
-      .section div[style*="grid-template-columns:repeat(2"] { grid-template-columns: 1fr !important; }
-    }
-  </style>
-
-  <div style="margin-top:26px; border-top:1px solid rgba(212,175,55,.22);"></div>
-</section>
-
 <section class="section" style="text-align:center;">
   <h3>Register Now</h3>
   <p class="muted" style="max-width:820px; margin:0 auto;">
-    Next cohort starts <strong style="color:var(--gold);">Wednesday, March 11, 2026 at 6:00 PM</strong>.
-    If you’re in, register now and we’ll send you the details.
+    Next cohort <strong style="color:var(--gold);">{% cohortCountdown %}</strong> — <strong style="color:var(--gold);">{% cohortStartLabel %}</strong>.
+    Register now and we’ll send you the details.
   </p>
   <div style="margin-top:26px;">
     <a class="button" href="/apply/">Register for the Next Cohort</a>
