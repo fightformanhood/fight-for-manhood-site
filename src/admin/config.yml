@@ -2,63 +2,62 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "src/assets/uploads"
 public_folder: "/assets/uploads"
 
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/about.md"
-        label: "About"
-        name: "about"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/program.md"
-        label: "Program"
-        name: "program"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/events.md"
-        label: "Events"
-        name: "events"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/resources.md"
-        label: "Resources"
-        name: "resources"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/contact.md"
-        label: "Contact"
-        name: "contact"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/join.md"
-        label: "Join"
-        name: "join"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
+site_url: "/"
+display_url: "/"
 
-  - name: "posts"
-    label: "Posts"
-    folder: "src/posts"
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "src/_data/home.json"
+        format: "json"
+        fields:
+          - { label: "Hero Line 1", name: "hero_line_1", widget: "string" }
+          - { label: "Hero Line 2", name: "hero_line_2", widget: "string" }
+          - { label: "Hero Subhead", name: "hero_subhead", widget: "string" }
+          - { label: "Hero Details Line", name: "hero_details", widget: "string" }
+          - { label: "Primary Button Text", name: "primary_cta_text", widget: "string" }
+          - { label: "Primary Button Link", name: "primary_cta_link", widget: "string" }
+          - { label: "Secondary Button Text", name: "secondary_cta_text", widget: "string" }
+          - { label: "Secondary Button Link", name: "secondary_cta_link", widget: "string" }
+
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+      - name: "program"
+        label: "Program"
+        file: "src/_data/program.json"
+        format: "json"
+        fields:
+          - { label: "Program Title", name: "title", widget: "string" }
+          - { label: "Duration", name: "duration", widget: "string" }
+          - { label: "When", name: "when", widget: "string" }
+          - { label: "Where", name: "where", widget: "string" }
+          - { label: "Cost", name: "cost", widget: "string" }
+          - label: "What to Expect (bullets)"
+            name: "bullets"
+            widget: "list"
+            field: { label: "Bullet", name: "bullet", widget: "string" }
+
+  - name: "updates"
+    label: "Updates"
+    folder: "src/updates"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
