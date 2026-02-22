@@ -1,1 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
 
+publish_mode: editorial_workflow
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "src/_data/home.json"
+        format: "json"
+        fields:
+          - { label: "Hero Line 1", name: "hero_line_1", widget: "string" }
+          - { label: "Hero Line 2", name: "hero_line_2", widget: "string" }
+          - { label: "Hero Subhead", name: "hero_subhead", widget: "string" }
+          - { label: "Hero Details Line", name: "hero_details", widget: "string" }
+          - { label: "Primary Button Text", name: "primary_cta_text", widget: "string" }
+          - { label: "Primary Button Link", name: "primary_cta_link", widget: "string" }
+          - { label: "Secondary Button Text", name: "secondary_cta_text", widget: "string" }
+          - { label: "Secondary Button Link", name: "secondary_cta_link", widget: "string" }
+
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+
+  - name: "program"
+    label: "Program"
+    file: "src/_data/program.json"
+    format: "json"
+    fields:
+      - { label: "Program Title", name: "title", widget: "string" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - { label: "When", name: "when", widget: "string" }
+      - { label: "Where", name: "where", widget: "string" }
+      - { label: "Cost", name: "cost", widget: "string" }
+      - label: "What to Expect (bullets)"
+        name: "bullets"
+        widget: "list"
+        field: { label: "Bullet", name: "bullet", widget: "string" }
+
+  - name: "updates"
+    label: "Updates"
+    folder: "src/updates"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
