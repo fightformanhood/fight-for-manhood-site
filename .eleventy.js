@@ -1,9 +1,8 @@
 export default function (eleventyConfig) {
-
-  // Copy root-level admin folder
+  // Copy the root /admin folder into the output so /admin works
   eleventyConfig.addPassthroughCopy({ "admin": "admin" });
 
-  // Uploads
+  // Optional uploads folder for CMS media
   eleventyConfig.addPassthroughCopy("src/assets/uploads");
 
   return {
