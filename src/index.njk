@@ -8,18 +8,14 @@ permalink: /
   :root{
     --bg0:#070b12;
     --bg1:#0b1324;
-    --card:#0f172a;
-    --card2:#0b1221;
     --text:#e8edf6;
     --muted:#a9b3c7;
     --gold:#caa246;
     --line: rgba(202,162,70,.28);
     --stroke: rgba(255,255,255,.08);
     --stroke2: rgba(255,255,255,.12);
-    --shadow: 0 20px 60px rgba(0,0,0,.45);
   }
 
-  /* Page backdrop */
   .ffm-wrap{
     min-height: 100vh;
     background:
@@ -31,15 +27,11 @@ permalink: /
     padding: clamp(24px, 4vw, 56px) 18px 64px;
   }
 
-  .ffm-container{
-    max-width: 980px;
-    margin: 0 auto;
-  }
-
-  /* Helpers */
+  .ffm-container{ max-width: 980px; margin: 0 auto; }
   .ffm-center{ text-align:center; }
   .ffm-muted{ color: var(--muted); }
   .ffm-gold{ color: var(--gold); }
+
   .ffm-divider{
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--line), transparent);
@@ -66,21 +58,27 @@ permalink: /
     text-transform: uppercase;
     backdrop-filter: blur(6px);
   }
-  .ffm-pill.alt{
-    border-color: rgba(255,255,255,.12);
-  }
+  .ffm-pill.alt{ border-color: rgba(255,255,255,.12); }
 
-  /* Hero */
+  /* HERO */
   .ffm-hero h1{
     font-size: clamp(44px, 6.2vw, 74px);
     line-height: 1.02;
     margin: 10px 0 10px;
     font-weight: 900;
     letter-spacing: -0.02em;
+    display: flex;                 /* <-- horizontal */
+    justify-content: center;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;               /* wraps nicely on phones */
   }
-  .ffm-hero h1 span{
-    display:block;
-    margin-top: 6px;
+  .ffm-hero h1 .gold{
+    color: var(--gold);
+    white-space: nowrap;           /* keeps "Fight like a man." together */
+  }
+  .ffm-hero h1 .white{
+    white-space: nowrap;
   }
   .ffm-hero p{
     font-size: clamp(16px, 1.75vw, 20px);
@@ -121,7 +119,6 @@ permalink: /
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap: 10px;
     padding: 14px 20px;
     border-radius: 12px;
     font-weight: 800;
@@ -140,10 +137,7 @@ permalink: /
     border-color: rgba(202,162,70,.55);
     color: #0a0f18;
   }
-  .ffm-btn:hover{
-    transform: translateY(-1px);
-    filter: brightness(1.05);
-  }
+  .ffm-btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
 
   /* Chips row */
   .ffm-chips{
@@ -164,9 +158,7 @@ permalink: /
   .ffm-chip strong{ color: rgba(232,237,246,.95); }
 
   /* Sections */
-  .ffm-section{
-    margin-top: 54px;
-  }
+  .ffm-section{ margin-top: 54px; }
   .ffm-section h2{
     font-size: 28px;
     letter-spacing: .08em;
@@ -187,7 +179,7 @@ permalink: /
     line-height: 1.6;
   }
 
-  /* Cards grid */
+  /* Cards */
   .ffm-grid-3{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -220,8 +212,6 @@ permalink: /
     font-size: 14px;
     line-height: 1.55;
   }
-
-  /* Tone callout */
   .ffm-callout{
     margin-top: 16px;
     padding: 16px 16px 14px;
@@ -235,9 +225,7 @@ permalink: /
     margin-top: 56px;
     padding-top: 18px;
   }
-  .ffm-register h2{
-    margin-bottom: 10px;
-  }
+  .ffm-register h2{ margin-bottom: 10px; }
   .ffm-register p{
     margin: 0 auto 18px;
     max-width: 760px;
@@ -245,29 +233,28 @@ permalink: /
     line-height: 1.6;
   }
 
-  /* Responsive */
   @media (max-width: 900px){
     .ffm-grid-3{ grid-template-columns: 1fr; }
     .ffm-grid-2{ grid-template-columns: 1fr; }
     .ffm-btn{ min-width: 220px; width: 100%; max-width: 360px; }
     .ffm-cohort{ padding: 14px 14px; }
+    .ffm-hero h1{ gap: 10px; }
   }
 </style>
 
 <div class="ffm-wrap">
   <div class="ffm-container">
 
-    <!-- TOP PILLS -->
     <div class="ffm-pills">
       <div class="ffm-pill">Knoxville • Wednesdays • 6:00 PM • No cost</div>
       <div class="ffm-pill alt"><span id="ffm-start-pill">Starts Mar 11, 2026</span></div>
     </div>
 
-    <!-- HERO -->
     <header class="ffm-hero ffm-center">
+      <!-- HORIZONTAL headline -->
       <h1>
-        Surrender to God.
-        <span class="ffm-gold">Fight like a man.</span>
+        <span class="white">Surrender to God.</span>
+        <span class="gold">Fight like a man.</span>
       </h1>
 
       <p>A 10-week Christian leadership program that forges real men.</p>
@@ -291,7 +278,6 @@ permalink: /
       </div>
     </header>
 
-    <!-- THE PROBLEM -->
     <section class="ffm-section">
       <h2>THE PROBLEM</h2>
       <div class="ffm-lead">Most men aren’t weak. They’re <span class="ffm-gold">unfocused.</span></div>
@@ -318,7 +304,6 @@ permalink: /
       <div class="ffm-divider"></div>
     </section>
 
-    <!-- THE FIGHT -->
     <section class="ffm-section">
       <h2>THE FIGHT</h2>
       <div class="ffm-lead">This is not about aggression.</div>
@@ -337,7 +322,6 @@ permalink: /
       <div class="ffm-divider"></div>
     </section>
 
-    <!-- WHAT YOU GET -->
     <section class="ffm-section">
       <h2>WHAT YOU GET</h2>
 
@@ -366,7 +350,6 @@ permalink: /
       <div class="ffm-divider"></div>
     </section>
 
-    <!-- REGISTER NOW -->
     <section class="ffm-register ffm-center">
       <h2>REGISTER NOW</h2>
       <p>
@@ -381,11 +364,7 @@ permalink: /
 </div>
 
 <script>
-  // Optional: keep dates "dynamic" without breaking builds.
-  // Set your next cohort date here (local to you), and it updates the pills + lines.
-  // If you want it to always calculate "two Wednesdays from now", tell me and I’ll switch it.
   (function () {
-    // EDIT THESE TWO LINES ONLY if needed:
     const startDateISO = "2026-03-11"; // YYYY-MM-DD
     const startTimeLabel = "6:00 PM";
 
@@ -397,7 +376,6 @@ permalink: /
     const day = d.toLocaleDateString(undefined, { day: "numeric" });
     const year = d.toLocaleDateString(undefined, { year: "numeric" });
 
-    // Short pill + cohort line
     const shortMonth = d.toLocaleDateString(undefined, { month: "short" });
     const shortDay = d.toLocaleDateString(undefined, { day: "numeric" });
 
