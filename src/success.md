@@ -1,21 +1,14 @@
 ---
-layout: base.njk
-title: You’re Registered
-permalink: /success/
+title: "Registration received"
+description: "You’re on the list."
+layout: "base.njk"
+permalink: "/success/"
 ---
 
-<section class="section" style="text-align:center;">
-  <h3>You’re Registered.</h3>
+## Registration received.
 
-  <p style="font-size:22px; max-width:800px; margin:0 auto;">
-    We received your registration.
-  </p>
+You’re on the list. We’ll follow up with details for the next cohort.
 
-  <p class="muted" style="margin-top:18px; max-width:800px; margin-left:auto; margin-right:auto;">
-    We’ll contact you with location details and next steps.
-  </p>
+<div class="divider"></div>
 
-  <div style="margin-top:26px;">
-    <a class="button" href="/">Back to Home</a>
-  </div>
-</section>
+<a class="btn" href="/">Back to home</a>
