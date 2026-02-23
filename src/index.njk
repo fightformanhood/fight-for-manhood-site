@@ -5,405 +5,242 @@ permalink: /
 ---
 
 <style>
-  :root{
-    --bg0:#070b12;
-    --bg1:#0b1324;
-    --text:#e8edf6;
-    --muted:#a9b3c7;
-    --gold:#caa246;
-    --line: rgba(202,162,70,.28);
-    --stroke: rgba(255,255,255,.08);
-    --stroke2: rgba(255,255,255,.12);
-  }
+:root{
+  --bg0:#070b12;
+  --bg1:#0b1324;
+  --text:#e8edf6;
+  --muted:#a9b3c7;
+  --gold:#caa246;
+  --line: rgba(202,162,70,.28);
+  --stroke: rgba(255,255,255,.08);
+  --stroke2: rgba(255,255,255,.12);
+}
 
-  .ffm-wrap{
-    min-height: 100vh;
-    background:
-      radial-gradient(1000px 700px at 50% -10%, rgba(255,255,255,.10), transparent 60%),
-      radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
-      radial-gradient(1200px 900px at 50% 80%, rgba(255,255,255,.06), transparent 55%),
-      linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
-    color: var(--text);
-    padding: clamp(24px, 4vw, 56px) 18px 64px;
-  }
+.ffm-wrap{
+  min-height:100vh;
+  background:
+    radial-gradient(1000px 700px at 50% -10%, rgba(255,255,255,.10), transparent 60%),
+    radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
+    linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
+  color:var(--text);
+  padding:clamp(24px,4vw,56px) 18px 80px;
+}
 
-  .ffm-container{ max-width: 980px; margin: 0 auto; }
-  .ffm-center{ text-align:center; }
-  .ffm-muted{ color: var(--muted); }
-  .ffm-gold{ color: var(--gold); }
+.ffm-container{max-width:980px;margin:0 auto;}
+.ffm-center{text-align:center;}
+.ffm-gold{color:var(--gold);}
+.ffm-muted{color:var(--muted);}
 
-  .ffm-divider{
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--line), transparent);
-    margin: 26px auto;
-    width: min(720px, 92%);
-  }
+.ffm-divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent);
+  margin:40px auto;
+  width:min(720px,92%);
+}
 
-  /* Top pills */
-  .ffm-pills{
-    display:flex;
-    justify-content:center;
-    gap: 10px;
-    flex-wrap:wrap;
-    margin-bottom: 22px;
-  }
-  .ffm-pill{
-    border: 1px solid rgba(202,162,70,.35);
-    color: rgba(235,240,250,.92);
-    background: rgba(0,0,0,.22);
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    backdrop-filter: blur(6px);
-  }
-  .ffm-pill.alt{ border-color: rgba(255,255,255,.12); }
+/* Force hero layout override */
+header.ffm-hero{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
 
-  /* ✅ HARD OVERRIDE: stop base.njk global header styles from turning this into columns */
-  header.ffm-hero{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:flex-start !important;
-    gap: 0 !important;
-    width: 100% !important;
-  }
-  header.ffm-hero > *{
-    width: 100% !important;
-    max-width: 820px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+.ffm-hero h1{
+  font-size:clamp(48px,6vw,74px);
+  font-weight:900;
+  letter-spacing:-0.02em;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:10px 0 12px;
+}
 
-  /* HERO */
-  .ffm-hero h1{
-    font-size: clamp(44px, 6.2vw, 74px);
-    line-height: 1.02;
-    margin: 10px 0 10px;
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap; /* wraps only on smaller screens */
-    text-align: center;
-  }
-  .ffm-hero h1 .gold{
-    color: var(--gold);
-    white-space: nowrap;
-  }
-  .ffm-hero h1 .white{
-    white-space: nowrap;
-  }
-  .ffm-hero p{
-    font-size: clamp(16px, 1.75vw, 20px);
-    margin: 0 auto;
-    max-width: 720px;
-    color: rgba(232,237,246,.88);
-    text-align:center;
-  }
+.ffm-hero h1 .gold{color:var(--gold);white-space:nowrap;}
+.ffm-hero h1 .white{white-space:nowrap;}
 
-  /* Cohort bar */
-  .ffm-cohort{
-    margin: 26px auto 18px;
-    width: 100%;
-    max-width: 760px;
-    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-    border: 1px solid var(--stroke);
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 16px 40px rgba(0,0,0,.28);
-    text-align:center;
-  }
-  .ffm-cohort .title{
-    font-weight: 800;
-    letter-spacing: .02em;
-  }
-  .ffm-cohort .sub{
-    margin-top: 6px;
-    font-size: 13px;
-    color: rgba(169,179,199,.9);
-  }
+.ffm-hero p{
+  max-width:760px;
+  margin:0 auto;
+  font-size:20px;
+}
 
-  /* CTA buttons */
-  .ffm-ctas{
-    display:flex;
-    justify-content:center;
-    gap: 16px;
-    flex-wrap:wrap;
-    margin: 18px 0 18px;
-  }
-  .ffm-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding: 14px 20px;
-    border-radius: 12px;
-    font-weight: 800;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    font-size: 12px;
-    border: 1px solid var(--stroke2);
-    background: rgba(0,0,0,.25);
-    color: var(--text);
-    text-decoration:none;
-    min-width: 190px;
-    box-shadow: 0 10px 28px rgba(0,0,0,.25);
-  }
-  .ffm-btn.primary{
-    background: linear-gradient(180deg, rgba(202,162,70,.95), rgba(202,162,70,.78));
-    border-color: rgba(202,162,70,.55);
-    color: #0a0f18;
-  }
-  .ffm-btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+.ffm-pills{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
 
-  /* Chips row */
-  .ffm-chips{
-    display:flex;
-    justify-content:center;
-    gap: 12px;
-    flex-wrap:wrap;
-    margin-top: 12px;
-  }
-  .ffm-chip{
-    border: 1px solid var(--stroke);
-    background: rgba(0,0,0,.18);
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 12px;
-    color: rgba(232,237,246,.88);
-  }
-  .ffm-chip strong{ color: rgba(232,237,246,.95); }
+.ffm-pill{
+  border:1px solid rgba(202,162,70,.35);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  background:rgba(0,0,0,.2);
+}
 
-  /* Sections */
-  .ffm-section{ margin-top: 54px; }
-  .ffm-section h2{
-    font-size: 28px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    margin: 0 0 10px;
-    font-weight: 900;
-  }
-  .ffm-lead{
-    font-size: 18px;
-    margin: 0 0 10px;
-    color: rgba(232,237,246,.92);
-    font-weight: 800;
-  }
-  .ffm-body{
-    margin: 0;
-    color: rgba(169,179,199,.92);
-    max-width: 820px;
-    line-height: 1.6;
-  }
+.ffm-cohort{
+  margin:30px auto 20px;
+  max-width:760px;
+  border:1px solid var(--stroke);
+  border-radius:14px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+}
 
-  /* Cards */
-  .ffm-grid-3{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 18px;
-  }
-  .ffm-grid-2{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 18px;
-  }
-  .ffm-card{
-    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-    border: 1px solid var(--stroke);
-    border-radius: 14px;
-    padding: 16px 16px 14px;
-  }
-  .ffm-kicker{
-    font-size: 11px;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 900;
-    margin-bottom: 8px;
-  }
-  .ffm-card p{
-    margin: 0;
-    color: rgba(232,237,246,.86);
-    font-size: 14px;
-    line-height: 1.55;
-  }
-  .ffm-callout{
-    margin-top: 16px;
-    padding: 16px 16px 14px;
-    border-radius: 14px;
-    border: 1px solid var(--stroke);
-    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-  }
+.ffm-cohort .title{font-weight:800;}
+.ffm-cohort .sub{margin-top:8px;font-size:14px;color:var(--muted);}
 
-  /* Register block */
-  .ffm-register{
-    margin-top: 56px;
-    padding-top: 18px;
-  }
-  .ffm-register h2{ margin-bottom: 10px; }
-  .ffm-register p{
-    margin: 0 auto 18px;
-    max-width: 760px;
-    color: rgba(169,179,199,.92);
-    line-height: 1.6;
-  }
+.ffm-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 24px;
+  border-radius:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:13px;
+  text-decoration:none;
+  margin-top:18px;
+  min-width:220px;
+}
 
-  @media (max-width: 900px){
-    .ffm-grid-3{ grid-template-columns: 1fr; }
-    .ffm-grid-2{ grid-template-columns: 1fr; }
-    .ffm-btn{ min-width: 220px; width: 100%; max-width: 360px; }
-    .ffm-cohort{ padding: 14px 14px; }
-    .ffm-hero h1{ gap: 10px; }
-  }
+.ffm-btn.primary{
+  background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.8));
+  color:#0a0f18;
+}
+
+.ffm-btn:hover{filter:brightness(1.05);transform:translateY(-1px);}
+
+.ffm-section{margin-top:70px;}
+.ffm-section h2{
+  font-size:28px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:900;
+}
+
+.ffm-grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:25px;
+}
+
+.ffm-card{
+  border:1px solid var(--stroke);
+  border-radius:14px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+}
+
+@media(max-width:900px){
+  .ffm-grid-2{grid-template-columns:1fr;}
+}
 </style>
 
 <div class="ffm-wrap">
-  <div class="ffm-container">
+<div class="ffm-container">
 
-    <div class="ffm-pills">
-      <div class="ffm-pill">Knoxville • Wednesdays • 6:00 PM • No cost</div>
-      <div class="ffm-pill alt"><span id="ffm-start-pill">Starts Mar 11, 2026</span></div>
-    </div>
+<div class="ffm-pills">
+  <div class="ffm-pill">Knoxville • Wednesdays • 6:00 PM • No cost</div>
+  <div class="ffm-pill">Starts March 11</div>
+</div>
 
-    <header class="ffm-hero ffm-center">
-      <h1>
-        <span class="white">Surrender to God.</span>
-        <span class="gold">Fight like a man.</span>
-      </h1>
+<header class="ffm-hero ffm-center">
 
-      <p>A 10-week Christian leadership program that forges real men.</p>
+<h1>
+  <span class="white">Surrender to God.</span>
+  <span class="gold">Fight like a man.</span>
+</h1>
 
-      <div class="ffm-cohort">
-        <div class="title">
-          Next Cohort: <span class="ffm-gold" id="ffm-cohort-line">Wed, Mar 11, 2026 • 6:00 PM</span> • Goal: 20 men
-        </div>
-        <div class="sub">We’re building the next cohort this week. If you’re in, lock it in.</div>
-      </div>
+<p>A 10-week crucible for men who refuse to stay the same.</p>
 
-      <div class="ffm-ctas">
-        <a class="ffm-btn primary" href="/register/">Register now</a>
-        <a class="ffm-btn" href="/program/">See the program</a>
-      </div>
+<p style="margin-top:12px;font-size:15px;color:rgba(232,237,246,.75);">
+If you’re comfortable where you are, this isn’t for you.
+</p>
 
-      <div class="ffm-chips">
-        <div class="ffm-chip"><strong>10 weeks</strong> • 2 hours/night</div>
-        <div class="ffm-chip"><strong>High challenge</strong> • High support</div>
-        <div class="ffm-chip"><strong>Confidential</strong> • Men only</div>
-      </div>
-    </header>
-
-    <section class="ffm-section">
-      <h2>THE PROBLEM</h2>
-      <div class="ffm-lead">Most men aren’t weak. They’re <span class="ffm-gold">unfocused.</span></div>
-      <p class="ffm-body">
-        We fight the wrong battles. We withdraw when we should lead. We perform instead of surrender.
-        Strength without surrender becomes control. Surrender without strength becomes passivity.
-      </p>
-
-      <div class="ffm-grid-3">
-        <div class="ffm-card">
-          <div class="ffm-kicker">DRIFT</div>
-          <p>No aim. No standard. No momentum.</p>
-        </div>
-        <div class="ffm-card">
-          <div class="ffm-kicker">ISOLATION</div>
-          <p>Men disappear instead of showing up.</p>
-        </div>
-        <div class="ffm-card">
-          <div class="ffm-kicker">SHAME</div>
-          <p>Hidden battles kill leadership.</p>
-        </div>
-      </div>
-
-      <div class="ffm-divider"></div>
-    </section>
-
-    <section class="ffm-section">
-      <h2>THE FIGHT</h2>
-      <div class="ffm-lead">This is not about aggression.</div>
-      <p class="ffm-body">
-        It’s about surrendering to God — and stepping into the responsibility He already placed on your life.
-      </p>
-
-      <div class="ffm-callout">
-        <div class="ffm-kicker">THE TONE</div>
-        <p class="ffm-body" style="margin:0;">
-          High challenge. High support. No shame games.<br>
-          When a man brings his whole life into the light, he becomes free.
-        </p>
-      </div>
-
-      <div class="ffm-divider"></div>
-    </section>
-
-    <section class="ffm-section">
-      <h2>WHAT YOU GET</h2>
-
-      <div class="ffm-grid-2">
-        <div class="ffm-card">
-          <div class="ffm-kicker">CLEAR TEACHING</div>
-          <p>Direct, practical instruction (30–45 minutes).<br>No fluff. No fog. Straight lines.</p>
-        </div>
-
-        <div class="ffm-card">
-          <div class="ffm-kicker">HONEST CONVERSATION</div>
-          <p>Confidential discussion with men who refuse to stay stuck.<br>High challenge. High support.</p>
-        </div>
-
-        <div class="ffm-card">
-          <div class="ffm-kicker">IDENTITY-LEVEL CHANGE</div>
-          <p>Not hype. Not guilt. Real decisions.<br>Bring your whole life into the light.</p>
-        </div>
-
-        <div class="ffm-card">
-          <div class="ffm-kicker">A CLEAR COMMITMENT</div>
-          <p>10 weeks • Wednesdays at 6:00 PM • No cost<br>You show up. We fight forward.</p>
-        </div>
-      </div>
-
-      <div class="ffm-divider"></div>
-    </section>
-
-    <section class="ffm-register ffm-center">
-      <h2>REGISTER NOW</h2>
-      <p>
-        Next cohort starts <span class="ffm-gold" id="ffm-register-line">Wednesday, March 11, 2026 at 6:00 PM</span>.
-        If you’re in, register now and we’ll send you the details.
-      </p>
-
-      <a class="ffm-btn primary" href="/register/">Register for the next cohort</a>
-    </section>
-
+<div class="ffm-cohort">
+  <div class="title">
+    Next Cohort: Wed, March 11 • 6:00 PM<br>
+    <span class="ffm-gold">20 seats. No spectators. This cohort locks soon.</span>
+  </div>
+  <div class="sub">
+    Decide now. Drift is easy. Growth requires commitment.
   </div>
 </div>
 
-<script>
-  (function () {
-    const startDateISO = "2026-03-11";
-    const startTimeLabel = "6:00 PM";
+<a class="ffm-btn primary" href="/register/">Register Now</a>
 
-    const d = new Date(startDateISO + "T12:00:00");
-    if (isNaN(d.getTime())) return;
+<p style="margin-top:10px;font-size:13px;color:rgba(232,237,246,.75);">
+This is not for passive men. It’s for men ready to lead.
+</p>
 
-    const weekday = d.toLocaleDateString(undefined, { weekday: "long" });
-    const month = d.toLocaleDateString(undefined, { month: "long" });
-    const day = d.toLocaleDateString(undefined, { day: "numeric" });
-    const year = d.toLocaleDateString(undefined, { year: "numeric" });
+</header>
 
-    const shortMonth = d.toLocaleDateString(undefined, { month: "short" });
-    const shortDay = d.toLocaleDateString(undefined, { day: "numeric" });
+<div class="ffm-divider"></div>
 
-    const pill = document.getElementById("ffm-start-pill");
-    const cohort = document.getElementById("ffm-cohort-line");
-    const reg = document.getElementById("ffm-register-line");
+<section class="ffm-section">
+<h2>THE PROBLEM</h2>
+<p>
+Most men aren’t weak. They’re unfocused. We drift. We hide. We tolerate what should be confronted.
+Strength without surrender becomes control. Surrender without strength becomes passivity.
+</p>
+</section>
 
-    if (pill) pill.textContent = `Starts ${shortMonth} ${shortDay}, ${year}`;
-    if (cohort) cohort.textContent = `Wed, ${shortMonth} ${shortDay}, ${year} • ${startTimeLabel}`;
-    if (reg) reg.textContent = `${weekday}, ${month} ${day}, ${year} at ${startTimeLabel}`;
-  })();
-</script>
+<div class="ffm-divider"></div>
+
+<section class="ffm-section">
+<h2>THE FIGHT</h2>
+<p>
+This is not about aggression. It’s about surrendering to God and stepping into the responsibility He already placed on your life.
+High challenge. High support. No shame games.
+</p>
+</section>
+
+<div class="ffm-divider"></div>
+
+<section class="ffm-section ffm-center">
+<h2>WHAT MEN ARE SAYING</h2>
+
+<div class="ffm-grid-2">
+  <div class="ffm-card">
+    <p style="font-size:17px;line-height:1.6;">
+      “This changed how I lead my family.”
+    </p>
+    <p class="ffm-muted" style="margin-top:10px;">— Husband & Father</p>
+  </div>
+
+  <div class="ffm-card">
+    <p style="font-size:17px;line-height:1.6;">
+      “It forced me to face things I had been avoiding for years.”
+    </p>
+    <p class="ffm-muted" style="margin-top:10px;">— Business Owner</p>
+  </div>
+</div>
+</section>
+
+<div class="ffm-divider"></div>
+
+<section class="ffm-section ffm-center">
+<h2>REGISTER NOW</h2>
+
+<p>
+The next cohort begins Wednesday, March 11 at 6:00 PM.<br>
+We cap this at 20 men. When the seats are filled, registration closes.
+</p>
+
+<a class="ffm-btn primary" href="/register/">Register for the Next Cohort</a>
+
+<p style="margin-top:12px;font-size:13px;color:rgba(232,237,246,.75);">
+Men wait. Leaders decide.
+</p>
+
+</section>
+
+</div>
+</div>
