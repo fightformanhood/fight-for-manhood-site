@@ -60,9 +60,11 @@ header.ffm-hero{
 .ffm-hero h1 .white{white-space:nowrap;}
 
 .ffm-hero p{
-  max-width:760px;
+  max-width:860px;
   margin:0 auto;
-  font-size:20px;
+  font-size:21px;
+  line-height:1.65;
+  color:rgba(232,237,246,.94);
 }
 
 .ffm-pills{
@@ -85,15 +87,23 @@ header.ffm-hero{
 
 .ffm-cohort{
   margin:30px auto 20px;
-  max-width:760px;
+  max-width:820px;
   border:1px solid var(--stroke);
   border-radius:14px;
   padding:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
 }
 
-.ffm-cohort .title{font-weight:800;}
-.ffm-cohort .sub{margin-top:8px;font-size:14px;color:var(--muted);}
+.ffm-cohort .title{font-weight:900;}
+.ffm-cohort .sub{margin-top:8px;font-size:14px;color:var(--muted);line-height:1.55;}
+
+.ffm-btnRow{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
 
 .ffm-btn{
   display:inline-flex;
@@ -101,13 +111,14 @@ header.ffm-hero{
   justify-content:center;
   padding:15px 24px;
   border-radius:12px;
-  font-weight:800;
+  font-weight:900;
   text-transform:uppercase;
   font-size:13px;
   text-decoration:none;
-  margin-top:18px;
   min-width:220px;
   border:1px solid var(--stroke2);
+  color:var(--text);
+  background:rgba(0,0,0,.18);
 }
 
 .ffm-btn.primary{
@@ -124,6 +135,14 @@ header.ffm-hero{
   text-transform:uppercase;
   letter-spacing:.1em;
   font-weight:900;
+  margin:0 0 10px 0;
+}
+
+.ffm-section p{
+  font-size:19px;
+  line-height:1.7;
+  color:rgba(232,237,246,.92);
+  margin:0;
 }
 
 .ffm-grid-2{
@@ -138,6 +157,22 @@ header.ffm-hero{
   border-radius:14px;
   padding:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+}
+
+.ffm-card h3{
+  margin:0 0 10px 0;
+  font-size:14px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(202,162,70,.92);
+  font-weight:900;
+}
+
+.ffm-card p{
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(232,237,246,.90);
 }
 
 /* Testimonials look */
@@ -236,10 +271,13 @@ header.ffm-hero{
   <span class="gold">Fight like a man.</span>
 </h1>
 
-<p>A 10-week crucible for men who refuse to stay the same.</p>
+<p>
+A 10-week crucible for men who are done drifting.
+We go after the real enemy: <span class="ffm-gold">shame, fear, passivity, and the double life</span>.
+</p>
 
-<p style="margin-top:12px;font-size:15px;color:rgba(232,237,246,.75);">
-If you’re comfortable where you are, this isn’t for you.
+<p style="margin-top:12px;font-size:16px;color:rgba(232,237,246,.78);max-width:860px;">
+If you’re comfortable, this will offend you. If you’re ready to be forged, you’ll be grateful you showed up.
 </p>
 
 <div class="ffm-cohort">
@@ -248,14 +286,18 @@ If you’re comfortable where you are, this isn’t for you.
     <span class="ffm-gold">20 seats. No spectators. This cohort locks soon.</span>
   </div>
   <div class="sub">
-    Decide now. Drift is easy. Growth requires commitment.
+    The cost is not money. The cost is honesty and commitment.
+    Men procrastinate. Leaders decide.
+  </div>
+
+  <div class="ffm-btnRow">
+    <a class="ffm-btn primary" href="/apply/">Apply Now</a>
+    <a class="ffm-btn" href="/program/">See the Battle Plan</a>
   </div>
 </div>
 
-<a class="ffm-btn primary" href="/register/">Register Now</a>
-
 <p style="margin-top:10px;font-size:13px;color:rgba(232,237,246,.75);">
-This is not for passive men. It’s for men ready to lead.
+This is for men ready to lead in the light — at home, at work, and before God.
 </p>
 
 </header>
@@ -265,8 +307,22 @@ This is not for passive men. It’s for men ready to lead.
 <section class="ffm-section">
 <h2>THE PROBLEM</h2>
 <p>
-Most men aren’t weak. They’re unfocused. We drift. We hide. We tolerate what should be confronted.
-Strength without surrender becomes control. Surrender without strength becomes passivity.
+Most men aren’t “bad.” They’re divided.
+We drift. We hide. We manage appearances.
+We confuse guilt with shame — and shame convinces a man he <em>is</em> the problem.
+Then he covers it: with work, noise, anger, control, or passivity.
+</p>
+</section>
+
+<div class="ffm-divider"></div>
+
+<section class="ffm-section">
+<h2>THE COST</h2>
+<p>
+A man can look fine on the outside and be collapsing on the inside.
+Fear-based obedience produces anxiety and paralysis.
+Performance religion creates compliant men, not strong sons.
+And what isn’t confronted gets passed on.
 </p>
 </section>
 
@@ -275,9 +331,52 @@ Strength without surrender becomes control. Surrender without strength becomes p
 <section class="ffm-section">
 <h2>THE FIGHT</h2>
 <p>
-This is not about aggression. It’s about surrendering to God and stepping into the responsibility He already placed on your life.
-High challenge. High support. No shame games.
+This is not aggression. It’s ordered strength under God.
+We confront wounds. We break shame in the light.
+We move from law to grace — from performance to relationship.
+We learn faith without fear.
+We become men who take responsibility, repair what we’ve damaged, and lead with strength under control.
 </p>
+</section>
+
+<div class="ffm-divider"></div>
+
+<section class="ffm-section">
+  <h2>WHAT HAPPENS HERE</h2>
+
+  <div class="ffm-grid-2">
+    <div class="ffm-card">
+      <h3>Expose What’s Hidden</h3>
+      <p>
+        Secrecy is where shame breeds. We bring it into the light.
+        Not to humiliate you — to free you.
+      </p>
+    </div>
+
+    <div class="ffm-card">
+      <h3>Rebuild Identity</h3>
+      <p>
+        You stop striving to measure up. You learn sonship.
+        Obedience becomes relationship — not fear management.
+      </p>
+    </div>
+
+    <div class="ffm-card">
+      <h3>Forge Responsibility</h3>
+      <p>
+        No blaming. No excuses. You take ownership without control,
+        and you lead without disappearing.
+      </p>
+    </div>
+
+    <div class="ffm-card">
+      <h3>Strengthen the Home</h3>
+      <p>
+        We go after anger, silence, conflict, and repair.
+        You become dangerous to darkness — not to your family.
+      </p>
+    </div>
+  </div>
 </section>
 
 <div class="ffm-divider"></div>
@@ -397,14 +496,17 @@ High challenge. High support. No shame games.
 <div class="ffm-divider"></div>
 
 <section class="ffm-section ffm-center">
-<h2>REGISTER NOW</h2>
+<h2>APPLY NOW</h2>
 
-<p>
+<p style="max-width:760px;margin:0 auto;">
 The next cohort begins Wednesday, March 11 at 6:00 PM.<br>
-We cap this at 20 men. When the seats are filled, registration closes.
+We cap this at <span class="ffm-gold">20 men</span>. When the seats are filled, applications close.
 </p>
 
-<a class="ffm-btn primary" href="/register/">Register for the Next Cohort</a>
+<div class="ffm-btnRow" style="margin-top:18px;">
+  <a class="ffm-btn primary" href="/apply/">Apply for the Next Cohort</a>
+  <a class="ffm-btn" href="/contact/">Ask a question</a>
+</div>
 
 <p style="margin-top:12px;font-size:13px;color:rgba(232,237,246,.75);">
 Men wait. Leaders decide.
