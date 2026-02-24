@@ -2,7 +2,7 @@
 title: "Apply"
 description: "Apply for the Fight for Manhood 10-week program."
 layout: "base.njk"
-permalink: "/register/"
+permalink: "/apply/"
 ---
 
 <style>
