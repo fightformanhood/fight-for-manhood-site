@@ -152,77 +152,57 @@ permalink: /program/
   line-height:1.7;
 }
 
-.ffm-list{
-  margin:14px 0 0;
-  padding-left:18px;
-  color:rgba(232,237,246,.88);
-  line-height:1.75;
-}
-.ffm-list li{ margin:6px 0; }
+/* ===== UPDATED 10 WEEK FLOW STYLING ===== */
 
 .ffm-schedule{
   display:grid;
-  gap:12px;
-  margin-top:18px;
+  gap:8px; /* tighter */
+  margin-top:22px;
 }
+
 .ffm-item{
   border:1px solid rgba(255,255,255,.08);
-  background:rgba(0,0,0,.16);
-  border-radius:14px;
-  padding:14px 16px;
+  background:rgba(0,0,0,.22);
+  border-radius:12px;
+  padding:16px 18px;
+  transition:all .15s ease;
 }
+
+.ffm-item:hover{
+  border-color:rgba(202,162,70,.45);
+  background:rgba(0,0,0,.28);
+}
+
 .ffm-item .top{
   display:flex;
   justify-content:space-between;
   gap:12px;
   flex-wrap:wrap;
-}
-.ffm-item .wk{
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:18px;
-  color:rgba(202,162,70,.95);
-}
-.ffm-item .name{
-  font-weight:900;
-  font-size:15px;
-}
-.ffm-item .desc{
-  margin-top:8px;
-  color:rgba(169,179,199,.92);
-  line-height:1.65;
-  font-size:14px;
+  align-items:baseline;
 }
 
-.ffm-faq details{
-  border:1px solid rgba(255,255,255,.08);
-  background:rgba(0,0,0,.16);
-  border-radius:14px;
-  padding:14px 16px;
-}
-.ffm-faq details + details{ margin-top:12px; }
-.ffm-faq summary{
-  cursor:pointer;
+.ffm-item .wk{
   font-weight:900;
-  letter-spacing:.06em;
+  letter-spacing:.18em;
   text-transform:uppercase;
-  font-size:12px;
-  color:rgba(232,237,246,.92);
-  list-style:none;
-}
-.ffm-faq summary::-webkit-details-marker{ display:none; }
-.ffm-faq summary::after{
-  content:"▾";
-  float:right;
+  font-size:20px;
   color:rgba(202,162,70,.95);
 }
-.ffm-faq details[open] summary::after{ content:"▴"; }
-.ffm-faq .ans{
-  margin-top:10px;
-  color:rgba(169,179,199,.92);
-  line-height:1.7;
+
+.ffm-item .name{
+  font-weight:900;
+  font-size:18px; /* bigger */
+  letter-spacing:.04em;
 }
+
+.ffm-item .desc{
+  margin-top:6px; /* tighter */
+  color:rgba(169,179,199,.92);
+  line-height:1.55;
+  font-size:16px; /* bigger */
+}
+
+/* ========================================= */
 
 @media(max-width:900px){
   .ffm-grid2{grid-template-columns:1fr;}
@@ -239,7 +219,7 @@ permalink: /program/
       <h1>The Fight for Manhood</h1>
       <p>
         This is a 10-week crucible for men who refuse to drift.
-        We’re not polishing your image. We’re pulling you into the light—into identity, responsibility, and real brotherhood.
+        You don’t spectate. You step into the fight.
       </p>
       <div class="subline">High challenge. High support. Confidential. Men only.</div>
 
@@ -251,195 +231,114 @@ permalink: /program/
 
     <div class="ffm-divider"></div>
 
-    <h2 class="ffm-sectionTitle">What This Is</h2>
+    <h2 class="ffm-sectionTitle">10-Week Battle Plan</h2>
     <p class="ffm-lead">
-      Most men aren’t avoiding God. They’re avoiding shame. This program is built to break that cycle.
-      We confront wounds, expose hiding, dismantle performance religion, and rebuild men as sons who live with integrity when no one is watching.
-    </p>
-
-    <div class="ffm-grid3">
-      <div class="ffm-card">
-        <h3>Exposure</h3>
-        <p>Shame dies in the light. No posturing. No pretending. You bring the real story into the open and stop living split.</p>
-      </div>
-      <div class="ffm-card">
-        <h3>Formation</h3>
-        <p>Not behavior management. Heart formation. The shift from rule-keeping to relationship—sonship instead of condemnation.</p>
-      </div>
-      <div class="ffm-card">
-        <h3>Brotherhood</h3>
-        <p>Men walking together in honesty. You don’t heal in isolation. You don’t win alone. Two are better than one.</p>
-      </div>
-    </div>
-
-    <div class="ffm-divider"></div>
-
-    <h2 class="ffm-sectionTitle">Who This Is For</h2>
-    <p class="ffm-lead">
-      Men 18+ who are done making excuses. If you’re tired of drift, tired of hiding, tired of acting strong while bleeding inside—this is for you.
-      If you want comfort, stay home.
-    </p>
-
-    <div class="ffm-grid2">
-      <div class="ffm-card">
-        <h3>You’ll Fit Here If…</h3>
-        <ul class="ffm-list" style="margin-top:10px;">
-          <li>You’re ready to tell the truth—about God, yourself, your past, your patterns.</li>
-          <li>You want strength without swagger and leadership without control.</li>
-          <li>You want brotherhood that doesn’t play games.</li>
-          <li>You’re willing to show up and do the work.</li>
-        </ul>
-      </div>
-      <div class="ffm-card">
-        <h3>You Won’t Like This If…</h3>
-        <ul class="ffm-list" style="margin-top:10px;">
-          <li>You need to protect your image.</li>
-          <li>You want a “tip of the week” instead of repentance and repair.</li>
-          <li>You want to stay passive and call it “busy.”</li>
-          <li>You want to blame everyone else and stay the same.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="ffm-divider"></div>
-
-    <h2 class="ffm-sectionTitle">What A Typical Night Looks Like</h2>
-    <p class="ffm-lead">
-      Every week is consistent. No circus. No hype. Just truth, brotherhood, and action.
-    </p>
-
-    <div class="ffm-grid2">
-      <div class="ffm-card">
-        <h3>1) Teaching</h3>
-        <p>Clear, Scripture-rooted instruction (30–45 minutes). Direct. Practical. Built to cut through fog and excuses.</p>
-      </div>
-      <div class="ffm-card">
-        <h3>2) Table Talk</h3>
-        <p>Confidential discussion. Real men, real issues. You’re not punished for honesty—you’re strengthened by it.</p>
-      </div>
-      <div class="ffm-card">
-        <h3>3) Assignment</h3>
-        <p>A specific move for the week: a decision, a conversation, an apology, a boundary, a repair. Momentum over emotion.</p>
-      </div>
-      <div class="ffm-card">
-        <h3>4) Prayer</h3>
-        <p>Not religious performance—alignment. Asking, listening, trusting. Learning to be led from within, not driven by fear.</p>
-      </div>
-    </div>
-
-    <div class="ffm-divider"></div>
-
-    <h2 class="ffm-sectionTitle">What You’ll Walk Away With</h2>
-    <p class="ffm-lead">
-      Not inspiration. Clarity. Freedom. A backbone. A path.
-    </p>
-
-    <ul class="ffm-list">
-      <li><strong>Freedom from shame:</strong> guilt says “I did wrong.” shame says “I am wrong.” we cut that lie at the root.</li>
-      <li><strong>Identity as a son:</strong> you stop striving to measure up and start living from what God already declared true.</li>
-      <li><strong>Clean responsibility:</strong> you stop blaming and start carrying what is yours—without pride, passivity, or control.</li>
-      <li><strong>Strength in relationships:</strong> you learn repair, truth-telling, boundaries, and leadership that protects instead of postures.</li>
-      <li><strong>Brotherhood:</strong> men who know you, sharpen you, and won’t let you disappear.</li>
-    </ul>
-
-    <div class="ffm-divider"></div>
-
-    <h2 class="ffm-sectionTitle">10-Week Flow</h2>
-    <p class="ffm-lead">
-      This is the roadmap. It’s progressive on purpose. Each week builds pressure, then builds strength.
+      This is progressive on purpose. Each week exposes weakness, then forges strength.
+      No coasting. No hiding. No spectators.
     </p>
 
     <div class="ffm-schedule">
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 1</div><div class="name">How Did We Get Here</div></div>
-        <div class="desc">Why so many men drift. What happened to masculine formation—and what it costs when men stay passive.</div>
-      </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 2</div><div class="name">Wounds & Shame</div></div>
-        <div class="desc">Shame isn’t guilt. It’s identity poison. We expose hiding, blame, fig leaves, and the isolation that kills men.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 3</div><div class="name">Father Figures</div></div>
-        <div class="desc">The father wound shapes everything. What every son needed, what went missing, and how God restores identity and initiation.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 4</div><div class="name">Momma’s Boy</div></div>
-        <div class="desc">A man must leave—physically and emotionally. We confront over-attachment, blurred roles, and the “transfer of allegiance” into manhood.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 5</div><div class="name">Finding Healing</div></div>
-        <div class="desc">You can’t redeem what you refuse to examine. We face the story with honesty, gain understanding, and learn release that brings freedom.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 6</div><div class="name">Biblical Manhood</div></div>
-        <div class="desc">Masculinity isn’t aggression or charisma. It’s ordered strength: truth, courage, protection, provision, and integrity under God.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 7</div><div class="name">Law vs. Grace</div></div>
-        <div class="desc">The shift from performance to sonship. No condemnation. Relationship before regulation. Confession before correction. Freedom begins here.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 8</div><div class="name">Faith & Fear</div></div>
-        <div class="desc">Fear-based obedience produces paralysis. Faith-based obedience produces courage. We learn to trust the Father and move anyway.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 9</div><div class="name">Relationships & Rage</div></div>
-        <div class="desc">Anger is often a cover for pain and fear. We confront conflict patterns, learn restraint, and become men who repair instead of erupt.</div>
-      </div>
-
-      <div class="ffm-item">
-        <div class="top"><div class="wk">Week 10</div><div class="name">A Real Man</div></div>
-        <div class="desc">The standard is Jesus: trusts the Father, rejects passivity, speaks truth, stops hiding, accepts responsibility, leads, and trusts God for reward.</div>
-      </div>
-    </div>
-
-    <div class="ffm-divider"></div>
-
-    <h2 class="ffm-sectionTitle">FAQ</h2>
-    <p class="ffm-lead">Kill excuses before they become exits.</p>
-
-    <div class="ffm-faq">
-      <details>
-        <summary>Is this really free?</summary>
-        <div class="ans">Yes. No cost. The requirement is commitment and honesty.</div>
-      </details>
-
-      <details>
-        <summary>Is this a Bible study?</summary>
-        <div class="ans">It’s Scripture-rooted, but it’s not academic. This is formation—truth, repentance, repair, and action.</div>
-      </details>
-
-      <details>
-        <summary>What if I miss a week?</summary>
-        <div class="ans">Life happens. But men who change show up. If you miss, you re-engage immediately. No disappearing.</div>
-      </details>
-
-      <details>
-        <summary>What happens after I apply?</summary>
-        <div class="ans">We’ll confirm your spot and send the location details, expectations, and what to bring for Week 1.</div>
-      </details>
-
-      <details>
-        <summary>How does registration closing work?</summary>
-        <div class="ans">
-          We cap this at 20 men. When it’s full, it’s full.
-          If seats remain, applications close <strong>the Sunday before Week 1 at 11:59 PM</strong>.
-          Men procrastinate. Leaders decide early.
+        <div class="top">
+          <div class="wk">Week 1</div>
+          <div class="name">The Alarm</div>
         </div>
-      </details>
+        <div class="desc">
+          Expose drift. Confront passivity. Draw the line. You decide this is the moment everything changes.
+        </div>
+      </div>
 
-      <details>
-        <summary>Is this confidential?</summary>
-        <div class="ans">Yes. What’s shared in the room stays in the room. No gossip. No leaks. Brotherhood requires trust.</div>
-      </details>
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 2</div>
+          <div class="name">Expose the Wound</div>
+        </div>
+        <div class="desc">
+          Shame thrives in secrecy. We drag it into the light and break its authority.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 3</div>
+          <div class="name">The Father Line</div>
+        </div>
+        <div class="desc">
+          Identify what shaped you. What you received. What you didn’t. Decide what stops with you.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 4</div>
+          <div class="name">Sever & Stand</div>
+        </div>
+        <div class="desc">
+          Break unhealthy attachments. Transfer allegiance. Stand as a man under God.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 5</div>
+          <div class="name">Reclaim Ground</div>
+        </div>
+        <div class="desc">
+          Face your story. Forgive. Release. Take back territory that shame and fear stole.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 6</div>
+          <div class="name">Define the Man</div>
+        </div>
+        <div class="desc">
+          Reject cultural caricatures. Embrace ordered strength—truth, courage, protection, integrity.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 7</div>
+          <div class="name">Break Performance</div>
+        </div>
+        <div class="desc">
+          Crush fear-based obedience. Step into sonship. Move from anxiety to confident trust.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 8</div>
+          <div class="name">Advance by Faith</div>
+        </div>
+        <div class="desc">
+          Courage is obedience in motion. You act before you feel ready.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 9</div>
+          <div class="name">Control the Fire</div>
+        </div>
+        <div class="desc">
+          Harness anger. Repair relationships. Become dangerous to darkness—not to your family.
+        </div>
+      </div>
+
+      <div class="ffm-item">
+        <div class="top">
+          <div class="wk">Week 10</div>
+          <div class="name">Commissioned</div>
+        </div>
+        <div class="desc">
+          You leave with clarity, conviction, and a battle plan. No retreat. No return to hiding.
+        </div>
+      </div>
+
     </div>
 
     <div class="ffm-divider"></div>
@@ -447,8 +346,7 @@ permalink: /program/
     <div class="ffm-center">
       <h2 class="ffm-sectionTitle">Ready?</h2>
       <p class="ffm-lead">
-        If you’re tired of drift, stop negotiating.
-        Step into the light. Take responsibility. Join the fight.
+        Stop observing. Step into the fight.
       </p>
       <div class="ffm-ctaRow">
         <a class="ffm-btn primary" href="/apply/">Apply for the next cohort</a>
