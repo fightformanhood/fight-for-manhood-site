@@ -24,24 +24,23 @@ permalink: "/apply/"
     radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
     linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
   color:var(--text);
-  padding:clamp(24px,4vw,56px) 18px 96px;
+  padding:clamp(20px,3vw,44px) 18px 72px;
 }
 
-.ffm-container{max-width:980px;margin:0 auto;}
+.ffm-container{max-width:940px;margin:0 auto;}
 .ffm-gold{color:var(--gold);}
-.ffm-muted{color:var(--muted);}
 
 .ffm-pills{
   display:flex;
   justify-content:center;
   gap:10px;
   flex-wrap:wrap;
-  margin-bottom:22px;
+  margin:0 0 16px;
 }
 
 .ffm-pill{
   border:1px solid rgba(202,162,70,.35);
-  padding:9px 16px;
+  padding:8px 14px;
   border-radius:999px;
   font-size:12px;
   text-transform:uppercase;
@@ -51,55 +50,58 @@ permalink: "/apply/"
 
 .ffm-hero{
   text-align:center;
-  max-width:960px;
-  margin:0 auto;
+  max-width:860px;
+  margin:0 auto 16px;
 }
 
 .ffm-hero h1{
-  font-size:clamp(44px,5.4vw,72px);
+  font-size:clamp(40px,5vw,64px);
   font-weight:900;
   letter-spacing:-0.02em;
-  margin:0 0 12px;
+  margin:0 0 10px;
 }
 
 .ffm-hero p{
   margin:0 auto;
-  max-width:900px;
-  font-size:20px;
-  line-height:1.65;
+  max-width:820px;
+  font-size:18px;
+  line-height:1.6;
   color:rgba(232,237,246,.92);
 }
 
+/* tighter divider */
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:34px auto;
-  width:min(820px,92%);
+  margin:18px auto 18px;
+  width:min(780px,92%);
 }
 
 .ffm-card{
-  max-width:920px;
+  max-width:860px;
   margin:0 auto;
   border:1px solid var(--stroke);
-  border-radius:18px;
-  padding:24px;
+  border-radius:16px;
+  padding:18px;
   background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-  box-shadow:0 14px 36px rgba(0,0,0,.28);
+  box-shadow:0 12px 30px rgba(0,0,0,.26);
 }
 
+/* SECTION TITLES: tight + consistent */
 .ffm-sectionTitle{
-  margin:18px 0 10px;
-  font-size:13px;
-  letter-spacing:.16em;
+  margin:14px 0 8px;
+  font-size:12px;
+  letter-spacing:.18em;
   text-transform:uppercase;
   font-weight:900;
   color:rgba(202,162,70,.92);
 }
 
+/* FORM GRID: compact */
 .ffm-grid{
   display:grid;
   grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px 16px;
+  gap:10px 12px;   /* tighter */
 }
 
 .ffm-field.full{grid-column:1 / -1;}
@@ -109,21 +111,22 @@ permalink: "/apply/"
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.08em;
-  font-size:12px;
+  font-size:11px;
   color:rgba(232,237,246,.86);
-  margin:0 0 8px;
+  margin:0 0 6px;
 }
 
 .ffm-field input,
 .ffm-field select{
   width:100%;
-  padding:14px 14px;
-  border-radius:14px;
+  padding:12px 12px; /* tighter */
+  border-radius:12px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
   color:var(--text);
   outline:none;
-  font-size:16px;
+  font-size:15px;
+  line-height:1.25;
 }
 
 .ffm-field input:focus,
@@ -132,35 +135,50 @@ permalink: "/apply/"
   box-shadow: 0 0 0 4px rgba(202,162,70,.12);
 }
 
-.ffm-checkboxCard{
+/* checkbox blocks: no “giant gaps” */
+.ffm-block{
   border:1px solid rgba(255,255,255,.10);
   background:rgba(0,0,0,.18);
   border-radius:14px;
-  padding:14px;
+  padding:12px;          /* tighter */
+  margin:0 0 10px;       /* tighter */
+}
+
+.ffm-block:last-child{margin-bottom:0;}
+
+.ffm-blockLabel{
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:11px;
+  color:rgba(232,237,246,.86);
+  margin:0 0 6px;
 }
 
 .ffm-checkboxGroup{
   display:grid;
-  gap:6px; /* tighter */
-  margin-top:4px;
+  gap:6px; /* tight */
+  margin:0;
 }
 
 .ffm-check{
   display:flex;
   align-items:center;
   gap:10px;
-  font-size:15px;
+  font-size:14px;
   color:rgba(232,237,246,.90);
+  margin:0;
 }
 
 .ffm-check input{
   width:16px;
   height:16px;
+  margin:0;
   accent-color: var(--gold);
 }
 
 .ffm-actions{
-  margin-top:22px;
+  margin-top:14px; /* tighter */
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -171,7 +189,7 @@ permalink: "/apply/"
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:16px 28px;
+  padding:15px 26px;
   border-radius:14px;
   font-weight:900;
   text-transform:uppercase;
@@ -190,14 +208,14 @@ permalink: "/apply/"
   font-size:13px;
   color:rgba(169,179,199,.90);
   text-align:center;
-  max-width:760px;
-  line-height:1.55;
+  max-width:740px;
+  line-height:1.45;
   margin:0;
 }
 
 @media (max-width: 820px){
   .ffm-grid{grid-template-columns:1fr;}
-  .ffm-card{padding:20px;}
+  .ffm-card{padding:16px;}
   .ffm-btn{width:100%;max-width:520px;}
 }
 </style>
@@ -234,7 +252,7 @@ permalink: "/apply/"
           <label>Don’t fill this out: <input name="bot-field" /></label>
         </p>
 
-        <div class="ffm-sectionTitle">Identity</div>
+        <div class="ffm-sectionTitle">Core Info</div>
 
         <div class="ffm-grid">
           <div class="ffm-field">
@@ -263,62 +281,45 @@ permalink: "/apply/"
               <option>Widowed</option>
             </select>
           </div>
-        </div>
 
-        <div class="ffm-sectionTitle">Connection</div>
-
-        <div class="ffm-grid">
           <div class="ffm-field">
-            <label for="church">Church Attended (if any)</label>
+            <label for="church">Church attended (if any)</label>
             <input id="church" name="church" type="text" />
           </div>
 
           <div class="ffm-field">
-            <label for="invited">Who Invited You?</label>
+            <label for="invited">Who invited you</label>
             <input id="invited" name="invited" type="text" />
           </div>
         </div>
 
         <div class="ffm-sectionTitle">Family</div>
-
-        <div class="ffm-checkboxCard">
-          <div style="font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:rgba(232,237,246,.86);margin:0 0 8px;">
-            Children (check all that apply)
-          </div>
+        <div class="ffm-block">
+          <div class="ffm-blockLabel">Kids (check all that apply)</div>
           <div class="ffm-checkboxGroup">
-            <label class="ffm-check"><input type="checkbox" name="children" value="Young Children"> Young Children</label>
-            <label class="ffm-check"><input type="checkbox" name="children" value="Teenagers"> Teenagers</label>
-            <label class="ffm-check"><input type="checkbox" name="children" value="College Age"> College Age</label>
-            <label class="ffm-check"><input type="checkbox" name="children" value="Adult"> Adult</label>
-            <label class="ffm-check"><input type="checkbox" name="children" value="No Children"> No Children</label>
+            <label class="ffm-check"><input type="checkbox" name="kids" value="Young Children"> Young Children</label>
+            <label class="ffm-check"><input type="checkbox" name="kids" value="Teenagers"> Teenagers</label>
+            <label class="ffm-check"><input type="checkbox" name="kids" value="College Age"> College Age</label>
+            <label class="ffm-check"><input type="checkbox" name="kids" value="Adult"> Adult</label>
+            <label class="ffm-check"><input type="checkbox" name="kids" value="No Children"> No Children</label>
           </div>
         </div>
 
         <div class="ffm-sectionTitle">Prior Involvement</div>
-
-        <div class="ffm-checkboxCard">
+        <div class="ffm-block">
           <div class="ffm-checkboxGroup">
-            <label class="ffm-check">
-              <input type="checkbox" name="past_graduate" value="Yes">
-              Past Graduate
-            </label>
-
-            <label class="ffm-check">
-              <input type="checkbox" name="attended_before" value="Yes">
-              Attended Before
-            </label>
+            <label class="ffm-check"><input type="checkbox" name="past_graduate" value="Yes"> Past Graduate</label>
+            <label class="ffm-check"><input type="checkbox" name="attended_before" value="Yes"> Attended Before</label>
           </div>
         </div>
 
         <div class="ffm-sectionTitle">Commitment</div>
-
-        <div class="ffm-checkboxCard">
+        <div class="ffm-block">
           <div class="ffm-checkboxGroup">
             <label class="ffm-check">
               <input type="checkbox" name="commitment_attendance" value="Yes" required>
               I understand this is a 10-week commitment and I will prioritize attendance.
             </label>
-
             <label class="ffm-check">
               <input type="checkbox" name="commitment_confidential" value="Yes" required>
               I understand this requires honesty and confidentiality.
@@ -328,9 +329,7 @@ permalink: "/apply/"
 
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <p class="ffm-fine">
-            Confidential. Men only. No cost. We cap this at 20 men. When seats are filled, registration closes.
-          </p>
+          <p class="ffm-fine">Confidential. Men only. No cost. 20 seats. When seats are filled, registration closes.</p>
         </div>
 
       </form>
