@@ -117,19 +117,19 @@ permalink: /program/
   font-size:21px;
 }
 
-/* ===== BIG, TIGHT, BATTLE FLOW ===== */
+/* ===== TIGHTER WEEK FLOW ===== */
 
 .ffm-schedule{
   display:grid;
-  gap:12px;
-  margin-top:30px;
+  gap:6px; /* reduced spacing between weeks */
+  margin-top:26px;
 }
 
 .ffm-item{
   border:1px solid rgba(255,255,255,.12);
   background:rgba(0,0,0,.28);
-  border-radius:16px;
-  padding:26px 26px;
+  border-radius:14px;
+  padding:20px 22px; /* slightly tighter */
   transition:all .15s ease;
 }
 
@@ -141,41 +141,39 @@ permalink: /program/
 .ffm-item .top{
   display:flex;
   justify-content:space-between;
-  gap:16px;
+  gap:14px;
   flex-wrap:wrap;
   align-items:baseline;
 }
 
 .ffm-item .wk{
   font-weight:900;
-  letter-spacing:.20em;
+  letter-spacing:.18em;
   text-transform:uppercase;
-  font-size:30px;
+  font-size:26px;
   color:rgba(202,162,70,1);
 }
 
 .ffm-item .name{
   font-weight:900;
-  font-size:26px;
+  font-size:23px;
   letter-spacing:.03em;
   color:rgba(232,237,246,.98);
 }
 
 .ffm-item .desc{
-  margin-top:10px;
+  margin-top:6px;
   color:rgba(232,237,246,.92);
   line-height:1.55;
-  font-size:22px;
+  font-size:20px;
 }
-
-/* =================================== */
 
 @media(max-width:900px){
   .ffm-btn{width:100%;max-width:480px;}
-  .ffm-item{padding:20px;}
-  .ffm-item .wk{font-size:26px;}
-  .ffm-item .name{font-size:22px;}
-  .ffm-item .desc{font-size:20px;}
+  .ffm-item{padding:18px;}
+  .ffm-item .wk{font-size:24px;}
+  .ffm-item .name{font-size:21px;}
+  .ffm-item .desc{font-size:19px;}
   .ffm-hero p{font-size:21px;}
   .ffm-lead{font-size:19px;}
 }
@@ -188,7 +186,7 @@ permalink: /program/
       <div class="ffm-kicker">10 weeks • Wednesdays • 6:00 PM • Knoxville • No cost</div>
       <h1>The Fight for Manhood</h1>
       <p>
-        This is not information. It’s formation.
+        This is not a lecture series. It’s a crucible.
         Ten weeks to confront drift, expose shame, break fear-based obedience,
         and step into the light as a son who leads without hiding.
       </p>
@@ -204,96 +202,109 @@ permalink: /program/
 
     <h2 class="ffm-sectionTitle">10-Week Battle Plan</h2>
     <p class="ffm-lead">
-      This is progressive on purpose. Each week confronts a layer of drift and calls you forward.
-      We don’t create performers. We forge men who walk in truth.
+      Each week dismantles drift and builds ordered strength.
+      We expose. We rebuild. We advance.
     </p>
 
     <div class="ffm-schedule">
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 1</div><div class="name">How Did We Get Here</div></div>
+        <div class="top">
+          <div class="wk">Week 1</div>
+          <div class="name">Sound the Alarm: How Did We Get Here</div>
+        </div>
         <div class="desc">
-          Sound the alarm. Identify drift. Expose the cultural confusion around manhood.
-          Stop calling weakness normal. Decide to fight.
+          Identify drift. Name the cost. Refuse cultural confusion. Decide to fight.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 2</div><div class="name">Wounds & Shame</div></div>
+        <div class="top">
+          <div class="wk">Week 2</div>
+          <div class="name">Expose the Wound: Breaking Shame</div>
+        </div>
         <div class="desc">
-          Shame says, “I am wrong.” We drag that lie into the light.
-          No more hiding. No more isolation. No more pretending you’re fine.
+          Drag secrecy into the light. Crush the lie that says “I am wrong.” Begin freedom.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 3</div><div class="name">Father Figures</div></div>
+        <div class="top">
+          <div class="wk">Week 3</div>
+          <div class="name">Restore the Father Line</div>
+        </div>
         <div class="desc">
-          The father line shapes everything. What you received. What you didn’t.
-          Face it honestly—and decide what stops with you.
+          Face what shaped you. Break destructive cycles. Decide what stops with you.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 4</div><div class="name">Momma’s Boy</div></div>
+        <div class="top">
+          <div class="wk">Week 4</div>
+          <div class="name">Raised in a Feminine Culture: Reclaiming God’s Order</div>
+        </div>
         <div class="desc">
-          A man leaves childish dependency.
-          Transfer allegiance. Take responsibility. Stand under God.
+          Transfer allegiance. Reject passivity. Stand as a man under God’s design.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 5</div><div class="name">Finding Healing</div></div>
+        <div class="top">
+          <div class="wk">Week 5</div>
+          <div class="name">Reclaim Lost Ground: Finding Healing</div>
+        </div>
         <div class="desc">
-          Healing is confrontation with hope.
-          Examine the story. Seek understanding. Forgive. Reclaim lost ground.
+          Confront the story. Forgive. Release. Take back territory shame stole.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 6</div><div class="name">Biblical Manhood</div></div>
+        <div class="top">
+          <div class="wk">Week 6</div>
+          <div class="name">Forge the Man: Biblical Manhood</div>
+        </div>
         <div class="desc">
-          Reject cultural caricatures.
-          Embrace ordered strength—truth, courage, protection, humility, restraint.
+          Reject caricatures. Embrace ordered strength—truth, courage, restraint, integrity.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 7</div><div class="name">Law vs. Grace</div></div>
+        <div class="top">
+          <div class="wk">Week 7</div>
+          <div class="name">Crush Performance Religion: Law vs. Grace</div>
+        </div>
         <div class="desc">
-          Break performance religion.
-          Move from condemnation to sonship.
-          Obey from relationship, not fear.
+          Move from condemnation to sonship. Obey from relationship, not fear.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 8</div><div class="name">Faith & Fear</div></div>
+        <div class="top">
+          <div class="wk">Week 8</div>
+          <div class="name">Advance by Faith: Faith & Fear</div>
+        </div>
         <div class="desc">
-          Fear-based obedience paralyzes.
-          Faith-based obedience moves.
-          Learn to trust the Father—and step forward anyway.
+          Break fear-based paralysis. Step forward in trust and decisive obedience.
         </div>
       </div>
 
       <div class="ffm-item">
-        <div class="top"><div class="wk">Week 9</div><div class="name">Relationships & Rage</div></div>
+        <div class="top">
+          <div class="wk">Week 9</div>
+          <div class="name">Master the Fire: Relationships & Rage</div>
+        </div>
         <div class="desc">
-          Harness anger instead of unleashing it.
-          Repair instead of erupt.
-          Lead your home with strength under control.
+          Harness anger. Repair instead of erupt. Lead your home with strength under control.
         </div>
       </div>
 
       <div class="ffm-item">
         <div class="top">
           <div class="wk">Week 10</div>
-          <div class="name">Am I a Real Man, How to Know for Sure</div>
+          <div class="name">The Final Measure: Am I a Real Man, How to Know for Sure</div>
         </div>
         <div class="desc">
-          Measure your life against Jesus.
-          No hiding. No passivity. No double life.
-          Trust the Father. Speak truth. Take responsibility. Lead from the light.
+          Measure your life against Jesus. No hiding. No passivity. Trust the Father. Lead from the light.
         </div>
       </div>
 
