@@ -14,6 +14,7 @@ permalink: "/apply/"
   --gold:#caa246;
   --line: rgba(202,162,70,.28);
   --stroke: rgba(255,255,255,.10);
+  --stroke2: rgba(255,255,255,.14);
 }
 
 .ffm-register{
@@ -26,15 +27,16 @@ permalink: "/apply/"
   padding:clamp(24px,4vw,56px) 18px 96px;
 }
 
-.ffm-container{max-width:900px;margin:0 auto;}
+.ffm-container{max-width:980px;margin:0 auto;}
 .ffm-gold{color:var(--gold);}
+.ffm-muted{color:var(--muted);}
 
 .ffm-pills{
   display:flex;
   justify-content:center;
   gap:10px;
   flex-wrap:wrap;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
 .ffm-pill{
@@ -49,39 +51,44 @@ permalink: "/apply/"
 
 .ffm-hero{
   text-align:center;
-  margin-bottom:30px;
+  max-width:960px;
+  margin:0 auto;
 }
 
 .ffm-hero h1{
-  font-size:clamp(42px,5vw,68px);
+  font-size:clamp(44px,5.4vw,72px);
   font-weight:900;
+  letter-spacing:-0.02em;
   margin:0 0 12px;
 }
 
 .ffm-hero p{
-  font-size:19px;
-  line-height:1.65;
-  max-width:760px;
   margin:0 auto;
+  max-width:900px;
+  font-size:20px;
+  line-height:1.65;
   color:rgba(232,237,246,.92);
 }
 
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:36px auto;
-  width:100%;
+  margin:34px auto;
+  width:min(820px,92%);
 }
 
 .ffm-card{
+  max-width:920px;
+  margin:0 auto;
   border:1px solid var(--stroke);
-  border-radius:16px;
-  padding:26px;
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  border-radius:18px;
+  padding:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  box-shadow:0 14px 36px rgba(0,0,0,.28);
 }
 
 .ffm-sectionTitle{
-  margin:22px 0 10px;
+  margin:18px 0 10px;
   font-size:13px;
   letter-spacing:.16em;
   text-transform:uppercase;
@@ -91,85 +98,107 @@ permalink: "/apply/"
 
 .ffm-grid{
   display:grid;
-  grid-template-columns:1fr;
-  gap:14px;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:14px 16px;
 }
+
+.ffm-field.full{grid-column:1 / -1;}
 
 .ffm-field label{
   display:block;
-  font-weight:800;
-  font-size:12px;
-  letter-spacing:.08em;
+  font-weight:900;
   text-transform:uppercase;
-  margin-bottom:6px;
+  letter-spacing:.08em;
+  font-size:12px;
+  color:rgba(232,237,246,.86);
+  margin:0 0 8px;
 }
 
 .ffm-field input,
 .ffm-field select{
   width:100%;
-  padding:14px;
-  border-radius:12px;
+  padding:14px 14px;
+  border-radius:14px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
   color:var(--text);
-  font-size:15px;
+  outline:none;
+  font-size:16px;
 }
 
 .ffm-field input:focus,
 .ffm-field select:focus{
-  border-color:rgba(202,162,70,.7);
-  box-shadow:0 0 0 3px rgba(202,162,70,.12);
+  border-color: rgba(202,162,70,.65);
+  box-shadow: 0 0 0 4px rgba(202,162,70,.12);
+}
+
+.ffm-checkboxCard{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(0,0,0,.18);
+  border-radius:14px;
+  padding:14px;
 }
 
 .ffm-checkboxGroup{
   display:grid;
-  gap:6px; /* tightened */
+  gap:6px; /* tighter */
   margin-top:4px;
 }
 
 .ffm-check{
   display:flex;
   align-items:center;
-  gap:8px;
-  font-size:14px;
+  gap:10px;
+  font-size:15px;
+  color:rgba(232,237,246,.90);
 }
 
 .ffm-check input{
   width:16px;
   height:16px;
-  accent-color:var(--gold);
+  accent-color: var(--gold);
 }
 
 .ffm-actions{
-  margin-top:24px;
-  text-align:center;
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
 }
 
 .ffm-btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:16px 30px;
+  padding:16px 28px;
   border-radius:14px;
   font-weight:900;
   text-transform:uppercase;
   font-size:14px;
-  background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.80));
+  letter-spacing:.08em;
+  border:1px solid var(--stroke2);
   color:#0a0f18;
-  border:none;
+  background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.80));
+  min-width:280px;
   cursor:pointer;
 }
 
 .ffm-btn:hover{filter:brightness(1.06);transform:translateY(-1px);}
 
 .ffm-fine{
-  margin-top:12px;
   font-size:13px;
-  color:rgba(169,179,199,.85);
+  color:rgba(169,179,199,.90);
+  text-align:center;
+  max-width:760px;
+  line-height:1.55;
+  margin:0;
 }
 
-@media (max-width:720px){
+@media (max-width: 820px){
+  .ffm-grid{grid-template-columns:1fr;}
   .ffm-card{padding:20px;}
+  .ffm-btn{width:100%;max-width:520px;}
 }
 </style>
 
@@ -185,7 +214,7 @@ permalink: "/apply/"
       <h1>Step Into <span class="ffm-gold">The Fight</span></h1>
       <p>
         This is not casual. It is a decision.
-        Brotherhood. Responsibility. Growth in the light.
+        Ten weeks. Brotherhood. Responsibility. Growth in the light.
       </p>
     </header>
 
@@ -209,33 +238,23 @@ permalink: "/apply/"
 
         <div class="ffm-grid">
           <div class="ffm-field">
-            <label>Full Name</label>
-            <input name="name" type="text" required />
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
 
           <div class="ffm-field">
-            <label>Email</label>
-            <input name="email" type="email" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
 
           <div class="ffm-field">
-            <label>Phone</label>
-            <input name="phone" type="tel" required />
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
           </div>
 
           <div class="ffm-field">
-            <label>Church Attended (if any)</label>
-            <input name="church" type="text" />
-          </div>
-
-          <div class="ffm-field">
-            <label>Who Invited You?</label>
-            <input name="invited" type="text" />
-          </div>
-
-          <div class="ffm-field">
-            <label>Marital Status</label>
-            <select name="marital" required>
+            <label for="marital">Marital Status</label>
+            <select id="marital" name="marital" required>
               <option value="">Select…</option>
               <option>Single</option>
               <option>Married</option>
@@ -246,38 +265,71 @@ permalink: "/apply/"
           </div>
         </div>
 
+        <div class="ffm-sectionTitle">Connection</div>
+
+        <div class="ffm-grid">
+          <div class="ffm-field">
+            <label for="church">Church Attended (if any)</label>
+            <input id="church" name="church" type="text" />
+          </div>
+
+          <div class="ffm-field">
+            <label for="invited">Who Invited You?</label>
+            <input id="invited" name="invited" type="text" />
+          </div>
+        </div>
+
+        <div class="ffm-sectionTitle">Family</div>
+
+        <div class="ffm-checkboxCard">
+          <div style="font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:rgba(232,237,246,.86);margin:0 0 8px;">
+            Children (check all that apply)
+          </div>
+          <div class="ffm-checkboxGroup">
+            <label class="ffm-check"><input type="checkbox" name="children" value="Young Children"> Young Children</label>
+            <label class="ffm-check"><input type="checkbox" name="children" value="Teenagers"> Teenagers</label>
+            <label class="ffm-check"><input type="checkbox" name="children" value="College Age"> College Age</label>
+            <label class="ffm-check"><input type="checkbox" name="children" value="Adult"> Adult</label>
+            <label class="ffm-check"><input type="checkbox" name="children" value="No Children"> No Children</label>
+          </div>
+        </div>
+
         <div class="ffm-sectionTitle">Prior Involvement</div>
 
-        <div class="ffm-checkboxGroup">
-          <label class="ffm-check">
-            <input type="checkbox" name="past_graduate" value="Yes">
-            Past Graduate
-          </label>
+        <div class="ffm-checkboxCard">
+          <div class="ffm-checkboxGroup">
+            <label class="ffm-check">
+              <input type="checkbox" name="past_graduate" value="Yes">
+              Past Graduate
+            </label>
 
-          <label class="ffm-check">
-            <input type="checkbox" name="attended_before" value="Yes">
-            Attended Before
-          </label>
+            <label class="ffm-check">
+              <input type="checkbox" name="attended_before" value="Yes">
+              Attended Before
+            </label>
+          </div>
         </div>
 
         <div class="ffm-sectionTitle">Commitment</div>
 
-        <div class="ffm-checkboxGroup">
-          <label class="ffm-check">
-            <input type="checkbox" name="commitment_attendance" value="Yes" required>
-            I understand this is a 10-week commitment and will prioritize attendance.
-          </label>
+        <div class="ffm-checkboxCard">
+          <div class="ffm-checkboxGroup">
+            <label class="ffm-check">
+              <input type="checkbox" name="commitment_attendance" value="Yes" required>
+              I understand this is a 10-week commitment and I will prioritize attendance.
+            </label>
 
-          <label class="ffm-check">
-            <input type="checkbox" name="commitment_confidential" value="Yes" required>
-            I understand this requires honesty and confidentiality.
-          </label>
+            <label class="ffm-check">
+              <input type="checkbox" name="commitment_confidential" value="Yes" required>
+              I understand this requires honesty and confidentiality.
+            </label>
+          </div>
         </div>
 
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
           <p class="ffm-fine">
-            Confidential. Men only. No cost. 20 seats.
+            Confidential. Men only. No cost. We cap this at 20 men. When seats are filled, registration closes.
           </p>
         </div>
 
