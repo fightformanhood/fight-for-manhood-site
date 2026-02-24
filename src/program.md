@@ -23,7 +23,7 @@ permalink: /program/
     radial-gradient(800px 650px at 50% 20%, rgba(202,162,70,.10), transparent 65%),
     linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
   color:var(--text);
-  padding:clamp(24px,4vw,56px) 18px 80px;
+  padding:clamp(24px,4vw,56px) 18px 90px;
 }
 
 .ffm-container{max-width:980px;margin:0 auto;}
@@ -42,32 +42,31 @@ permalink: /program/
   display:inline-block;
   border:1px solid rgba(202,162,70,.35);
   background:rgba(0,0,0,.20);
-  padding:8px 14px;
+  padding:9px 16px;
   border-radius:999px;
-  font-size:12px;
+  font-size:13px;
   letter-spacing:.16em;
   text-transform:uppercase;
   margin-bottom:18px;
 }
 
 .ffm-hero h1{
-  font-size:clamp(42px,5.2vw,66px);
+  font-size:clamp(44px,5.4vw,70px);
   font-weight:900;
   letter-spacing:-0.02em;
   margin:0 0 10px;
 }
 .ffm-hero p{
-  max-width:820px;
+  max-width:900px;
   margin:0 auto;
-  font-size:18px;
+  font-size:20px;
   line-height:1.65;
-  color:rgba(232,237,246,.90);
+  color:rgba(232,237,246,.92);
 }
-
 .ffm-hero .subline{
   margin-top:12px;
-  font-size:14px;
-  color:rgba(232,237,246,.72);
+  font-size:15px;
+  color:rgba(232,237,246,.74);
 }
 
 .ffm-ctaRow{
@@ -75,20 +74,20 @@ permalink: /program/
   justify-content:center;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:22px;
+  margin-top:24px;
 }
 
 .ffm-btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:15px 24px;
+  padding:16px 26px;
   border-radius:12px;
-  font-weight:800;
+  font-weight:900;
   text-transform:uppercase;
-  font-size:13px;
+  font-size:14px;
   text-decoration:none;
-  min-width:220px;
+  min-width:240px;
   border:1px solid var(--stroke2);
   color:var(--text);
   background:rgba(0,0,0,.18);
@@ -100,83 +99,48 @@ permalink: /program/
 }
 .ffm-btn:hover{filter:brightness(1.05);transform:translateY(-1px);}
 
-.ffm-grid2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-  margin-top:22px;
-}
-.ffm-grid3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:22px;
-}
-
-.ffm-card{
-  border:1px solid var(--stroke);
-  border-radius:14px;
-  padding:18px;
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
-  box-shadow:0 10px 28px rgba(0,0,0,.25);
-}
-
-.ffm-card h3{
-  margin:0 0 8px;
-  font-size:14px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:rgba(202,162,70,.92);
-  font-weight:900;
-}
-.ffm-card p{
-  margin:0;
-  color:rgba(232,237,246,.88);
-  line-height:1.65;
-  font-size:15px;
-}
-
 .ffm-sectionTitle{
   margin:0;
-  font-size:26px;
-  letter-spacing:.1em;
+  font-size:28px;
+  letter-spacing:.12em;
   text-transform:uppercase;
   font-weight:900;
   text-align:center;
 }
 .ffm-lead{
-  margin:10px auto 0;
-  max-width:860px;
+  margin:12px auto 0;
+  max-width:920px;
   text-align:center;
-  color:rgba(169,179,199,.92);
+  color:rgba(169,179,199,.94);
   line-height:1.7;
+  font-size:18px;
 }
 
-/* ===== UPDATED 10 WEEK FLOW STYLING ===== */
+/* ===== BIGGER + TIGHTER 10 WEEK FLOW ===== */
 
 .ffm-schedule{
   display:grid;
-  gap:8px; /* tighter */
-  margin-top:22px;
+  gap:10px;
+  margin-top:26px;
 }
 
 .ffm-item{
-  border:1px solid rgba(255,255,255,.08);
-  background:rgba(0,0,0,.22);
-  border-radius:12px;
-  padding:16px 18px;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(0,0,0,.24);
+  border-radius:14px;
+  padding:20px 22px;
   transition:all .15s ease;
 }
 
 .ffm-item:hover{
-  border-color:rgba(202,162,70,.45);
-  background:rgba(0,0,0,.28);
+  border-color:rgba(202,162,70,.48);
+  background:rgba(0,0,0,.30);
 }
 
 .ffm-item .top{
   display:flex;
   justify-content:space-between;
-  gap:12px;
+  gap:14px;
   flex-wrap:wrap;
   align-items:baseline;
 }
@@ -185,29 +149,32 @@ permalink: /program/
   font-weight:900;
   letter-spacing:.18em;
   text-transform:uppercase;
-  font-size:20px;
-  color:rgba(202,162,70,.95);
+  font-size:24px;
+  color:rgba(202,162,70,.98);
 }
 
 .ffm-item .name{
   font-weight:900;
-  font-size:18px; /* bigger */
-  letter-spacing:.04em;
+  font-size:22px;
+  letter-spacing:.03em;
+  color:rgba(232,237,246,.96);
 }
 
 .ffm-item .desc{
-  margin-top:6px; /* tighter */
-  color:rgba(169,179,199,.92);
+  margin-top:8px;
+  color:rgba(232,237,246,.88);
   line-height:1.55;
-  font-size:16px; /* bigger */
+  font-size:19px;
 }
 
-/* ========================================= */
+/* ======================================= */
 
 @media(max-width:900px){
-  .ffm-grid2{grid-template-columns:1fr;}
-  .ffm-grid3{grid-template-columns:1fr;}
-  .ffm-btn{width:100%;max-width:360px;}
+  .ffm-btn{width:100%;max-width:420px;}
+  .ffm-item{padding:18px 18px;}
+  .ffm-item .wk{font-size:22px;}
+  .ffm-item .name{font-size:20px;}
+  .ffm-item .desc{font-size:18px;}
 }
 </style>
 
@@ -218,8 +185,9 @@ permalink: /program/
       <div class="ffm-kicker">10 weeks • Wednesdays • 6:00 PM • Knoxville • No cost</div>
       <h1>The Fight for Manhood</h1>
       <p>
-        This is a 10-week crucible for men who refuse to drift.
-        You don’t spectate. You step into the fight.
+        This is not a lecture series. It’s a <span class="ffm-gold">crucible</span>.
+        Ten weeks to stop hiding, stop negotiating, and step into the light with a clean heart and a steady hand.
+        We go after the places men drift — and we rebuild a man to lead without fear, ego, or collapse.
       </p>
       <div class="subline">High challenge. High support. Confidential. Men only.</div>
 
@@ -233,8 +201,9 @@ permalink: /program/
 
     <h2 class="ffm-sectionTitle">10-Week Battle Plan</h2>
     <p class="ffm-lead">
-      This is progressive on purpose. Each week exposes weakness, then forges strength.
-      No coasting. No hiding. No spectators.
+      Each week is a strike against drift, shame, and fear.
+      We don’t worship “being right.” We fight for relationship with God, integrity in the dark, and leadership that protects.
+      When the fight is real, you don’t posture — you obey.
     </p>
 
     <div class="ffm-schedule">
@@ -245,7 +214,7 @@ permalink: /program/
           <div class="name">The Alarm</div>
         </div>
         <div class="desc">
-          Expose drift. Confront passivity. Draw the line. You decide this is the moment everything changes.
+          Identify the drift. Name the cost. Draw the line in the sand. This is where excuses die and movement starts.
         </div>
       </div>
 
@@ -255,7 +224,7 @@ permalink: /program/
           <div class="name">Expose the Wound</div>
         </div>
         <div class="desc">
-          Shame thrives in secrecy. We drag it into the light and break its authority.
+          Shame thrives in secrecy. We pull the real story into the light, break agreements with hiding, and regain ground.
         </div>
       </div>
 
@@ -265,7 +234,7 @@ permalink: /program/
           <div class="name">The Father Line</div>
         </div>
         <div class="desc">
-          Identify what shaped you. What you received. What you didn’t. Decide what stops with you.
+          What shaped you matters. What you received. What you didn’t. You face it with truth — and decide what stops with you.
         </div>
       </div>
 
@@ -275,7 +244,7 @@ permalink: /program/
           <div class="name">Sever & Stand</div>
         </div>
         <div class="desc">
-          Break unhealthy attachments. Transfer allegiance. Stand as a man under God.
+          A man leaves childish dependency — emotionally and spiritually. You transfer allegiance, take your place, and stand under God.
         </div>
       </div>
 
@@ -285,7 +254,7 @@ permalink: /program/
           <div class="name">Reclaim Ground</div>
         </div>
         <div class="desc">
-          Face your story. Forgive. Release. Take back territory that shame and fear stole.
+          Healing is not denial — it’s confrontation with hope. You face your story, pursue understanding, forgive, and walk free.
         </div>
       </div>
 
@@ -295,7 +264,7 @@ permalink: /program/
           <div class="name">Define the Man</div>
         </div>
         <div class="desc">
-          Reject cultural caricatures. Embrace ordered strength—truth, courage, protection, integrity.
+          Reject cultural caricatures. Step into ordered strength: humility with backbone, truth with love, courage with restraint.
         </div>
       </div>
 
@@ -305,7 +274,7 @@ permalink: /program/
           <div class="name">Break Performance</div>
         </div>
         <div class="desc">
-          Crush fear-based obedience. Step into sonship. Move from anxiety to confident trust.
+          A man who fears punishment stays small. We sever fear-based obedience and step into sonship — courage rooted in the Father’s goodness.
         </div>
       </div>
 
@@ -315,7 +284,7 @@ permalink: /program/
           <div class="name">Advance by Faith</div>
         </div>
         <div class="desc">
-          Courage is obedience in motion. You act before you feel ready.
+          Faith moves. It doesn’t freeze. You learn to obey without panic, confront without arrogance, and lead without needing approval.
         </div>
       </div>
 
@@ -325,17 +294,19 @@ permalink: /program/
           <div class="name">Control the Fire</div>
         </div>
         <div class="desc">
-          Harness anger. Repair relationships. Become dangerous to darkness—not to your family.
+          “When angry, do not sin.” Anger becomes a weapon against your home when it’s fed by pride and fear.
+          You learn restraint, confession, repair — and you leave no foothold for darkness.
         </div>
       </div>
 
       <div class="ffm-item">
         <div class="top">
           <div class="wk">Week 10</div>
-          <div class="name">Commissioned</div>
+          <div class="name">A Real Man</div>
         </div>
         <div class="desc">
-          You leave with clarity, conviction, and a battle plan. No retreat. No return to hiding.
+          The standard is Jesus: no hiding, no passivity, no double life. You trust the Father, speak truth, take responsibility, and lead from the light.
+          Commissioned, not congratulated.
         </div>
       </div>
 
@@ -346,7 +317,8 @@ permalink: /program/
     <div class="ffm-center">
       <h2 class="ffm-sectionTitle">Ready?</h2>
       <p class="ffm-lead">
-        Stop observing. Step into the fight.
+        Stop making deals with drift. Stop letting shame run your life.
+        Step into the light, take responsibility, and fight like a man who belongs to God.
       </p>
       <div class="ffm-ctaRow">
         <a class="ffm-btn primary" href="/apply/">Apply for the next cohort</a>
