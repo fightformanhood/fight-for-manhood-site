@@ -178,12 +178,12 @@ permalink: /program/
   flex-wrap:wrap;
 }
 
-/* 🔥 UPDATED WEEK SIZE HERE */
+/* ✅ ONLY CHANGE: make Week labels bigger */
 .ffm-item .wk{
   font-weight:900;
   letter-spacing:.14em;
   text-transform:uppercase;
-  font-size:clamp(16px, 2vw, 22px);
+  font-size:18px; /* was 12px */
   color:rgba(202,162,70,.95);
 }
 
@@ -233,3 +233,184 @@ permalink: /program/
   .ffm-btn{width:100%;max-width:360px;}
 }
 </style>
+
+<div class="ffm-page">
+  <div class="ffm-container">
+
+    <div class="ffm-hero ffm-center">
+      <div class="ffm-kicker">10 weeks • Wednesdays • 6:00 PM • Knoxville • No cost</div>
+      <h1>The Fight for Manhood Program</h1>
+      <p>
+        This is a 10-week crucible for men who refuse to stay the same.
+        We’re not building spectators. We’re building sons, leaders, husbands, fathers, and men who live in the light.
+      </p>
+      <div class="subline">High challenge. High support. Confidential. Men only.</div>
+
+      <div class="ffm-ctaRow">
+        <a class="ffm-btn primary" href="/register/">Register now</a>
+        <a class="ffm-btn" href="/contact/">Ask a question</a>
+      </div>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <h2 class="ffm-sectionTitle">What This Is</h2>
+    <p class="ffm-lead">
+      The Fight is a structured, spiritual leadership process designed to expose drift, break shame, restore identity,
+      and build men who take responsibility without posturing.
+    </p>
+
+    <div class="ffm-grid3">
+      <div class="ffm-card">
+        <h3>Truth</h3>
+        <p>Clear teaching that cuts through fog. No fluff. No performance. Straight lines.</p>
+      </div>
+      <div class="ffm-card">
+        <h3>Brotherhood</h3>
+        <p>Men walking together in honesty. Confidential conversation that produces real change.</p>
+      </div>
+      <div class="ffm-card">
+        <h3>Action</h3>
+        <p>Not inspiration. Decisions. Repentance. Repair. A man stepping into the light without shame.</p>
+      </div>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <h2 class="ffm-sectionTitle">What A Typical Night Looks Like</h2>
+    <p class="ffm-lead">
+      Every week is simple, consistent, and built for real transformation — not information overload.
+    </p>
+
+    <div class="ffm-grid2">
+      <div class="ffm-card">
+        <h3>1) Teaching</h3>
+        <p>Direct instruction (about 30–45 minutes). Biblical. Practical. Masculine. Clear.</p>
+      </div>
+      <div class="ffm-card">
+        <h3>2) Discussion</h3>
+        <p>Confidential conversation in the room. Real men. Real issues. No shame games.</p>
+      </div>
+      <div class="ffm-card">
+        <h3>3) Application</h3>
+        <p>Specific decisions for the week. What you’ll do, what you’ll say, what you’ll repair.</p>
+      </div>
+      <div class="ffm-card">
+        <h3>4) Prayer</h3>
+        <p>Not religious performance — alignment. Asking, listening, responding, trusting.</p>
+      </div>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <h2 class="ffm-sectionTitle">What You’ll Walk Away With</h2>
+    <p class="ffm-lead">
+      Men don’t need more content. They need clarity, courage, and a path forward.
+    </p>
+
+    <ul class="ffm-list">
+      <li><strong>Identity:</strong> You’ll know who you are as a son — and you’ll stop living in confusion.</li>
+      <li><strong>Freedom:</strong> You’ll bring hidden things into the light and cut agreements with shame.</li>
+      <li><strong>Leadership:</strong> You’ll take responsibility without control, passivity, or performance.</li>
+      <li><strong>Relationships:</strong> You’ll strengthen your marriage, your family, and your brotherhood.</li>
+      <li><strong>Momentum:</strong> You’ll leave with a plan — not a feeling.</li>
+    </ul>
+
+    <div class="ffm-divider"></div>
+
+    <h2 class="ffm-sectionTitle">10-Week Flow</h2>
+    <p class="ffm-lead">
+      Here’s the structure. Titles are written in a way that makes sense on a website — we can rename them to match your exact curriculum.
+    </p>
+
+    <div class="ffm-schedule">
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 1</div><div class="name">The Call</div></div>
+        <div class="desc">A man’s identity, authority, and why drift is so normal.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 2</div><div class="name">The Battle Within</div></div>
+        <div class="desc">Where men lose momentum: agreements, patterns, and hidden compromises.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 3</div><div class="name">The Father Wound</div></div>
+        <div class="desc">How the past shapes leadership — and how to break the cycle.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 4</div><div class="name">Shame & The Light</div></div>
+        <div class="desc">When a man brings his whole life into the light, he becomes free.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 5</div><div class="name">Truth & Alignment</div></div>
+        <div class="desc">Not compliance — relationship. Learning to hear and respond.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 6</div><div class="name">Responsibility</div></div>
+        <div class="desc">Taking ownership without control, pride, or passivity.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 7</div><div class="name">Marriage & Brotherhood</div></div>
+        <div class="desc">How real men repair, communicate, and fight for unity.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 8</div><div class="name">Courage</div></div>
+        <div class="desc">Confrontation, honesty, and stepping forward when it’s uncomfortable.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 9</div><div class="name">Mission</div></div>
+        <div class="desc">A man’s calling, direction, and building something that lasts.</div>
+      </div>
+      <div class="ffm-item">
+        <div class="top"><div class="wk">Week 10</div><div class="name">The Line in the Sand</div></div>
+        <div class="desc">Commitment, next steps, and how to keep momentum after the program ends.</div>
+      </div>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <h2 class="ffm-sectionTitle">FAQ</h2>
+    <p class="ffm-lead">Answer the objections before they become excuses.</p>
+
+    <div class="ffm-faq">
+      <details>
+        <summary>Is this really free?</summary>
+        <div class="ans">Yes. There’s no cost. The only requirement is commitment and honesty.</div>
+      </details>
+
+      <details>
+        <summary>What if I miss a week?</summary>
+        <div class="ans">Life happens. But men who change show up. If you miss, you re-engage and get back in.</div>
+      </details>
+
+      <details>
+        <summary>Is this a Bible study?</summary>
+        <div class="ans">It’s biblical, but it’s not academic. This is leadership formation — truth, repentance, and action.</div>
+      </details>
+
+      <details>
+        <summary>Who is this for?</summary>
+        <div class="ans">Men 18+ who are ready to grow. If you’re comfortable where you are, this isn’t for you.</div>
+      </details>
+
+      <details>
+        <summary>What happens after I register?</summary>
+        <div class="ans">You’ll receive details for location, what to bring, and how to prepare for Week 1.</div>
+      </details>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <div class="ffm-center">
+      <h2 class="ffm-sectionTitle">Ready?</h2>
+      <p class="ffm-lead">
+        We cap this at 20 men. When the seats are filled, registration closes.
+      </p>
+      <div class="ffm-ctaRow">
+        <a class="ffm-btn primary" href="/register/">Register for the next cohort</a>
+        <a class="ffm-btn" href="/contact/">Talk to us first</a>
+      </div>
+      <p class="ffm-muted" style="margin-top:14px;font-size:13px;">Men wait. Leaders decide.</p>
+    </div>
+
+  </div>
+</div>
