@@ -69,11 +69,10 @@ permalink: "/apply/"
   color:rgba(232,237,246,.92);
 }
 
-/* tighter divider */
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:18px auto 18px;
+  margin:18px auto;
   width:min(780px,92%);
 }
 
@@ -87,7 +86,6 @@ permalink: "/apply/"
   box-shadow:0 12px 30px rgba(0,0,0,.26);
 }
 
-/* SECTION TITLES: tight + consistent */
 .ffm-sectionTitle{
   margin:14px 0 8px;
   font-size:12px;
@@ -97,14 +95,18 @@ permalink: "/apply/"
   color:rgba(202,162,70,.92);
 }
 
-/* FORM GRID: compact */
+/* default grid (used elsewhere if needed) */
 .ffm-grid{
   display:grid;
   grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:10px 12px;   /* tighter */
+  gap:10px 12px;
 }
 
-.ffm-field.full{grid-column:1 / -1;}
+/* CORE INFO stacked vertically */
+.ffm-grid--core{
+  grid-template-columns:1fr;
+  gap:10px;
+}
 
 .ffm-field label{
   display:block;
@@ -119,7 +121,7 @@ permalink: "/apply/"
 .ffm-field input,
 .ffm-field select{
   width:100%;
-  padding:12px 12px; /* tighter */
+  padding:12px 12px;
   border-radius:12px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
@@ -135,13 +137,12 @@ permalink: "/apply/"
   box-shadow: 0 0 0 4px rgba(202,162,70,.12);
 }
 
-/* checkbox blocks: no “giant gaps” */
 .ffm-block{
   border:1px solid rgba(255,255,255,.10);
   background:rgba(0,0,0,.18);
   border-radius:14px;
-  padding:12px;          /* tighter */
-  margin:0 0 10px;       /* tighter */
+  padding:12px;
+  margin:0 0 10px;
 }
 
 .ffm-block:last-child{margin-bottom:0;}
@@ -157,7 +158,7 @@ permalink: "/apply/"
 
 .ffm-checkboxGroup{
   display:grid;
-  gap:6px; /* tight */
+  gap:6px;
   margin:0;
 }
 
@@ -178,7 +179,7 @@ permalink: "/apply/"
 }
 
 .ffm-actions{
-  margin-top:14px; /* tighter */
+  margin-top:14px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -214,7 +215,6 @@ permalink: "/apply/"
 }
 
 @media (max-width: 820px){
-  .ffm-grid{grid-template-columns:1fr;}
   .ffm-card{padding:16px;}
   .ffm-btn{width:100%;max-width:520px;}
 }
@@ -254,7 +254,7 @@ permalink: "/apply/"
 
         <div class="ffm-sectionTitle">Core Info</div>
 
-        <div class="ffm-grid">
+        <div class="ffm-grid ffm-grid--core">
           <div class="ffm-field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
@@ -329,7 +329,9 @@ permalink: "/apply/"
 
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <p class="ffm-fine">Confidential. Men only. No cost. 20 seats. When seats are filled, registration closes.</p>
+          <p class="ffm-fine">
+            Confidential. Men only. No cost. 20 seats. When seats are filled, registration closes.
+          </p>
         </div>
 
       </form>
