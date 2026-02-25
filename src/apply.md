@@ -50,33 +50,47 @@ permalink: "/apply/"
   background:rgba(0,0,0,.22);
 }
 
-/* Hero */
-.ffm-hero{
-  text-align:center;
-  margin:0 auto 10px;
+/* IMPORTANT: base.njk styles ALL <header> tags as the sticky nav.
+   So we force-reset our hero header here. */
+header.ffm-hero{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:6px !important;
+
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  position:static !important;
+  top:auto !important;
+  z-index:auto !important;
+  backdrop-filter:none !important;
 }
 
 .ffm-hero h1{
   margin:0;
-  font-size:clamp(34px,4.2vw,54px);
+  font-size:clamp(40px,5vw,66px);
   font-weight:900;
   letter-spacing:-0.02em;
-  line-height:1.05;
+  line-height:1.02;
+  text-transform:uppercase;
+  text-align:center;
 }
 
 .ffm-hero p{
-  margin:6px auto 0;
+  margin:0;
+  text-align:center;
   font-size:16px;
   line-height:1.35;
-  color:rgba(232,237,246,.85);
-  max-width:760px;
+  color:rgba(232,237,246,.86);
 }
 
 /* Divider */
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:12px auto;
+  margin:14px auto;
   width:min(780px,92%);
 }
 
@@ -93,7 +107,7 @@ permalink: "/apply/"
 
 /* Section titles */
 .ffm-sectionTitle{
-  margin:8px 0 4px;          /* tighter */
+  margin:8px 0 6px;
   font-size:11px;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -101,28 +115,29 @@ permalink: "/apply/"
   color:rgba(202,162,70,.92);
 }
 
-/* ===== CORE INFO: MAKE IT OBVIOUSLY TIGHTER =====
-   Switch to “label-left / input-right” rows.
-   This removes the big vertical gaps entirely.
+/* ===== CORE INFO: ACTUALLY TIGHT =====
+   Your big blank red boxes are coming from vertical spacing.
+   We remove ALL margins, use small gaps, and keep inputs shorter.
 */
 .ffm-core{
   display:flex;
   flex-direction:column;
-  gap:4px; /* ultra tight between rows */
-}
-
-.ffm-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:0;     /* kill any inherited padding */
-  margin:0;      /* kill any inherited margin */
-}
-
-.ffm-row label{
-  width:210px;
-  min-width:210px;
+  gap:6px; /* tight spacing between fields */
   margin:0;
+  padding:0;
+}
+
+.ffm-field{
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:2px; /* tight label-to-input */
+}
+
+.ffm-field label{
+  margin:0;
+  padding:0;
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.06em;
@@ -131,23 +146,22 @@ permalink: "/apply/"
   line-height:1.1;
 }
 
-.ffm-row input,
-.ffm-row select{
-  flex:1;
+.ffm-field input,
+.ffm-field select{
   width:100%;
   margin:0;
-  padding:6px 10px;          /* tighter input */
+  padding:8px 10px; /* shorter inputs */
   border-radius:10px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
   color:var(--text);
   outline:none;
   font-size:14px;
-  line-height:1.1;           /* tighter */
+  line-height:1.1;
 }
 
-.ffm-row input:focus,
-.ffm-row select:focus{
+.ffm-field input:focus,
+.ffm-field select:focus{
   border-color: rgba(202,162,70,.65);
   box-shadow: 0 0 0 2px rgba(202,162,70,.12);
 }
@@ -224,21 +238,9 @@ permalink: "/apply/"
   line-height:1.35;
 }
 
-/* Mobile */
 @media (max-width: 720px){
   .ffm-card{padding:12px;}
   .ffm-btn{width:100%;max-width:520px;}
-
-  /* Stack label above input on small screens (still tight) */
-  .ffm-row{
-    flex-direction:column;
-    align-items:stretch;
-    gap:3px;
-  }
-  .ffm-row label{
-    width:auto;
-    min-width:0;
-  }
 }
 </style>
 
@@ -251,7 +253,7 @@ permalink: "/apply/"
     </div>
 
     <header class="ffm-hero">
-      <h1>Step Into <span class="ffm-gold">The Fight</span></h1>
+      <h1>STEP INTO <span class="ffm-gold">THE FIGHT</span></h1>
       <p>Ten weeks. Brotherhood. Responsibility. Growth in the light.</p>
     </header>
 
@@ -274,32 +276,33 @@ permalink: "/apply/"
         <div class="ffm-sectionTitle">Core Info</div>
 
         <div class="ffm-core">
-          <div class="ffm-row">
+
+          <div class="ffm-field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
 
-          <div class="ffm-row">
+          <div class="ffm-field">
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
 
-          <div class="ffm-row">
+          <div class="ffm-field">
             <label for="phone">Phone</label>
             <input id="phone" name="phone" type="tel" autocomplete="tel" required />
           </div>
 
-          <div class="ffm-row">
-            <label for="church">Church attended</label>
+          <div class="ffm-field">
+            <label for="church">Church attended (if any)</label>
             <input id="church" name="church" type="text" />
           </div>
 
-          <div class="ffm-row">
+          <div class="ffm-field">
             <label for="invited">Who invited you</label>
             <input id="invited" name="invited" type="text" />
           </div>
 
-          <div class="ffm-row">
+          <div class="ffm-field">
             <label for="marital">Marital Status</label>
             <select id="marital" name="marital" required>
               <option value="">Select…</option>
@@ -310,6 +313,7 @@ permalink: "/apply/"
               <option>Widowed</option>
             </select>
           </div>
+
         </div>
 
         <div class="ffm-sectionTitle">Family</div>
