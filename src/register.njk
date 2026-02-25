@@ -31,7 +31,6 @@ permalink: "/register/"
 .ffm-gold{ color:var(--gold); }
 .ffm-muted{ color:var(--muted); }
 
-/* Pills */
 .ffm-pills{
   display:flex;
   justify-content:center;
@@ -44,13 +43,12 @@ permalink: "/register/"
   border:1px solid rgba(202,162,70,.35);
   padding:14px 24px;
   border-radius:999px;
-  font-size:22px;
+  font-size:22px; /* 3x */
   text-transform:uppercase;
   letter-spacing:.14em;
   background:rgba(0,0,0,.22);
 }
 
-/* Hero */
 .ffm-hero{
   text-align:center;
   margin-bottom:20px;
@@ -58,15 +56,16 @@ permalink: "/register/"
 
 .ffm-hero h1{
   margin:0;
-  font-size:clamp(48px,5vw,74px);
+  font-size:clamp(48px,5vw,74px); /* NOT scaled */
   font-weight:900;
   letter-spacing:-0.02em;
   text-transform:uppercase;
+  line-height:1.02;
 }
 
 .ffm-hero .subline{
   margin-top:12px;
-  font-size:34px;
+  font-size:34px; /* 3x */
   line-height:1.25;
   color:rgba(232,237,246,.9);
 }
@@ -78,7 +77,6 @@ permalink: "/register/"
   width:90%;
 }
 
-/* Card */
 .ffm-card{
   border:1px solid var(--stroke);
   border-radius:20px;
@@ -87,21 +85,21 @@ permalink: "/register/"
   box-shadow:0 14px 36px rgba(0,0,0,.28);
 }
 
-/* Section Titles */
+/* Section Titles (3x) */
 .ffm-sectionTitle{
   margin:30px 0 18px;
-  font-size:30px;
+  font-size:30px; /* 3x */
   letter-spacing:.18em;
   text-transform:uppercase;
   font-weight:900;
   color:var(--gold);
 }
 
-/* CORE INFO (tight vertical spacing) */
+/* CORE INFO — tight vertical spacing */
 .ffm-core{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:8px; /* tight */
 }
 
 .ffm-field{
@@ -113,7 +111,7 @@ permalink: "/register/"
   margin-bottom:6px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:22px;
+  font-size:22px; /* 3x */
 }
 
 .ffm-field input,
@@ -124,16 +122,14 @@ permalink: "/register/"
   border:1px solid rgba(255,255,255,.18);
   background:rgba(0,0,0,.28);
   color:var(--text);
-  font-size:24px;
+  font-size:24px; /* 3x */
 }
 
 .ffm-field input,
-.ffm-field select{
-  height:64px;
-}
+.ffm-field select{ height:64px; }
 
 .ffm-field textarea{
-  min-height:150px;
+  min-height:170px;
   resize:vertical;
 }
 
@@ -144,31 +140,35 @@ permalink: "/register/"
   box-shadow:0 0 0 4px rgba(202,162,70,.15);
 }
 
-/* Blocks */
+/* Blocks below core info */
 .ffm-block{
   border:1px solid rgba(255,255,255,.12);
   background:rgba(0,0,0,.20);
   border-radius:20px;
   padding:26px;
-  margin-bottom:20px;
+  margin:0 0 22px;
 }
 
 .ffm-blockLabel{
-  font-size:26px;
+  font-size:26px; /* 3x */
   font-weight:900;
-  margin-bottom:16px;
+  margin:0 0 16px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
 }
 
 .ffm-checkboxGroup{
   display:grid;
   gap:14px;
+  margin:0;
 }
 
 .ffm-check{
   display:flex;
   align-items:center;
   gap:14px;
-  font-size:24px;
+  font-size:24px; /* 3x */
+  line-height:1.2;
 }
 
 .ffm-check input{
@@ -177,9 +177,42 @@ permalink: "/register/"
   accent-color:var(--gold);
 }
 
-/* Button */
+.ffm-callout{
+  border:1px solid rgba(202,162,70,.28);
+  background:rgba(0,0,0,.18);
+  border-radius:20px;
+  padding:22px;
+  margin-top:22px;
+}
+
+.ffm-calloutTitle{
+  margin:0 0 10px;
+  font-size:26px; /* 3x */
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:rgba(232,237,246,.95);
+}
+
+.ffm-callout p{
+  margin:0;
+  font-size:22px; /* 3x */
+  line-height:1.45;
+  color:rgba(232,237,246,.86);
+}
+
+.ffm-list{
+  margin:14px 0 0;
+  padding-left:26px;
+  font-size:22px; /* 3x */
+  line-height:1.55;
+  color:rgba(232,237,246,.86);
+}
+.ffm-list li{ margin:8px 0; }
+
+/* Actions */
 .ffm-actions{
-  margin-top:30px;
+  margin-top:34px;
   text-align:center;
 }
 
@@ -188,7 +221,7 @@ permalink: "/register/"
   border-radius:20px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:26px;
+  font-size:26px; /* 3x */
   letter-spacing:.06em;
   border:1px solid var(--stroke2);
   color:#0a0f18;
@@ -200,15 +233,37 @@ permalink: "/register/"
 .ffm-btn:hover{ transform:translateY(-2px); }
 
 .ffm-fine{
-  margin-top:18px;
-  font-size:22px;
+  margin:18px auto 0;
+  font-size:22px; /* 3x */
   color:rgba(169,179,199,.9);
   text-align:center;
+  max-width:900px;
+  line-height:1.4;
 }
 
-/* Mobile */
+.ffm-back{
+  display:inline-block;
+  margin-top:14px;
+  font-size:22px; /* 3x */
+  color:rgba(232,237,246,.85);
+  text-decoration:none;
+  border-bottom:1px solid rgba(202,162,70,.35);
+  padding-bottom:3px;
+}
+.ffm-back:hover{ opacity:.85; }
+
 @media(max-width:720px){
-  .ffm-btn{ width:100%; }
+  .ffm-card{ padding:22px; }
+  .ffm-btn{ width:100%; min-width:0; }
+  .ffm-pill{ font-size:18px; }
+  .ffm-hero .subline{ font-size:26px; }
+  .ffm-sectionTitle{ font-size:24px; }
+  .ffm-field label{ font-size:18px; }
+  .ffm-field input, .ffm-field select, .ffm-field textarea{ font-size:18px; }
+  .ffm-check{ font-size:18px; }
+  .ffm-calloutTitle{ font-size:20px; }
+  .ffm-callout p, .ffm-list{ font-size:18px; }
+  .ffm-fine, .ffm-back{ font-size:16px; }
 }
 </style>
 
@@ -245,33 +300,33 @@ permalink: "/register/"
 
         <div class="ffm-core">
           <div class="ffm-field">
-            <label>Name</label>
-            <input name="name" type="text" required />
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
 
           <div class="ffm-field">
-            <label>Email</label>
-            <input name="email" type="email" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
 
           <div class="ffm-field">
-            <label>Phone</label>
-            <input name="phone" type="tel" required />
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
           </div>
 
           <div class="ffm-field">
-            <label>Church attended (if any)</label>
-            <input name="church" type="text" />
+            <label for="church">Church attended (if any)</label>
+            <input id="church" name="church" type="text" />
           </div>
 
           <div class="ffm-field">
-            <label>Who invited you</label>
-            <input name="invited" type="text" />
+            <label for="invited">Who invited you</label>
+            <input id="invited" name="invited" type="text" />
           </div>
 
           <div class="ffm-field">
-            <label>Marital Status</label>
-            <select name="marital" required>
+            <label for="marital">Marital Status</label>
+            <select id="marital" name="marital" required>
               <option value="">Select…</option>
               <option>Single</option>
               <option>Married</option>
@@ -282,8 +337,9 @@ permalink: "/register/"
           </div>
         </div>
 
-        <div class="ffm-sectionTitle">Family</div>
+        <!-- EVERYTHING BELOW CORE INFO (RESTORED) -->
 
+        <div class="ffm-sectionTitle">Family</div>
         <div class="ffm-block">
           <div class="ffm-blockLabel">Children (check all that apply)</div>
           <div class="ffm-checkboxGroup">
@@ -296,7 +352,6 @@ permalink: "/register/"
         </div>
 
         <div class="ffm-sectionTitle">Prior Involvement</div>
-
         <div class="ffm-block">
           <div class="ffm-checkboxGroup">
             <label class="ffm-check"><input type="checkbox" name="past_graduate" value="Yes"> Past Graduate</label>
@@ -305,7 +360,6 @@ permalink: "/register/"
         </div>
 
         <div class="ffm-sectionTitle">Commitment</div>
-
         <div class="ffm-block">
           <div class="ffm-checkboxGroup">
             <label class="ffm-check">
@@ -320,15 +374,30 @@ permalink: "/register/"
         </div>
 
         <div class="ffm-sectionTitle">Notes</div>
-
         <div class="ffm-field">
-          <label>Anything we should know?</label>
-          <textarea name="notes"></textarea>
+          <label for="notes">Anything we should know? (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Questions, schedule conflicts, anything you want us to know."></textarea>
+        </div>
+
+        <div class="ffm-callout">
+          <div class="ffm-calloutTitle">What Happens After You Register</div>
+          <p>
+            You’ll get a confirmation and the exact location details.
+            Week 1 is the line in the sand. Come ready. Come honest. Come all in.
+          </p>
+          <ul class="ffm-list">
+            <li>We protect confidentiality. No stories leave the room.</li>
+            <li>We expect attendance. Men drift when they disappear.</li>
+            <li>We fight for truth, not image.</li>
+          </ul>
         </div>
 
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <div class="ffm-fine">Confidential. Men only. No cost. We cap this at 20 men.</div>
+          <div class="ffm-fine">
+            Confidential. Men only. No cost. We cap this at 20 men. When seats are filled, registration closes.
+          </div>
+          <a class="ffm-back" href="/contact/">Questions first? Contact us.</a>
         </div>
 
       </form>
