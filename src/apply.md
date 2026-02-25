@@ -1,8 +1,8 @@
 ---
-title: "Apply"
-description: "Apply for the Fight for Manhood 10-week program."
+title: "Register"
+description: "Register for the Fight for Manhood 10-week program."
 layout: "base.njk"
-permalink: "/apply/"
+permalink: "/register/"
 ---
 
 <style>
@@ -10,7 +10,6 @@ permalink: "/apply/"
   --bg0:#070b12;
   --bg1:#0b1324;
   --text:#e8edf6;
-  --muted:#a9b3c7;
   --gold:#caa246;
   --line: rgba(202,162,70,.28);
   --stroke: rgba(255,255,255,.10);
@@ -24,205 +23,174 @@ permalink: "/apply/"
     radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
     linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
   color:var(--text);
-  padding:clamp(18px,3vw,36px) 18px 70px;
+  padding:40px 20px 90px;
 }
 
-.ffm-register *{ box-sizing:border-box; }
-
-.ffm-container{ max-width:860px; margin:0 auto; }
+.ffm-container{ max-width:900px; margin:0 auto; }
 .ffm-gold{ color:var(--gold); }
 
+/* Pills */
 .ffm-pills{
   display:flex;
   justify-content:center;
-  gap:8px;
+  gap:12px;
   flex-wrap:wrap;
-  margin:0 0 14px;
+  margin-bottom:20px;
 }
 
 .ffm-pill{
   border:1px solid rgba(202,162,70,.35);
-  padding:7px 13px;
+  padding:12px 20px;
   border-radius:999px;
-  font-size:11px;
+  font-size:22px;  /* 3x bigger */
   text-transform:uppercase;
   letter-spacing:.14em;
   background:rgba(0,0,0,.22);
 }
 
-/* HERO (not <header> to avoid base.njk header styling) */
+/* HERO */
 .ffm-hero{
   text-align:center;
-  margin:0 auto 10px;
+  margin-bottom:16px;
 }
 
 .ffm-hero h1{
   margin:0;
-  font-size:clamp(40px,5vw,66px);
+  font-size:clamp(44px,5vw,70px); /* unchanged */
   font-weight:900;
   letter-spacing:-0.02em;
   text-transform:uppercase;
-  line-height:1.02;
 }
 
 .ffm-hero .subline{
-  margin:6px 0 0;
-  font-size:15px;
-  line-height:1.25;
-  color:rgba(232,237,246,.86);
+  margin-top:10px;
+  font-size:36px; /* 3x bigger */
+  line-height:1.2;
+  color:rgba(232,237,246,.9);
 }
 
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:14px auto;
-  width:min(820px,92%);
+  margin:20px auto;
+  width:90%;
 }
 
 .ffm-card{
-  max-width:860px;
-  margin:0 auto;
   border:1px solid var(--stroke);
-  border-radius:16px;
-  padding:16px;
+  border-radius:18px;
+  padding:30px;
   background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
   box-shadow:0 14px 36px rgba(0,0,0,.28);
 }
 
 .ffm-sectionTitle{
-  margin:10px 0 6px;
-  font-size:11px;
+  margin:20px 0 14px;
+  font-size:30px; /* 3x bigger */
   letter-spacing:.18em;
   text-transform:uppercase;
   font-weight:900;
-  color:rgba(202,162,70,.92);
+  color:var(--gold);
 }
 
-/* CORE INFO — tighter by force */
+/* CORE INFO (tight spacing, large text) */
 .ffm-core{
   display:flex;
   flex-direction:column;
-  gap:2px;   /* tighter */
-  margin:0;
-  padding:0;
+  gap:8px;
 }
 
 .ffm-field{
-  margin:0;
-  padding:0;
   display:flex;
   flex-direction:column;
 }
 
 .ffm-field label{
-  margin:0 0 1px; /* tighter */
+  margin-bottom:6px;
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:.06em;
-  font-size:10px;
-  line-height:1;
-  color:rgba(232,237,246,.86);
+  font-size:24px; /* 3x bigger */
 }
 
 .ffm-field input,
 .ffm-field select{
-  width:100%;
-  margin:0;
-  padding:4px 10px; /* tighter */
-  height:28px;      /* hard cap */
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(0,0,0,.26);
+  padding:14px 16px;
+  height:60px;
+  font-size:26px; /* 3x bigger */
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.28);
   color:var(--text);
-  outline:none;
-  font-size:14px;
-  line-height:1;
 }
 
 .ffm-field input:focus,
 .ffm-field select:focus{
-  border-color: rgba(202,162,70,.65);
-  box-shadow: 0 0 0 2px rgba(202,162,70,.12);
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(202,162,70,.15);
 }
 
 .ffm-block{
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(0,0,0,.18);
-  border-radius:14px;
-  padding:10px;
-  margin:0 0 10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.20);
+  border-radius:18px;
+  padding:20px;
+  margin-top:16px;
 }
 
 .ffm-blockLabel{
-  margin:0 0 6px;
+  font-size:26px; /* 3x bigger */
   font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  font-size:11px;
-  color:rgba(232,237,246,.86);
+  margin-bottom:12px;
 }
 
 .ffm-checkboxGroup{
   display:grid;
-  gap:4px;
-  margin:0;
+  gap:12px;
 }
 
 .ffm-check{
   display:flex;
   align-items:center;
-  gap:8px;
-  font-size:13px;
-  color:rgba(232,237,246,.90);
-  margin:0;
+  gap:12px;
+  font-size:24px; /* 3x bigger */
 }
 
 .ffm-check input{
-  width:14px;
-  height:14px;
-  margin:0;
-  accent-color: var(--gold);
+  width:26px;
+  height:26px;
+  accent-color:var(--gold);
 }
 
 .ffm-actions{
-  margin-top:10px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
+  margin-top:30px;
+  text-align:center;
 }
 
 .ffm-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 26px;
-  border-radius:14px;
+  padding:22px 40px;
+  border-radius:20px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:13px;
+  font-size:26px; /* 3x bigger */
   letter-spacing:.06em;
   border:1px solid var(--stroke2);
   color:#0a0f18;
   background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.80));
-  min-width:280px;
+  min-width:360px;
   cursor:pointer;
 }
 
-.ffm-btn:hover{ filter:brightness(1.05); transform:translateY(-1px); }
+.ffm-btn:hover{ transform:translateY(-2px); }
 
 .ffm-fine{
-  margin:0;
-  font-size:12px;
-  color:rgba(169,179,199,.85);
+  margin-top:16px;
+  font-size:22px; /* 3x bigger */
+  color:rgba(169,179,199,.9);
   text-align:center;
-  line-height:1.35;
-  max-width:680px;
 }
 
-@media (max-width:720px){
-  .ffm-card{ padding:14px; }
-  .ffm-btn{ width:100%; max-width:520px; }
+@media(max-width:720px){
+  .ffm-btn{ width:100%; }
 }
 </style>
 
@@ -243,7 +211,6 @@ permalink: "/apply/"
 
     <section class="ffm-card">
 
-      <!-- Netlify Forms -->
       <form name="ffm-register"
             method="POST"
             data-netlify="true"
@@ -260,33 +227,33 @@ permalink: "/apply/"
 
         <div class="ffm-core">
           <div class="ffm-field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <label>Name</label>
+            <input name="name" type="text" required />
           </div>
 
           <div class="ffm-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+            <label>Email</label>
+            <input name="email" type="email" required />
           </div>
 
           <div class="ffm-field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <label>Phone</label>
+            <input name="phone" type="tel" required />
           </div>
 
           <div class="ffm-field">
-            <label for="church">Church attended (if any)</label>
-            <input id="church" name="church" type="text" />
+            <label>Church attended (if any)</label>
+            <input name="church" type="text" />
           </div>
 
           <div class="ffm-field">
-            <label for="invited">Who invited you</label>
-            <input id="invited" name="invited" type="text" />
+            <label>Who invited you</label>
+            <input name="invited" type="text" />
           </div>
 
           <div class="ffm-field">
-            <label for="marital">Marital Status</label>
-            <select id="marital" name="marital" required>
+            <label>Marital Status</label>
+            <select name="marital" required>
               <option value="">Select…</option>
               <option>Single</option>
               <option>Married</option>
@@ -297,43 +264,9 @@ permalink: "/apply/"
           </div>
         </div>
 
-        <div class="ffm-sectionTitle">Family</div>
-        <div class="ffm-block">
-          <div class="ffm-blockLabel">Kids (check all that apply)</div>
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Young Children"> Young Children</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Teenagers"> Teenagers</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="College Age"> College Age</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Adult"> Adult</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="No Children"> No Children</label>
-          </div>
-        </div>
-
-        <div class="ffm-sectionTitle">Prior Involvement</div>
-        <div class="ffm-block">
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check"><input type="checkbox" name="past_graduate" value="Yes"> Past Graduate</label>
-            <label class="ffm-check"><input type="checkbox" name="attended_before" value="Yes"> Attended Before</label>
-          </div>
-        </div>
-
-        <div class="ffm-sectionTitle">Commitment</div>
-        <div class="ffm-block">
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check">
-              <input type="checkbox" name="commitment_attendance" value="Yes" required>
-              I understand this is a 10-week commitment and I will prioritize attendance.
-            </label>
-            <label class="ffm-check">
-              <input type="checkbox" name="commitment_confidential" value="Yes" required>
-              I understand this requires honesty and confidentiality.
-            </label>
-          </div>
-        </div>
-
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <p class="ffm-fine">Confidential. Men only. No cost. We cap this at 20 men.</p>
+          <div class="ffm-fine">Confidential. Men only. No cost.</div>
         </div>
 
       </form>
