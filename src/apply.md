@@ -17,6 +17,7 @@ permalink: "/apply/"
   --stroke2: rgba(255,255,255,.14);
 }
 
+/* Page */
 .ffm-register{
   min-height:100vh;
   background:
@@ -27,15 +28,16 @@ permalink: "/apply/"
   padding:clamp(18px,3vw,36px) 18px 60px;
 }
 
-.ffm-container{max-width:820px;margin:0 auto;}
+.ffm-container{max-width:860px;margin:0 auto;}
 .ffm-gold{color:var(--gold);}
 
+/* Pills */
 .ffm-pills{
   display:flex;
   justify-content:center;
   gap:8px;
   flex-wrap:wrap;
-  margin:0 0 14px;
+  margin:0 0 12px;
 }
 
 .ffm-pill{
@@ -48,15 +50,24 @@ permalink: "/apply/"
   background:rgba(0,0,0,.22);
 }
 
+/* Hero */
 .ffm-hero{
   text-align:center;
-  margin:0 auto 12px;
+  margin:0 auto 10px;
 }
 
+/* Force title to be one horizontal line */
 .ffm-hero h1{
-  font-size:clamp(36px,4.5vw,56px);
+  margin:0 0 6px;
+  font-size:clamp(34px,4.2vw,54px);
   font-weight:900;
-  margin:0 0 8px;
+  letter-spacing:-0.02em;
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:10px;
+  flex-wrap:nowrap;        /* key */
+  white-space:nowrap;      /* key */
 }
 
 .ffm-hero p{
@@ -64,15 +75,18 @@ permalink: "/apply/"
   font-size:16px;
   line-height:1.5;
   color:rgba(232,237,246,.92);
+  max-width:760px;
 }
 
+/* Divider */
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:14px auto;
+  margin:12px auto;
   width:100%;
 }
 
+/* Card */
 .ffm-card{
   border:1px solid var(--stroke);
   border-radius:14px;
@@ -81,9 +95,9 @@ permalink: "/apply/"
   box-shadow:0 10px 24px rgba(0,0,0,.25);
 }
 
-/* SECTION TITLES */
+/* Section titles */
 .ffm-sectionTitle{
-  margin:12px 0 6px;
+  margin:10px 0 4px;
   font-size:11px;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -91,62 +105,46 @@ permalink: "/apply/"
   color:rgba(202,162,70,.92);
 }
 
-/* DEFAULT GRID */
+/* Core Info: STACKED + ULTRA TIGHT */
 .ffm-grid{
   display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:10px 12px;
-}
-
-/* CORE INFO STACKED + VERY TIGHT */
-.ffm-grid--core{
   grid-template-columns:1fr;
-  gap:4px; /* tighter between fields */
+  gap:2px; /* ultra tight between fields */
 }
 
-/* Tighten label and input spacing INSIDE Core Info only */
-.ffm-grid--core .ffm-field label{
-  margin:0 0 2px;
-  font-size:10px;
-  letter-spacing:.06em;
-}
-
-.ffm-grid--core .ffm-field input,
-.ffm-grid--core .ffm-field select{
-  padding:8px 10px;
-  border-radius:10px;
-  font-size:14px;
-}
-
+/* Each field: kill any inherited spacing */
+.ffm-field{ margin:0; padding:0; }
 .ffm-field label{
   display:block;
+  margin:0 0 2px;       /* ultra tight label gap */
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:.08em;
-  font-size:11px;
+  letter-spacing:.06em;
+  font-size:10px;
   color:rgba(232,237,246,.86);
-  margin:0 0 6px;
 }
 
 .ffm-field input,
 .ffm-field select{
   width:100%;
-  padding:12px 12px;
-  border-radius:12px;
+  padding:7px 10px;     /* tighter */
+  border-radius:10px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
   color:var(--text);
   outline:none;
-  font-size:15px;
-  line-height:1.25;
+  font-size:14px;
+  line-height:1.15;
+  margin:0;
 }
 
 .ffm-field input:focus,
 .ffm-field select:focus{
   border-color: rgba(202,162,70,.65);
-  box-shadow: 0 0 0 3px rgba(202,162,70,.12);
+  box-shadow: 0 0 0 2px rgba(202,162,70,.12);
 }
 
+/* Blocks */
 .ffm-block{
   border:1px solid rgba(255,255,255,.10);
   background:rgba(0,0,0,.18);
@@ -186,6 +184,7 @@ permalink: "/apply/"
   accent-color: var(--gold);
 }
 
+/* Actions */
 .ffm-actions{
   margin-top:10px;
   text-align:center;
@@ -211,14 +210,15 @@ permalink: "/apply/"
 .ffm-btn:hover{filter:brightness(1.05);}
 
 .ffm-fine{
-  margin-top:8px;
+  margin-top:6px;
   font-size:12px;
   color:rgba(169,179,199,.85);
   line-height:1.45;
 }
 
 @media (max-width: 720px){
-  .ffm-grid{grid-template-columns:1fr;}
+  /* Allow wrap on small screens only */
+  .ffm-hero h1{ flex-wrap:wrap; white-space:normal; }
   .ffm-card{padding:12px;}
   .ffm-btn{width:100%;max-width:520px;}
 }
@@ -233,7 +233,7 @@ permalink: "/apply/"
     </div>
 
     <header class="ffm-hero">
-      <h1>Step Into <span class="ffm-gold">The Fight</span></h1>
+      <h1><span>Step Into</span> <span class="ffm-gold">The Fight</span></h1>
       <p>Ten weeks. Brotherhood. Responsibility. Growth in the light.</p>
     </header>
 
@@ -255,7 +255,7 @@ permalink: "/apply/"
 
         <div class="ffm-sectionTitle">Core Info</div>
 
-        <div class="ffm-grid ffm-grid--core">
+        <div class="ffm-grid">
           <div class="ffm-field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
