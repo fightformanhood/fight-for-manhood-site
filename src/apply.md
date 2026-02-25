@@ -1,8 +1,8 @@
 ---
-title: "Register"
-description: "Register for the Fight for Manhood 10-week program."
+title: "Apply"
+description: "Apply for the Fight for Manhood 10-week program."
 layout: "base.njk"
-permalink: "/register/"
+permalink: "/apply/"
 ---
 
 <style>
@@ -10,6 +10,7 @@ permalink: "/register/"
   --bg0:#070b12;
   --bg1:#0b1324;
   --text:#e8edf6;
+  --muted:#a9b3c7;
   --gold:#caa246;
   --line: rgba(202,162,70,.28);
   --stroke: rgba(255,255,255,.10);
@@ -42,13 +43,13 @@ permalink: "/register/"
   border:1px solid rgba(202,162,70,.35);
   padding:12px 20px;
   border-radius:999px;
-  font-size:22px;  /* 3x bigger */
+  font-size:18px;
   text-transform:uppercase;
   letter-spacing:.14em;
   background:rgba(0,0,0,.22);
 }
 
-/* HERO */
+/* Hero */
 .ffm-hero{
   text-align:center;
   margin-bottom:16px;
@@ -56,7 +57,7 @@ permalink: "/register/"
 
 .ffm-hero h1{
   margin:0;
-  font-size:clamp(44px,5vw,70px); /* unchanged */
+  font-size:clamp(44px,5vw,70px);
   font-weight:900;
   letter-spacing:-0.02em;
   text-transform:uppercase;
@@ -64,8 +65,8 @@ permalink: "/register/"
 
 .ffm-hero .subline{
   margin-top:10px;
-  font-size:36px; /* 3x bigger */
-  line-height:1.2;
+  font-size:24px;
+  line-height:1.25;
   color:rgba(232,237,246,.9);
 }
 
@@ -86,18 +87,18 @@ permalink: "/register/"
 
 .ffm-sectionTitle{
   margin:20px 0 14px;
-  font-size:30px; /* 3x bigger */
+  font-size:20px;
   letter-spacing:.18em;
   text-transform:uppercase;
   font-weight:900;
   color:var(--gold);
 }
 
-/* CORE INFO (tight spacing, large text) */
+/* Core info tight */
 .ffm-core{
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:6px;
 }
 
 .ffm-field{
@@ -109,14 +110,14 @@ permalink: "/register/"
   margin-bottom:6px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:24px; /* 3x bigger */
+  font-size:16px;
 }
 
 .ffm-field input,
 .ffm-field select{
   padding:14px 16px;
-  height:60px;
-  font-size:26px; /* 3x bigger */
+  height:56px;
+  font-size:18px;
   border-radius:14px;
   border:1px solid rgba(255,255,255,.18);
   background:rgba(0,0,0,.28);
@@ -129,49 +130,18 @@ permalink: "/register/"
   box-shadow:0 0 0 3px rgba(202,162,70,.15);
 }
 
-.ffm-block{
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(0,0,0,.20);
-  border-radius:18px;
-  padding:20px;
-  margin-top:16px;
-}
-
-.ffm-blockLabel{
-  font-size:26px; /* 3x bigger */
-  font-weight:900;
-  margin-bottom:12px;
-}
-
-.ffm-checkboxGroup{
-  display:grid;
-  gap:12px;
-}
-
-.ffm-check{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:24px; /* 3x bigger */
-}
-
-.ffm-check input{
-  width:26px;
-  height:26px;
-  accent-color:var(--gold);
-}
-
+/* Actions */
 .ffm-actions{
-  margin-top:30px;
+  margin-top:26px;
   text-align:center;
 }
 
 .ffm-btn{
-  padding:22px 40px;
+  padding:20px 36px;
   border-radius:20px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:26px; /* 3x bigger */
+  font-size:20px;
   letter-spacing:.06em;
   border:1px solid var(--stroke2);
   color:#0a0f18;
@@ -184,7 +154,7 @@ permalink: "/register/"
 
 .ffm-fine{
   margin-top:16px;
-  font-size:22px; /* 3x bigger */
+  font-size:16px;
   color:rgba(169,179,199,.9);
   text-align:center;
 }
@@ -203,21 +173,21 @@ permalink: "/register/"
     </div>
 
     <div class="ffm-hero">
-      <h1>STEP INTO <span class="ffm-gold">THE FIGHT</span></h1>
-      <div class="subline">Ten weeks. Brotherhood. Responsibility. Growth in the light.</div>
+      <h1>APPLY FOR <span class="ffm-gold">THE FIGHT</span></h1>
+      <div class="subline">This is a decision. Ten weeks. Brotherhood. Responsibility. Growth in the light.</div>
     </div>
 
     <div class="ffm-divider"></div>
 
     <section class="ffm-card">
 
-      <form name="ffm-register"
+      <form name="ffm-apply"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             action="/success/">
 
-        <input type="hidden" name="form-name" value="ffm-register" />
+        <input type="hidden" name="form-name" value="ffm-apply" />
 
         <p style="display:none;">
           <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -265,8 +235,8 @@ permalink: "/register/"
         </div>
 
         <div class="ffm-actions">
-          <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <div class="ffm-fine">Confidential. Men only. No cost.</div>
+          <button class="ffm-btn" type="submit">Submit Application</button>
+          <div class="ffm-fine">Confidential. Men only. No cost. We cap this at 20 men.</div>
         </div>
 
       </form>
