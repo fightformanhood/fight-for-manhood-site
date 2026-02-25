@@ -1,8 +1,8 @@
 ---
-title: "Register"
-description: "Register for the Fight for Manhood 10-week program."
+title: "Apply"
+description: "Apply for the Fight for Manhood 10-week program."
 layout: "base.njk"
-permalink: "/register/"
+permalink: "/apply/"
 ---
 
 <style>
@@ -32,7 +32,6 @@ permalink: "/register/"
 .ffm-container{ max-width:860px; margin:0 auto; }
 .ffm-gold{ color:var(--gold); }
 
-/* Pills */
 .ffm-pills{
   display:flex;
   justify-content:center;
@@ -80,7 +79,6 @@ permalink: "/register/"
   width:min(820px,92%);
 }
 
-/* Card */
 .ffm-card{
   max-width:860px;
   margin:0 auto;
@@ -91,7 +89,6 @@ permalink: "/register/"
   box-shadow:0 14px 36px rgba(0,0,0,.28);
 }
 
-/* Section title */
 .ffm-sectionTitle{
   margin:10px 0 6px;
   font-size:11px;
@@ -101,11 +98,11 @@ permalink: "/register/"
   color:rgba(202,162,70,.92);
 }
 
-/* ===== CORE INFO — CRUSH THE SPACING ===== */
+/* CORE INFO — tighter by force */
 .ffm-core{
   display:flex;
   flex-direction:column;
-  gap:4px;           /* << tight between fields */
+  gap:2px;   /* tighter */
   margin:0;
   padding:0;
 }
@@ -118,7 +115,7 @@ permalink: "/register/"
 }
 
 .ffm-field label{
-  margin:0 0 2px;    /* << tight label gap */
+  margin:0 0 1px; /* tighter */
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.06em;
@@ -131,8 +128,8 @@ permalink: "/register/"
 .ffm-field select{
   width:100%;
   margin:0;
-  padding:6px 10px;  /* << shorter */
-  height:32px;       /* << hard cap */
+  padding:4px 10px; /* tighter */
+  height:28px;      /* hard cap */
   border-radius:10px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
@@ -148,7 +145,6 @@ permalink: "/register/"
   box-shadow: 0 0 0 2px rgba(202,162,70,.12);
 }
 
-/* Blocks below core info */
 .ffm-block{
   border:1px solid rgba(255,255,255,.10);
   background:rgba(0,0,0,.18);
@@ -168,7 +164,7 @@ permalink: "/register/"
 
 .ffm-checkboxGroup{
   display:grid;
-  gap:4px; /* tight */
+  gap:4px;
   margin:0;
 }
 
@@ -188,7 +184,6 @@ permalink: "/register/"
   accent-color: var(--gold);
 }
 
-/* Actions */
 .ffm-actions{
   margin-top:10px;
   display:flex;
@@ -248,6 +243,7 @@ permalink: "/register/"
 
     <section class="ffm-card">
 
+      <!-- Netlify Forms -->
       <form name="ffm-register"
             method="POST"
             data-netlify="true"
