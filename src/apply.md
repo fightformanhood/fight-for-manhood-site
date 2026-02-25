@@ -61,12 +61,13 @@ permalink: "/apply/"
   font-size:clamp(34px,4.2vw,54px);
   font-weight:900;
   letter-spacing:-0.02em;
+  line-height:1.05;
 }
 
 .ffm-hero p{
   margin:6px auto 0;
   font-size:16px;
-  line-height:1.5;
+  line-height:1.35;
   color:rgba(232,237,246,.85);
   max-width:760px;
 }
@@ -92,7 +93,7 @@ permalink: "/apply/"
 
 /* Section titles */
 .ffm-sectionTitle{
-  margin:10px 0 4px;
+  margin:8px 0 4px;          /* tighter */
   font-size:11px;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -100,40 +101,53 @@ permalink: "/apply/"
   color:rgba(202,162,70,.92);
 }
 
-/* Core Info: STACKED + ULTRA TIGHT */
-.ffm-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:2px; /* ultra tight */
+/* ===== CORE INFO: MAKE IT OBVIOUSLY TIGHTER =====
+   Switch to “label-left / input-right” rows.
+   This removes the big vertical gaps entirely.
+*/
+.ffm-core{
+  display:flex;
+  flex-direction:column;
+  gap:4px; /* ultra tight between rows */
 }
 
-.ffm-field{margin:0;}
-.ffm-field label{
-  display:block;
-  margin:0 0 2px;
+.ffm-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0;     /* kill any inherited padding */
+  margin:0;      /* kill any inherited margin */
+}
+
+.ffm-row label{
+  width:210px;
+  min-width:210px;
+  margin:0;
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:.06em;
   font-size:10px;
   color:rgba(232,237,246,.86);
+  line-height:1.1;
 }
 
-.ffm-field input,
-.ffm-field select{
+.ffm-row input,
+.ffm-row select{
+  flex:1;
   width:100%;
   margin:0;
-  padding:7px 10px;
+  padding:6px 10px;          /* tighter input */
   border-radius:10px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.26);
   color:var(--text);
   outline:none;
   font-size:14px;
-  line-height:1.15;
+  line-height:1.1;           /* tighter */
 }
 
-.ffm-field input:focus,
-.ffm-field select:focus{
+.ffm-row input:focus,
+.ffm-row select:focus{
   border-color: rgba(202,162,70,.65);
   box-shadow: 0 0 0 2px rgba(202,162,70,.12);
 }
@@ -207,12 +221,24 @@ permalink: "/apply/"
   margin-top:6px;
   font-size:12px;
   color:rgba(169,179,199,.85);
-  line-height:1.45;
+  line-height:1.35;
 }
 
+/* Mobile */
 @media (max-width: 720px){
   .ffm-card{padding:12px;}
   .ffm-btn{width:100%;max-width:520px;}
+
+  /* Stack label above input on small screens (still tight) */
+  .ffm-row{
+    flex-direction:column;
+    align-items:stretch;
+    gap:3px;
+  }
+  .ffm-row label{
+    width:auto;
+    min-width:0;
+  }
 }
 </style>
 
@@ -247,33 +273,33 @@ permalink: "/apply/"
 
         <div class="ffm-sectionTitle">Core Info</div>
 
-        <div class="ffm-grid">
-          <div class="ffm-field">
+        <div class="ffm-core">
+          <div class="ffm-row">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
 
-          <div class="ffm-field">
+          <div class="ffm-row">
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
 
-          <div class="ffm-field">
+          <div class="ffm-row">
             <label for="phone">Phone</label>
             <input id="phone" name="phone" type="tel" autocomplete="tel" required />
           </div>
 
-          <div class="ffm-field">
-            <label for="church">Church attended (if any)</label>
+          <div class="ffm-row">
+            <label for="church">Church attended</label>
             <input id="church" name="church" type="text" />
           </div>
 
-          <div class="ffm-field">
+          <div class="ffm-row">
             <label for="invited">Who invited you</label>
             <input id="invited" name="invited" type="text" />
           </div>
 
-          <div class="ffm-field">
+          <div class="ffm-row">
             <label for="marital">Marital Status</label>
             <select id="marital" name="marital" required>
               <option value="">Select…</option>
