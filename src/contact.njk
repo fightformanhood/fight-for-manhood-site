@@ -1,0 +1,347 @@
+---
+title: "Contact"
+description: "Contact Fight for Manhood"
+layout: "base.njk"
+permalink: "/contact/"
+---
+
+<style>
+:root{
+  --bg0:#070b12;
+  --bg1:#0b1324;
+  --text:#e8edf6;
+  --muted:#a9b3c7;
+  --gold:#caa246;
+  --line: rgba(202,162,70,.28);
+  --stroke: rgba(255,255,255,.10);
+  --stroke2: rgba(255,255,255,.14);
+}
+
+.ffm-contact{
+  min-height:100vh;
+  background:
+    radial-gradient(1000px 700px at 50% -10%, rgba(255,255,255,.10), transparent 60%),
+    radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
+    linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
+  color:var(--text);
+  padding:40px 20px 90px;
+}
+
+.ffm-container{ max-width:1000px; margin:0 auto; }
+.ffm-center{ text-align:center; }
+.ffm-gold{ color:var(--gold); }
+.ffm-muted{ color:var(--muted); }
+
+.ffm-pills{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.ffm-pill{
+  border:1px solid rgba(202,162,70,.35);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  background:rgba(0,0,0,.22);
+}
+
+.ffm-hero{
+  text-align:center;
+  margin:0 auto 18px;
+}
+
+.ffm-hero h1{
+  margin:0;
+  font-size:clamp(42px,5vw,68px);
+  font-weight:900;
+  letter-spacing:-0.02em;
+  text-transform:uppercase;
+  line-height:1.05;
+}
+
+.ffm-hero p{
+  margin:10px auto 0;
+  max-width:860px;
+  font-size:18px;
+  line-height:1.65;
+  color:rgba(232,237,246,.90);
+}
+
+.ffm-divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent);
+  margin:26px auto;
+  width:min(860px,94%);
+}
+
+.ffm-grid{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:18px;
+  align-items:start;
+}
+
+.ffm-card{
+  border:1px solid var(--stroke);
+  border-radius:18px;
+  padding:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  box-shadow:0 14px 36px rgba(0,0,0,.28);
+}
+
+.ffm-card h2{
+  margin:0 0 12px 0;
+  font-size:14px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(202,162,70,.92);
+  font-weight:900;
+}
+
+.ffm-field{
+  display:flex;
+  flex-direction:column;
+  margin:0 0 14px;
+}
+
+.ffm-field label{
+  margin-bottom:7px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:.12em;
+  color:rgba(232,237,246,.92);
+}
+
+.ffm-field input,
+.ffm-field textarea{
+  padding:14px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.28);
+  color:var(--text);
+  font-size:16px;
+}
+
+.ffm-field textarea{
+  min-height:160px;
+  resize:vertical;
+}
+
+.ffm-field input:focus,
+.ffm-field textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 0 4px rgba(202,162,70,.14);
+}
+
+.ffm-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-start;
+  margin-top:6px;
+}
+
+.ffm-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 18px;
+  border-radius:14px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:.08em;
+  border:1px solid var(--stroke2);
+  color:#0a0f18;
+  background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.80));
+  min-width:220px;
+  cursor:pointer;
+}
+
+.ffm-btn:hover{ transform:translateY(-1px); filter:brightness(1.02); }
+
+.ffm-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 18px;
+  border-radius:14px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:.08em;
+  border:1px solid rgba(202,162,70,.22);
+  color:rgba(232,237,246,.92);
+  background:rgba(0,0,0,.18);
+  text-decoration:none;
+  min-width:220px;
+}
+
+.ffm-secondary:hover{ opacity:.9; transform:translateY(-1px); }
+
+.ffm-fine{
+  margin-top:12px;
+  font-size:13px;
+  color:rgba(169,179,199,.92);
+  line-height:1.5;
+}
+
+.ffm-infoLine{
+  font-size:15px;
+  line-height:1.6;
+  color:rgba(232,237,246,.90);
+  margin:0 0 10px;
+}
+
+.ffm-infoLine strong{
+  color:rgba(232,237,246,.96);
+}
+
+.ffm-map{
+  margin-top:12px;
+  display:inline-block;
+  color:rgba(202,162,70,.95);
+  text-decoration:none;
+  border-bottom:1px solid rgba(202,162,70,.35);
+  padding-bottom:2px;
+}
+.ffm-map:hover{ opacity:.9; }
+
+.ffm-callout{
+  border:1px solid rgba(202,162,70,.24);
+  background:rgba(0,0,0,.18);
+  border-radius:16px;
+  padding:16px;
+  margin-top:14px;
+}
+
+.ffm-callout h3{
+  margin:0 0 8px 0;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+  color:rgba(232,237,246,.92);
+}
+
+.ffm-callout p{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+  color:rgba(232,237,246,.86);
+}
+
+@media(max-width:900px){
+  .ffm-grid{ grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="ffm-contact">
+  <div class="ffm-container">
+
+    <div class="ffm-pills">
+      <div class="ffm-pill">Knoxville • Wednesdays • 6:00 PM</div>
+      <div class="ffm-pill">Direct Answers • No Runaround</div>
+    </div>
+
+    <div class="ffm-hero">
+      <h1>Contact <span class="ffm-gold">Us</span></h1>
+      <p>
+        If you have a question, ask it straight.
+        If you’re ready to move, go register.
+      </p>
+    </div>
+
+    <div class="ffm-divider"></div>
+
+    <div class="ffm-grid">
+
+      <section class="ffm-card">
+        <h2>Send a message</h2>
+
+        <form name="ffm-contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/success/">
+
+          <input type="hidden" name="form-name" value="ffm-contact" />
+
+          <p style="display:none;">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="ffm-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="ffm-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="ffm-field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+
+          <div class="ffm-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Ask your question. Say what you mean." required></textarea>
+          </div>
+
+          <div class="ffm-actions">
+            <button class="ffm-btn" type="submit">Send Message</button>
+            <a class="ffm-secondary" href="/register/">Register Instead</a>
+          </div>
+
+          <div class="ffm-fine">
+            We respond as fast as possible. If you’re trying to decide whether to show up, the fastest answer is to register.
+          </div>
+        </form>
+      </section>
+
+      <aside class="ffm-card">
+        <h2>Details</h2>
+
+        <p class="ffm-infoLine">
+          <strong>Location:</strong><br>
+          United Real Estate Solutions<br>
+          308 N Peters Road Ste 225<br>
+          Knoxville, TN 37922
+        </p>
+
+        <a class="ffm-map"
+           href="https://www.google.com/maps/search/?api=1&query=United%20Real%20Estate%20Solutions%2C%20308%20N%20Peters%20Road%20Ste%20225%2C%20Knoxville%2C%20TN%2037922"
+           target="_blank"
+           rel="noopener">Open in Google Maps</a>
+
+        <div class="ffm-callout">
+          <h3>Fast Path</h3>
+          <p>
+            If you’re ready: register now. If you’re unsure: ask your question here.
+            Either way—don’t drift.
+          </p>
+        </div>
+
+        <div class="ffm-callout">
+          <h3>Confidential</h3>
+          <p>
+            Your message stays private. We don’t share it. We don’t blast you with spam.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+</div>

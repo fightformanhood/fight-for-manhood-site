@@ -1,0 +1,57 @@
+<h1>Fight for Manhood — Website Starter (Eleventy + Decap CMS)</h1>
+<p>This repo is a clean, fast, low-maintenance website that you can edit in a browser without touching code.</p>
+<h2>1) Local run (optional)</h2>
+<ol>
+<li>Install Node.js (LTS).</li>
+<li>In this folder:
+<ul>
+<li><code>npm install</code></li>
+<li><code>npm run dev</code></li>
+</ul>
+</li>
+<li>Open the local URL Eleventy prints.</li>
+</ol>
+<h2>2) Deploy (recommended: Netlify)</h2>
+<ol>
+<li>Create a GitHub repo and push this code.</li>
+<li>Create a Netlify site from the repo.</li>
+<li>In Netlify:
+<ul>
+<li>Build command: <code>npm run build</code></li>
+<li>Publish directory: <code>_site</code></li>
+</ul>
+</li>
+</ol>
+<h3>Enable browser editing (Decap CMS)</h3>
+<p>Decap CMS lives at <code>/admin</code>.</p>
+<p>To enable logins + editing on Netlify:</p>
+<ol>
+<li>Netlify → <strong>Identity</strong> → Enable Identity.</li>
+<li>Identity → <strong>Registration</strong>: set to “Invite only”.</li>
+<li>Identity → <strong>Services</strong> → Enable <strong>Git Gateway</strong>.</li>
+<li>(Optional) Identity → Add yourself as an invited user.</li>
+</ol>
+<p>Then visit:</p>
+<ul>
+<li><code>https://YOUR-SITE.netlify.app/admin</code></li>
+</ul>
+<h2>3) What you can edit</h2>
+<ul>
+<li>Pages: <code>src/*.md</code> (Home, About, Program, Events, Resources, Contact, Give)</li>
+<li>Posts: <code>src/posts/*.md</code> (blog / updates)</li>
+</ul>
+<h2>4) “On the fly” update workflow (the simple way)</h2>
+<p>When you have an idea, do one of these:</p>
+<ul>
+<li>Edit directly in <code>/admin</code> (best).</li>
+<li>Or paste text to ChatGPT and say: “Update the Programs page with this copy” — then copy/paste the updated Markdown into the CMS.</li>
+</ul>
+<h2>5) Content model</h2>
+<ul>
+<li>Hero headline</li>
+<li>3 pillars</li>
+<li>Program details (12 weeks, Wednesday nights, Knoxville, no cost)</li>
+<li>“Join / Apply” call-to-action</li>
+</ul>
+<hr>
+<p>If you want <em>me</em> (ChatGPT) to “update the website” automatically, the clean path is connecting the CMS through an automation (API key + webhook). We can set that up later once you pick hosting and want secure access.</p>
