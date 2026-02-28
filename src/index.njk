@@ -23,7 +23,7 @@ permalink: /
     radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
     linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
   color:var(--text);
-  padding:clamp(24px,4vw,56px) 18px 80px;
+  padding:clamp(22px,3.2vw,44px) 18px 70px; /* tighter */
 }
 
 .ffm-container{max-width:980px;margin:0 auto;}
@@ -34,11 +34,59 @@ permalink: /
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:40px auto;
+  margin:28px auto; /* tighter */
   width:min(720px,92%);
 }
 
-/* Force hero layout override (prevents base.njk global header rules from breaking layout) */
+/* ===== Announcement Bar ===== */
+.ffm-announcement{
+  width:100%;
+  text-align:center;
+  background:rgba(0,0,0,.42);
+  border:1px solid rgba(202,162,70,.28);
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.26),
+    0 0 0 1px rgba(202,162,70,.06),
+    0 0 22px rgba(202,162,70,.08);
+  border-radius:14px;
+  padding:14px 14px 16px;
+  margin:0 auto 18px;
+  max-width:980px;
+}
+
+.ffm-announcement a{
+  text-decoration:none;
+  color:var(--text);
+  display:block;
+}
+
+.ffm-announcement .kicker{
+  display:block;
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(202,162,70,.95);
+  font-weight:900;
+}
+
+.ffm-announcement .date{
+  display:block;
+  margin-top:6px;
+  font-size:18px;
+  font-weight:900;
+  color:rgba(232,237,246,.96);
+}
+
+.ffm-announcement .tagline{
+  display:block;
+  margin-top:6px;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(232,237,246,.78);
+}
+
+/* Force hero layout override */
 header.ffm-hero{
   display:flex !important;
   flex-direction:column !important;
@@ -53,7 +101,7 @@ header.ffm-hero{
   gap:14px;
   flex-wrap:wrap;
   justify-content:center;
-  margin:10px 0 12px;
+  margin:8px 0 10px; /* tighter */
 }
 
 .ffm-hero h1 .gold{color:var(--gold);white-space:nowrap;}
@@ -72,7 +120,7 @@ header.ffm-hero{
   justify-content:center;
   gap:10px;
   flex-wrap:wrap;
-  margin-bottom:25px;
+  margin-bottom:18px; /* tighter */
 }
 
 .ffm-pill{
@@ -86,7 +134,7 @@ header.ffm-hero{
 }
 
 .ffm-cohort{
-  margin:30px auto 20px;
+  margin:22px auto 14px; /* tighter */
   max-width:820px;
   border:1px solid var(--stroke);
   border-radius:14px;
@@ -117,7 +165,7 @@ header.ffm-hero{
   justify-content:center;
   gap:12px;
   flex-wrap:wrap;
-  margin-top:18px;
+  margin-top:14px; /* tighter */
 }
 
 .ffm-btn{
@@ -144,7 +192,7 @@ header.ffm-hero{
 
 .ffm-btn:hover{filter:brightness(1.05);transform:translateY(-1px);}
 
-.ffm-section{margin-top:70px;}
+.ffm-section{margin-top:48px;} /* tighter */
 .ffm-section h2{
   font-size:28px;
   text-transform:uppercase;
@@ -164,7 +212,7 @@ header.ffm-hero{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:18px;
-  margin-top:25px;
+  margin-top:18px; /* tighter */
 }
 
 .ffm-card{
@@ -259,7 +307,7 @@ header.ffm-hero{
 }
 
 .ffm-attr{
-  margin-top:12px;
+  margin-top:10px; /* tighter */
   font-size:13px;
   color: rgba(169,179,199,.92);
 }
@@ -269,20 +317,36 @@ header.ffm-hero{
 @media(max-width:900px){
   .ffm-grid-2{grid-template-columns:1fr;}
 }
+@media(max-width:520px){
+  .ffm-wrap{ padding:20px 14px 66px; }
+  .ffm-btn{ min-width:0; width:100%; }
+  .ffm-btnRow{ width:100%; }
+  .ffm-announcement{ margin-bottom:14px; padding:12px 12px 14px; }
+  .ffm-announcement .date{ font-size:16px; }
+}
 </style>
 
 <div class="ffm-wrap">
 <div class="ffm-container">
 
+<!-- Announcement Bar -->
+<div class="ffm-announcement">
+  <a href="/register/">
+    <span class="kicker">Due to strong response, we’ve expanded and adjusted the start date.</span>
+    <span class="date">The next cohort now begins Tuesday, March 17 • 6:00 PM</span>
+    <span class="tagline">More men. More fire. Same standard.</span>
+  </a>
+</div>
+
 <div class="ffm-pills">
-  <div class="ffm-pill">Knoxville • Wednesdays • 6:00 PM • No cost</div>
-  <div class="ffm-pill">Starts March 11</div>
+  <div class="ffm-pill">Knoxville • Tuesdays • 6:00 PM • No cost</div>
+  <div class="ffm-pill">Starts Tuesday, March 17</div>
 </div>
 
 <header class="ffm-hero ffm-center">
 
 <h1>
-  <span class="white">Surrender to God.</span>
+  <span class="white">Stand as a son.</span>
   <span class="gold">Fight like a man.</span>
 </h1>
 
@@ -291,28 +355,24 @@ A 10-week crucible for men who are done drifting.
 We go after the real enemy: <span class="ffm-gold">shame, fear, passivity, and the double life</span>.
 </p>
 
-<p style="margin-top:12px;font-size:16px;color:rgba(232,237,246,.78);max-width:860px;">
+<p style="margin-top:10px;font-size:16px;color:rgba(232,237,246,.78);max-width:860px;">
 If you’re comfortable, this will offend you. If you’re ready to be forged, you’ll be grateful you showed up.
 </p>
 
 <div class="ffm-cohort">
   <div class="title">
-    Next Cohort: Wed, March 11 • 6:00 PM<br>
+    Next Cohort: Tue, March 17 • 6:00 PM<br>
     <span class="ffm-gold">20 seats. No spectators. This cohort locks soon.</span>
   </div>
 
- <div class="ffm-loc">
-  Location:
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=United%20Real%20Estate%20Solutions%2C%20308%20N%20Peters%20Road%20Ste%20225%2C%20Knoxville%2C%20TN%2037922"
-    target="_blank"
-    rel="noopener"
-  >
-    United Real Estate Solutions<br>
-    308 N Peters Road Ste 225<br>
-    Knoxville, TN 37922
-  </a>
-</div>
+  <div class="ffm-loc">
+    Location:
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=United%20Real%20Estate%20Solutions%2C%20308%20N%20Peters%20Road%20Ste%20225%2C%20Knoxville%2C%20TN%2037922"
+      target="_blank"
+      rel="noopener"
+    >United Real Estate Solutions<br>308 N Peters Road Ste 225<br>Knoxville, TN 37922</a>
+  </div>
 
   <div class="sub">
     The cost is not money. The cost is honesty and commitment.
@@ -325,7 +385,7 @@ If you’re comfortable, this will offend you. If you’re ready to be forged, y
   </div>
 </div>
 
-<p style="margin-top:10px;font-size:13px;color:rgba(232,237,246,.75);">
+<p style="margin-top:8px;font-size:13px;color:rgba(232,237,246,.75);">
 This is for men ready to lead in the light — at home, at work, and before God.
 </p>
 
@@ -336,10 +396,10 @@ This is for men ready to lead in the light — at home, at work, and before God.
 <section class="ffm-section">
 <h2>THE PROBLEM</h2>
 <p>
-Most men aren’t “bad.” They’re divided.
-We drift. We hide. We manage appearances.
+Most men aren’t “bad.” They’re at war with themselves.
+We compromise. We hide. We manage appearances.
 We confuse guilt with shame — and shame convinces a man he <em>is</em> the problem.
-Then he covers it: with work, noise, anger, control, or passivity.
+Then he covers it — with whatever keeps him from stepping into the light.
 </p>
 </section>
 
@@ -348,10 +408,10 @@ Then he covers it: with work, noise, anger, control, or passivity.
 <section class="ffm-section">
 <h2>THE COST</h2>
 <p>
-A man can look fine on the outside and be collapsing on the inside.
-Fear-based obedience produces anxiety and paralysis.
-Performance religion creates compliant men, not strong sons.
-And what isn’t confronted gets passed on.
+A man can look solid and still be coming apart inside.
+Fear-based obedience breeds anxiety and quiet despair.
+Performance religion creates controlled men, not courageous sons.
+And what you refuse to confront will shape the next generation.
 </p>
 </section>
 
@@ -360,11 +420,11 @@ And what isn’t confronted gets passed on.
 <section class="ffm-section">
 <h2>THE FIGHT</h2>
 <p>
-This is not aggression. It’s ordered strength under God.
-We confront wounds. We break shame in the light.
-We move from law to grace — from performance to relationship.
-We learn faith without fear.
-We become men who take responsibility, repair what we’ve damaged, and lead with strength under control.
+This is strength anchored in identity.
+Not rage. Not passivity. Not performance.
+We confront wounds. We drag darkness into the light.
+We move from fear to faith.
+We become men who reclaim what was surrendered and lead with disciplined, dangerous strength.
 </p>
 </section>
 
@@ -374,38 +434,38 @@ We become men who take responsibility, repair what we’ve damaged, and lead wit
   <h2>WHAT HAPPENS HERE</h2>
 
   <div class="ffm-grid-2">
-    <div class="ffm-card">
-      <h3>Expose What’s Hidden</h3>
-      <p>
-        Secrecy is where shame breeds. We bring it into the light.
-        Not to humiliate you — to free you.
-      </p>
-    </div>
+   <div class="ffm-card">
+  <h3>Expose What’s Hidden</h3>
+  <p>
+    Secrecy is where shame breeds. We bring it into the light.
+    Not to condemn you — to restore you.
+  </p>
+</div>
 
-    <div class="ffm-card">
-      <h3>Rebuild Identity</h3>
-      <p>
-        You stop striving to measure up. You learn sonship.
-        Obedience becomes relationship — not fear management.
-      </p>
-    </div>
+<div class="ffm-card">
+  <h3>Rebuild Identity</h3>
+  <p>
+    You stop performing for approval and stand as a son.
+    Obedience flows from relationship — not anxiety.
+  </p>
+</div>
 
-    <div class="ffm-card">
-      <h3>Forge Responsibility</h3>
-      <p>
-        No blaming. No excuses. You take ownership without control,
-        and you lead without disappearing.
-      </p>
-    </div>
+   <div class="ffm-card">
+  <h3>Forge Responsibility</h3>
+  <p>
+    No blaming. No excuses.
+    You take ownership without domination,
+    and you lead without disappearing.
+  </p>
+</div>
 
-    <div class="ffm-card">
-      <h3>Strengthen the Home</h3>
-      <p>
-        We go after anger, silence, conflict, and repair.
-        You become dangerous to darkness — not to your family.
-      </p>
-    </div>
-  </div>
+<div class="ffm-card">
+  <h3>Strengthen the Home</h3>
+  <p>
+    We go after anger, silence, and the damage they cause.
+    You become dangerous to darkness — not to your family.
+  </p>
+</div>
 </section>
 
 <div class="ffm-divider"></div>
@@ -528,16 +588,16 @@ We become men who take responsibility, repair what we’ve damaged, and lead wit
 <h2>APPLY NOW</h2>
 
 <p style="max-width:760px;margin:0 auto;">
-The next cohort begins Wednesday, March 11 at 6:00 PM.<br>
+The next cohort begins Tuesday, March 10 at 6:00 PM.<br>
 We cap this at <span class="ffm-gold">20 men</span>. When the seats are filled, applications close.
 </p>
 
-<div class="ffm-btnRow" style="margin-top:18px;">
+<div class="ffm-btnRow" style="margin-top:14px;">
   <a class="ffm-btn primary" href="/register/">Apply for the Next Cohort</a>
   <a class="ffm-btn" href="/contact/">Ask a question</a>
 </div>
 
-<p style="margin-top:12px;font-size:13px;color:rgba(232,237,246,.75);">
+<p style="margin-top:10px;font-size:13px;color:rgba(232,237,246,.75);">
 Men wait. Leaders decide.
 </p>
 

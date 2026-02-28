@@ -144,7 +144,7 @@
     radial-gradient(800px 650px at 50% 20%, rgba(202,162,70,.10), transparent 65%),
     linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
   color:var(--text);
-  padding:clamp(24px,4vw,56px) 18px 100px;
+  padding:clamp(22px,3.2vw,44px) 18px 78px;
 }
 
 .ffm-container{max-width:1000px;margin:0 auto;}
@@ -155,7 +155,7 @@
 .ffm-divider{
   height:1px;
   background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:46px auto;
+  margin:30px auto;
   width:min(820px,92%);
 }
 
@@ -168,14 +168,14 @@
   font-size:14px;
   letter-spacing:.16em;
   text-transform:uppercase;
-  margin-bottom:18px;
+  margin-bottom:14px;
 }
 
 .ffm-hero h1{
   font-size:clamp(48px,5.8vw,78px);
   font-weight:900;
   letter-spacing:-0.02em;
-  margin:0 0 14px;
+  margin:0 0 10px;
 }
 .ffm-hero p{
   max-width:960px;
@@ -186,7 +186,7 @@
 }
 
 .ffm-hero .subline{
-  margin-top:14px;
+  margin-top:10px;
   font-size:17px;
   color:rgba(232,237,246,.78);
 }
@@ -196,7 +196,7 @@
   justify-content:center;
   gap:16px;
   flex-wrap:wrap;
-  margin-top:28px;
+  margin-top:18px;
 }
 
 .ffm-btn{
@@ -230,7 +230,7 @@
   text-align:center;
 }
 .ffm-lead{
-  margin:14px auto 0;
+  margin:10px auto 0;
   max-width:960px;
   text-align:center;
   color:rgba(169,179,199,.96);
@@ -238,65 +238,85 @@
   font-size:21px;
 }
 
-/* ===== TIGHTER WEEK FLOW ===== */
+/* ===== ULTRA DENSE STACK MODE WITH GOLD DIVIDER ===== */
 
 .ffm-schedule{
-  display:grid;
-  gap:6px; /* reduced spacing between weeks */
-  margin-top:26px;
+  display:block;
+  margin-top:10px;
 }
 
 .ffm-item{
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(0,0,0,.28);
-  border-radius:14px;
-  padding:20px 22px; /* slightly tighter */
-  transition:all .15s ease;
+  background:rgba(0,0,0,.34);
+  padding:10px 14px;
+  border-radius:0;
+  border:0;
+}
+
+/* Gold glowing divider */
+.ffm-item:not(:first-child){
+  border-top:2px solid rgba(202,162,70,.85);
+  box-shadow:
+    inset 0 1px 8px rgba(202,162,70,.45),
+    inset 0 0 18px rgba(202,162,70,.25);
+  margin-top:14px;
 }
 
 .ffm-item:hover{
-  border-color:rgba(202,162,70,.55);
-  background:rgba(0,0,0,.34);
+  background:rgba(0,0,0,.42);
 }
 
 .ffm-item .top{
   display:flex;
   justify-content:space-between;
-  gap:14px;
+  gap:8px;
   flex-wrap:wrap;
   align-items:baseline;
 }
 
 .ffm-item .wk{
   font-weight:900;
-  letter-spacing:.18em;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  font-size:26px;
+  font-size:20px;
   color:rgba(202,162,70,1);
 }
 
 .ffm-item .name{
   font-weight:900;
-  font-size:23px;
-  letter-spacing:.03em;
+  font-size:18px;
+  letter-spacing:.01em;
   color:rgba(232,237,246,.98);
 }
 
 .ffm-item .desc{
-  margin-top:6px;
-  color:rgba(232,237,246,.92);
-  line-height:1.55;
-  font-size:20px;
+  margin-top:3px;
+  color:rgba(232,237,246,.88);
+  line-height:1.35;
+  font-size:17px;
+}
+
+/* Closing emphasis */
+.ffm-closing{
+  margin-top:18px;
+  font-size:15px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:900;
+  color:rgba(202,162,70,.95);
+  text-align:center;
 }
 
 @media(max-width:900px){
   .ffm-btn{width:100%;max-width:480px;}
-  .ffm-item{padding:18px;}
-  .ffm-item .wk{font-size:24px;}
-  .ffm-item .name{font-size:21px;}
-  .ffm-item .desc{font-size:19px;}
+  .ffm-item{padding:10px 12px;}
+  .ffm-item .wk{font-size:18px;}
+  .ffm-item .name{font-size:17px;}
+  .ffm-item .desc{font-size:16px;}
   .ffm-hero p{font-size:21px;}
   .ffm-lead{font-size:19px;}
+}
+@media(max-width:520px){
+  .ffm-page{ padding:20px 14px 74px; }
 }
 </style>
 <div class="ffm-page">
@@ -306,12 +326,11 @@
 <h1>The Fight for Manhood</h1>
 <p>
 This is not a lecture series. It’s a crucible.
-Ten weeks to confront drift, expose shame, break fear-based obedience,
-and step into the light as a son who leads without hiding.
+Ten weeks to confront compromise, expose hidden strongholds, crush cowardly surrender, and stand in the light as a son who leads without retreat.
 </p>
 <div class="subline">High challenge. High support. Confidential. Men only.</div></p>
 <p><div class="ffm-ctaRow">
-<a class="ffm-btn primary" href="/apply/">Apply now</a>
+<a class="ffm-btn primary" href="/register/">Apply now</a>
 <a class="ffm-btn" href="/contact/">Ask a question</a>
 </div>
 </div></p>
@@ -334,7 +353,7 @@ Identify drift. Name the cost. Refuse cultural confusion. Decide to fight.
 <p><div class="ffm-item">
 <div class="top">
 <div class="wk">Week 2</div>
-<div class="name">Expose the Wound: Breaking Shame</div>
+<div class="name">Expose the Wound: Breaking Patterns</div>
 </div>
 <div class="desc">
 Drag secrecy into the light. Crush the lie that says “I am wrong.” Begin freedom.
@@ -364,7 +383,7 @@ Transfer allegiance. Reject passivity. Stand as a man under God’s design.
 <div class="name">Reclaim Lost Ground: Finding Healing</div>
 </div>
 <div class="desc">
-Confront the story. Forgive. Release. Take back territory shame stole.
+Confront the story. Forgive. Release. Take back territory patterns stole.
 </div>
 </div></p>
 <p><div class="ffm-item">
@@ -417,18 +436,18 @@ Measure your life against Jesus. No hiding. No passivity. Trust the Father. Lead
 <p><div class="ffm-center">
 <h2 class="ffm-sectionTitle">Ready?</h2>
 <p class="ffm-lead">
-Stop drifting. Stop negotiating with shame.
+Stop negotiating with weakness.
+Stop surrendering ground that was never meant to be lost.
 Step into the light and fight like a man who belongs to God.
 </p>
 <div class="ffm-ctaRow">
-<a class="ffm-btn primary" href="/apply/">Apply for the next cohort</a>
+<a class="ffm-btn primary" href="/register/">Apply for the next cohort</a>
 <a class="ffm-btn" href="/contact/">Talk to us first</a>
 </div>
-<p class="ffm-muted" style="margin-top:16px;font-size:14px;">Men wait. Leaders move.</p>
+<p class="ffm-closing">Men wait. Leaders move.</p>
 </div></p>
   </div>
 </div>
-
 </main>
 
 <footer>
