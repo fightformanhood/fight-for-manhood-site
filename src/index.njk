@@ -323,6 +323,52 @@ header.ffm-hero{
   .ffm-announcement{ margin-bottom:14px; padding:12px 12px 14px; }
   .ffm-announcement .date{ font-size:16px; }
 }
+/* Seat counter widget */
+.ffm-cap-wrap{
+  margin-top:14px;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid rgba(202,162,70,.28);
+  background:rgba(7,11,18,.45);
+  max-width:420px;
+}
+
+.ffm-cap-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:.95rem;
+  margin-bottom:8px;
+}
+
+.ffm-cap-badge{
+  background:#caa246;
+  color:#0b1324;
+  font-weight:700;
+  padding:3px 8px;
+  border-radius:6px;
+}
+
+.ffm-cap-line{
+  color:#e8edf6;
+}
+
+.ffm-cap-bar{
+  height:10px;
+  background:rgba(255,255,255,.08);
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.ffm-cap-fill{
+  height:100%;
+  background:linear-gradient(90deg,#caa246,#ff9d2e);
+}
+
+.ffm-cap-meta{
+  margin-top:6px;
+  font-size:.85rem;
+  color:#a9b3c7;
+}
 </style>
 
 <div class="ffm-wrap">
@@ -379,11 +425,36 @@ If you’re comfortable, this will offend you. If you’re ready to be forged, y
   </div>
 
   <div class="ffm-btnRow">
-    <a class="ffm-btn primary" href="/register/">Apply Now</a>
-    <a class="ffm-btn" href="/program/">See the Battle Plan</a>
-  </div>
+  <a class="ffm-btn primary" href="/register/">Claim Your Spot</a>
+  <a class="ffm-btn" href="/program/">See the Battle Plan</a>
 </div>
 
+{# Cohort capacity widget #}
+{% set capacity = 25 %}
+{% set registered = 13 %}
+{% set remaining = capacity - registered %}
+{% set pct = (registered / capacity * 100) | round %}
+
+<div class="ffm-cap-wrap">
+
+  <div class="ffm-cap-top">
+    <span class="ffm-cap-badge">Cohort Filling</span>
+    <span class="ffm-cap-line">
+      ⚔️ <strong>{{ remaining }}</strong> spots remaining
+    </span>
+  </div>
+
+  <div class="ffm-cap-bar">
+    <div class="ffm-cap-fill" style="width: {{ pct }}%"></div>
+  </div>
+
+  <div class="ffm-cap-meta">
+    {{ registered }} of {{ capacity }} seats taken
+  </div>
+
+</div>
+
+</div>
 <p style="margin-top:8px;font-size:13px;color:rgba(232,237,246,.75);">
 This is for men ready to lead in the light — at home, at work, and before God.
 </p>
