@@ -670,6 +670,25 @@ We cap this at <span class="ffm-gold">25 men</span>. When the seats are filled, 
   <a class="ffm-btn" href="/contact/">Ask a question</a>
 </div>
 
+{# Reuse the same numbers as the top widget #}
+{% set capacity = 25 %}
+{% set registered = 15 %}
+{% set remaining = capacity - registered %}
+{% set pct = (registered / capacity * 100) | round %}
+
+<div class="ffm-cap-wrap" style="margin-left:auto;margin-right:auto;">
+  <div class="ffm-cap-top">
+    <span class="ffm-cap-badge">Seats Remaining</span>
+    <span class="ffm-cap-line">⚔️ <strong>{{ remaining }}</strong> left</span>
+  </div>
+  <div class="ffm-cap-bar">
+    <div class="ffm-cap-fill" style="width: {{ pct }}%"></div>
+  </div>
+  <div class="ffm-cap-meta">
+    {{ registered }} of {{ capacity }} seats taken
+  </div>
+</div>
+
 <p style="margin-top:10px;font-size:13px;color:rgba(232,237,246,.75);">
 Men wait. Leaders decide.
 </p>
