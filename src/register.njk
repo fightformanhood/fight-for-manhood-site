@@ -252,6 +252,46 @@ permalink: "/register/"
 }
 .ffm-back:hover{ opacity:.85; }
 
+.ffm-updateBox,
+.ffm-locationCard{
+  margin:0 0 24px;
+  padding:22px 24px;
+  border-radius:20px;
+  border:1px solid rgba(202,162,70,.28);
+  background:linear-gradient(180deg, rgba(20,28,44,.92), rgba(8,12,20,.88));
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.26),
+    0 0 0 1px rgba(202,162,70,.06),
+    0 0 18px rgba(202,162,70,.08);
+}
+
+.ffm-updateTitle,
+.ffm-locationCard h3{
+  margin:0 0 10px;
+  font-size:24px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--gold);
+}
+
+.ffm-updateBox p,
+.ffm-locationCard p{
+  margin:0 0 10px;
+  font-size:22px;
+  line-height:1.5;
+  color:rgba(232,237,246,.90);
+}
+
+.ffm-locationCard a{
+  color:rgba(202,162,70,.95);
+  text-decoration:none;
+  border-bottom:1px solid rgba(202,162,70,.35);
+  padding-bottom:2px;
+}
+
+.ffm-locationCard a:hover{ opacity:.88; }
+
 @media(max-width:720px){
   .ffm-card{ padding:22px; }
   .ffm-btn{ width:100%; min-width:0; }
@@ -277,13 +317,36 @@ permalink: "/register/"
 
     <div class="ffm-hero">
       <h1>STEP INTO <span class="ffm-gold">THE FIGHT</span></h1>
-      <div class="subline">Ten weeks. Brotherhood. Responsibility. Growth in the light.</div>
+      <div class="subline">Ten weeks. Brotherhood. Responsibility. Growth in the light. Now meeting at our larger Cedar Bluff venue.</div>
     </div>
 
     <div class="ffm-divider"></div>
 
     <section class="ffm-card">
 
+<div class="ffm-updateBox">
+  <div class="ffm-updateTitle">Registration Update</div>
+  <p>
+    This cohort was originally planned for 25 men, but response exceeded the size of our original room.
+    Fight for Manhood has now moved to a larger venue.
+  </p>
+  <p>
+    Registration remains open, but space is still limited.
+  </p>
+</div>
+
+<div class="ffm-locationCard">
+  <h3>Meeting Location</h3>
+  <p><strong>Best Western Plus Knoxville Cedar Bluff</strong></p>
+  <p>420 N Peters Rd<br>Knoxville, TN 37922</p>
+  <p>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Knoxville%20Cedar%20Bluff%2C%20420%20N%20Peters%20Rd%2C%20Knoxville%2C%20TN%2037922"
+      target="_blank"
+      rel="noopener"
+    >Open in Maps</a>
+  </p>
+</div>
       <form name="ffm-register"
             method="POST"
             data-netlify="true"
@@ -381,10 +444,10 @@ permalink: "/register/"
 
         <div class="ffm-callout">
           <div class="ffm-calloutTitle">What Happens After You Register</div>
-          <p>
-            You’ll get a confirmation and the exact location details.
-            Week 1 is the line in the sand. Come ready. Come honest. Come all in.
-          </p>
+     <p>
+  You’ll get a confirmation after registering.
+  Week 1 begins at Best Western Plus Knoxville Cedar Bluff. Come ready. Come honest. Come all in.
+</p>
           <ul class="ffm-list">
             <li>We protect confidentiality. No stories leave the room.</li>
             <li>We expect attendance. Men drift when they disappear.</li>
@@ -394,9 +457,9 @@ permalink: "/register/"
 
         <div class="ffm-actions">
           <button class="ffm-btn" type="submit">Step Into the Fight</button>
-          <div class="ffm-fine">
-            Confidential. Men only. No cost. We cap this at 25 men. When seats are filled, registration closes.
-          </div>
+        <div class="ffm-fine">
+  Confidential. Men only. No cost. This cohort was originally planned for 25 men, but response exceeded the first room and we secured a larger venue. Registration remains open while space lasts.
+</div>
           <a class="ffm-back" href="/contact/">Questions first? Contact us.</a>
         </div>
 
