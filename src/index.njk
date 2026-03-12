@@ -328,12 +328,12 @@ header.ffm-hero{
   margin:14px auto 0;
   padding:14px 14px 12px;
   border-radius:16px;
-  border:1px solid rgba(202,162,70,.42);
+  border:1px solid rgba(202,162,70,.34);
   background:linear-gradient(180deg, rgba(20,28,44,.92), rgba(8,12,20,.88));
   box-shadow:
-    0 14px 34px rgba(0,0,0,.34),
-    0 0 0 1px rgba(202,162,70,.08),
-    0 0 24px rgba(202,162,70,.14);
+    0 12px 28px rgba(0,0,0,.30),
+    0 0 0 1px rgba(202,162,70,.06),
+    0 0 16px rgba(202,162,70,.08);
   max-width:420px;
   text-align:left;
 }
@@ -347,15 +347,21 @@ header.ffm-hero{
 }
 
 .ffm-cap-badge{
-  background:linear-gradient(180deg,#d7af55,#caa246);
-  color:#0b1324;
-  font-weight:800;
-  padding:4px 9px;
-  border-radius:7px;
+  background:none;
+  color:var(--gold);
+  font-weight:900;
+  padding:0;
+  border-radius:0;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  text-shadow:
+    0 0 10px rgba(202,162,70,.18),
+    0 0 20px rgba(202,162,70,.10);
 }
 
 .ffm-cap-line{
   color:#e8edf6;
+  font-weight:700;
 }
 
 .ffm-cap-bar{
