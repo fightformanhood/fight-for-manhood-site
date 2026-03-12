@@ -426,22 +426,22 @@ If you’re comfortable, this will offend you. If you’re ready to be forged, y
   </div>
 
   <div class="ffm-btnRow">
-  <a class="ffm-btn primary" href="/register/">Claim Your Spot</a>
+  <a class="ffm-btn primary" href="/register/">Reserve Your Place</a>
   <a class="ffm-btn" href="/program/">See the Battle Plan</a>
 </div>
 
 {# Cohort capacity widget #}
-{% set capacity = 30 %}
-{% set registered = 29%}
-{% set remaining = capacity - registered %}
-{% set pct = (registered / capacity * 100) | round %}
+{% set planned = 25 %}
+{% set expanded = 32 %}
+{% set registered = 30 %}
+{% set pct = (registered / expanded * 100) | round %}
 
 <div class="ffm-cap-wrap">
 
   <div class="ffm-cap-top">
-    <span class="ffm-cap-badge">Cohort Filling</span>
+    <span class="ffm-cap-badge">Strong Response</span>
     <span class="ffm-cap-line">
-      ⚔️ <strong>{{ remaining }}</strong> spots remaining
+      ⚔️ <strong>{{ registered }}</strong> men registered
     </span>
   </div>
 
@@ -450,7 +450,7 @@ If you’re comfortable, this will offend you. If you’re ready to be forged, y
   </div>
 
   <div class="ffm-cap-meta">
-    {{ registered }} of {{ capacity }} seats taken
+    Originally planned for {{ planned }} men • expanded room at {{ expanded }} • registration remains open
   </div>
 
 </div>
