@@ -662,31 +662,31 @@ We become men who reclaim what was surrendered and lead with disciplined, danger
 <h2>APPLY NOW</h2>
 
 <p style="max-width:760px;margin:0 auto;">
-The next cohort begins Tuesday, March 17 at 6:00 PM.<br>
-We cap this at <span class="ffm-gold">25/30 men</span>. When the seats are filled, applications close.
+The next cohort begins Tuesday, March 17 at 6:00 PM at <span class="ffm-gold">Best Western Plus Knoxville Cedar Bluff</span>.<br>
+This cohort was originally planned for 25 men. Response has already pushed beyond that, and space remains limited.
 </p>
 
 <div class="ffm-btnRow" style="margin-top:14px;">
-  <a class="ffm-btn primary" href="/register/">Claim One of the Remaining Seats</a>
+  <a class="ffm-btn primary" href="/register/">Reserve Your Place</a>
   <a class="ffm-btn" href="/contact/">Ask a question</a>
 </div>
 
 {# Reuse the same numbers as the top widget #}
-{% set capacity = 30 %}
-{% set registered = 29 %}
-{% set remaining = capacity - registered %}
-{% set pct = (registered / capacity * 100) | round %}
+{% set planned = 25 %}
+{% set expanded = 32 %}
+{% set registered = 30 %}
+{% set pct = (registered / expanded * 100) | round %}
 
 <div class="ffm-cap-wrap" style="margin-left:auto;margin-right:auto;">
   <div class="ffm-cap-top">
-    <span class="ffm-cap-badge">Seats Remaining</span>
-    <span class="ffm-cap-line">⚔️ <strong>{{ remaining }}</strong> left</span>
+    <span class="ffm-cap-badge">Registration Update</span>
+    <span class="ffm-cap-line">⚔️ <strong>{{ registered }}</strong> men registered</span>
   </div>
   <div class="ffm-cap-bar">
     <div class="ffm-cap-fill" style="width: {{ pct }}%"></div>
   </div>
   <div class="ffm-cap-meta">
-    {{ registered }} of {{ capacity }} seats taken
+    Originally planned for {{ planned }} • expanded venue secured • limited room remains
   </div>
 </div>
 
