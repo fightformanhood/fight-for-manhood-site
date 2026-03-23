@@ -56,14 +56,14 @@
   function attempt() {
     const val = (input.value || "").trim();
     if (val === PASSWORD) {
-      sessionStorage.setItem(STORAGE_KEY, "open");
+      localStorage.setItem(STORAGE_KEY, "open");
       openGate();
     } else {
       showError();
     }
   }
 
-  if (sessionStorage.getItem(STORAGE_KEY) === "open") {
+  if (localstorage.getItem(STORAGE_KEY) === "open") {
     openGate();
     return;
   }
