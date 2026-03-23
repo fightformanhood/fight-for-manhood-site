@@ -1,1 +1,366 @@
+---
+title: "Attendee Hub"
+description: "Private resources for attendees and recent graduates."
+layout: "base.njk"
+permalink: "/hub/"
+eleventyExcludeFromCollections: true
+---
 
+<style>
+:root{
+  --bg0:#070b12;
+  --bg1:#0b1324;
+  --card:rgba(255,255,255,.05);
+  --card2:rgba(255,255,255,.07);
+  --text:#e8edf6;
+  --muted:#a9b3c7;
+  --gold:#caa246;
+  --line:rgba(202,162,70,.28);
+  --stroke:rgba(255,255,255,.10);
+  --danger:#ffb4b4;
+}
+
+.ffm-gate-lock{
+  overflow:hidden;
+}
+
+.ffm-gate-wrap{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+}
+
+.ffm-gate-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(3,7,14,.82);
+  backdrop-filter:blur(8px);
+}
+
+.ffm-gate-box{
+  position:relative;
+  z-index:2;
+  width:min(92vw,520px);
+  margin:12vh auto 0;
+  padding:34px 28px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(9,16,28,.96), rgba(7,11,18,.96));
+  box-shadow:0 20px 70px rgba(0,0,0,.45);
+  color:var(--text);
+  text-align:center;
+}
+
+.ffm-gate-kicker{
+  color:var(--gold);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.82rem;
+  margin-bottom:10px;
+}
+
+.ffm-gate-box h1{
+  margin:0 0 10px;
+  font-size:2rem;
+  line-height:1.08;
+}
+
+.ffm-gate-box p{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
+.ffm-gate-form{
+  display:grid;
+  gap:12px;
+}
+
+.ffm-gate-input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  font-size:1rem;
+}
+
+.ffm-gate-btn{
+  border:none;
+  border-radius:14px;
+  padding:14px 18px;
+  background:linear-gradient(180deg, #d2ab52, #b78d35);
+  color:#111;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.ffm-gate-error{
+  color:var(--danger);
+  font-size:.95rem;
+}
+
+.ffm-page{
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 500px at 50% -10%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+}
+
+.ffm-shell{
+  width:min(1180px, calc(100% - 32px));
+  margin:0 auto;
+  padding:42px 0 80px;
+}
+
+.ffm-hero{
+  padding:34px 28px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+  margin-bottom:22px;
+}
+
+.ffm-kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.82rem;
+  margin-bottom:10px;
+}
+
+.ffm-hero h1{
+  margin:0 0 10px;
+  font-size:clamp(2rem, 4vw, 3.5rem);
+  line-height:1.02;
+}
+
+.ffm-hero p{
+  margin:0;
+  color:var(--muted);
+  max-width:760px;
+  font-size:1.05rem;
+}
+
+.ffm-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:22px;
+  margin-top:22px;
+}
+
+.ffm-stack{
+  display:grid;
+  gap:22px;
+}
+
+.ffm-card{
+  border:1px solid var(--stroke);
+  border-radius:24px;
+  background:var(--card);
+  padding:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.16);
+}
+
+.ffm-card h2{
+  margin:0 0 14px;
+  font-size:1.35rem;
+}
+
+.ffm-card p{
+  color:var(--muted);
+}
+
+.ffm-links{
+  display:grid;
+  gap:12px;
+}
+
+.ffm-link{
+  display:block;
+  text-decoration:none;
+  color:var(--text);
+  padding:16px 18px;
+  border-radius:18px;
+  border:1px solid rgba(202,162,70,.22);
+  background:rgba(202,162,70,.07);
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.ffm-link:hover{
+  transform:translateY(-1px);
+  border-color:rgba(202,162,70,.44);
+  background:rgba(202,162,70,.11);
+}
+
+.ffm-link strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.ffm-link span{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.ffm-post{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:16px;
+  margin-top:16px;
+}
+
+.ffm-post:first-of-type{
+  border-top:none;
+  padding-top:0;
+  margin-top:0;
+}
+
+.ffm-post h3{
+  margin:0 0 8px;
+  font-size:1.08rem;
+}
+
+.ffm-post-meta{
+  color:var(--gold);
+  font-size:.84rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+.ffm-archive{
+  display:grid;
+  gap:12px;
+}
+
+.ffm-archive-item{
+  padding:14px 16px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:var(--card2);
+}
+
+.ffm-archive-item strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.ffm-archive-item span{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+@media (max-width: 900px){
+  .ffm-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+{% include "partials/ffm-gate.njk", {
+  gateId: "hub",
+  gateTitle: "Attendee Hub",
+  gateMessage: "Private access for attendees and recent graduates.",
+  gatePassword: "SET-YOUR-HUB-PASSWORD-HERE"
+} %}
+
+<section class="ffm-page">
+  <div class="ffm-shell">
+
+    <div class="ffm-hero">
+      <div class="ffm-kicker">Private Resource Hub</div>
+      <h1>Attendee / Alumni Hub</h1>
+      <p>
+        This page is for current attendees and recent graduates. Check here for your latest notes,
+        handouts, updates, encouragement, and archived materials from previous weeks.
+      </p>
+    </div>
+
+    <div class="ffm-grid">
+      <div class="ffm-stack">
+
+        <div class="ffm-card">
+          <h2>Latest Post From You</h2>
+
+          <div class="ffm-post">
+            <div class="ffm-post-meta">Current message</div>
+            <h3>Stay in the fight this week.</h3>
+            <p>
+              Use this section for a short written post each week. This can be encouragement, a challenge,
+              a reminder, or a practical word to keep the men leaning in between sessions.
+            </p>
+          </div>
+
+          <div class="ffm-post">
+            <div class="ffm-post-meta">Example post</div>
+            <h3>Do not coast after a strong week.</h3>
+            <p>
+              What starts strong often fades when a man goes passive again. Stay alert. Revisit the material.
+              Be honest this week. Stay engaged with what God is exposing and rebuilding.
+            </p>
+          </div>
+        </div>
+
+        <div class="ffm-card">
+          <h2>Current Week Handouts</h2>
+          <div class="ffm-links">
+            <a class="ffm-link" href="#" target="_blank" rel="noopener">
+              <strong>Session Notes</strong>
+              <span>Link to the current week’s notes or PDF handout.</span>
+            </a>
+            <a class="ffm-link" href="#" target="_blank" rel="noopener">
+              <strong>Discussion Questions</strong>
+              <span>Optional weekly questions or reflection sheet.</span>
+            </a>
+            <a class="ffm-link" href="#" target="_blank" rel="noopener">
+              <strong>Bonus Resource</strong>
+              <span>Any extra article, PDF, or video you want them to review.</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ffm-stack">
+
+        <div class="ffm-card">
+          <h2>Previous Weeks</h2>
+          <div class="ffm-archive">
+            <div class="ffm-archive-item">
+              <strong>Week 1</strong>
+              <span>Add links to handouts, notes, or recap material.</span>
+            </div>
+            <div class="ffm-archive-item">
+              <strong>Week 2</strong>
+              <span>Add links to handouts, notes, or recap material.</span>
+            </div>
+            <div class="ffm-archive-item">
+              <strong>Week 3</strong>
+              <span>Add links to handouts, notes, or recap material.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ffm-card">
+          <h2>Extra Resources</h2>
+          <div class="ffm-links">
+            <a class="ffm-link" href="#" target="_blank" rel="noopener">
+              <strong>Previous Notes Archive</strong>
+              <span>Link to a folder or archive page.</span>
+            </a>
+            <a class="ffm-link" href="#" target="_blank" rel="noopener">
+              <strong>Video Update</strong>
+              <span>Add an unlisted video link later if you want to do vlog-style updates.</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
