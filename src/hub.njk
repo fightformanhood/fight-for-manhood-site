@@ -97,12 +97,11 @@ eleventyExcludeFromCollections: true
 }
 </style>
 
-{% include "partials/ffm-gate.njk", {
-  gateId: "hub",
-  gateTitle: attendeeHub.heroTitle,
-  gateMessage: "Private access for attendees and recent graduates.",
-  gatePassword: attendeeHub.password
-} %}
+{% set gateId = "hub" %}
+{% set gateTitle = attendeeHub.heroTitle %}
+{% set gateMessage = "Private access for attendees and recent graduates." %}
+{% set gatePassword = attendeeHub.password %}
+{% include "partials/ffm-gate.njk" %}
 
 <section class="ffm-page">
   <div class="ffm-shell">
