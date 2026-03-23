@@ -1,0 +1,77 @@
+{
+  "password": "SET-YOUR-PIONEER-PASSWORD-HERE",
+  "heroKicker": "Private Leadership Hub",
+  "heroTitle": "Pioneer Portal",
+  "heroText": "This is the working hub for pioneers. Review the weekly material, revisit prior presentations, access the attendee contact list, and watch for leadership notes and updates.",
+
+  "thisWeek": [
+    {
+      "title": "Weekly Questions",
+      "text": "Replace this with the current week's questions or a link note."
+    },
+    {
+      "title": "Leader Emphasis",
+      "text": "What you want pioneers listening for, pressing into, or following up on this week."
+    },
+    {
+      "title": "What To Be Ready For",
+      "text": "Any logistics, expected attendance, watch-outs, or discussion focus."
+    }
+  ],
+
+  "posts": [
+    {
+      "meta": "Latest leadership note",
+      "title": "Set the tone early.",
+      "text": "Use this area for updates to pioneers. You can post a brief leadership note, what you're sensing, what they need to reinforce, or anything you want them to keep in front of them."
+    },
+    {
+      "meta": "Example post",
+      "title": "Watch for the quiet men.",
+      "text": "Some of the men who say the least up front are often being hit the hardest. Do not confuse quiet with disengaged. Pay attention, stay warm, and keep them in the game."
+    }
+  ],
+
+  "reviewMaterials": [
+    {
+      "title": "Past Presentation Deck",
+      "text": "Link this to the slide deck, PDF, Google Drive file, or download.",
+      "url": "#"
+    },
+    {
+      "title": "Previous Week Notes",
+      "text": "Link to a PDF, Google Doc, or handout archive.",
+      "url": "#"
+    },
+    {
+      "title": "Leader Review Sheet",
+      "text": "Optional one-page guide for pioneers to revisit before the next session.",
+      "url": "#"
+    }
+  ],
+
+  "contactList": {
+    "title": "Open Contact Spreadsheet",
+    "text": "Link your Google Sheet, Excel file, or shared contact doc here.",
+    "url": "#",
+    "note": "Keep this limited to the information pioneers truly need."
+  },
+
+  "downloads": [
+    {
+      "title": "Weekly Question Sheet",
+      "text": "PDF or Doc link.",
+      "url": "#"
+    },
+    {
+      "title": "Session Handout",
+      "text": "PDF or Doc link.",
+      "url": "#"
+    },
+    {
+      "title": "Extra Resource",
+      "text": "Anything else you want pioneers to review.",
+      "url": "#"
+    }
+  ]
+}
