@@ -63,7 +63,7 @@
     }
   }
 
-  if (localstorage.getItem(STORAGE_KEY) === "open") {
+  if (localStorage.getItem(STORAGE_KEY) === "open") {
     openGate();
     return;
   }
@@ -71,13 +71,21 @@
   document.documentElement.classList.add("ffm-gate-lock");
   document.body.classList.add("ffm-gate-lock");
 
-  btn.addEventListener("click", attempt);
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") attempt();
-  });
+  if (btn) {
+    btn.addEventListener("click", attempt);
+  }
 
-  setTimeout(function () {
-    if (input) input.focus();
-  }, 100);
+  if (input) {
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        attempt();
+      }
+    });
+
+    setTimeout(function () {
+      input.focus();
+    }, 100);
+  }
 })();
 </script>
