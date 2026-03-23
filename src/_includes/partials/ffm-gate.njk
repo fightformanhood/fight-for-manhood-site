@@ -1,1 +1,83 @@
+{% set gateId = gateId or "default" %}
+{% set gateTitle = gateTitle or "Protected Page" %}
+{% set gateMessage = gateMessage or "Enter the password to continue." %}
+{% set gatePassword = gatePassword or "changeme" %}
 
+<div id="ffmGateWrap-{{ gateId }}" class="ffm-gate-wrap" aria-hidden="false">
+  <div class="ffm-gate-backdrop"></div>
+  <div class="ffm-gate-box">
+    <div class="ffm-gate-kicker">Fight for Manhood</div>
+    <h1>{{ gateTitle }}</h1>
+    <p>{{ gateMessage }}</p>
+
+    <form class="ffm-gate-form" onsubmit="return false;">
+      <input
+        id="ffmGateInput-{{ gateId }}"
+        class="ffm-gate-input"
+        type="password"
+        placeholder="Enter password"
+        autocomplete="off"
+      />
+      <button id="ffmGateBtn-{{ gateId }}" class="ffm-gate-btn" type="button">
+        Enter
+      </button>
+      <div id="ffmGateError-{{ gateId }}" class="ffm-gate-error" style="display:none;">
+        Incorrect password.
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+  const GATE_ID = "{{ gateId }}";
+  const PASSWORD = "{{ gatePassword }}";
+  const STORAGE_KEY = "ffm_gate_" + GATE_ID;
+  const wrap = document.getElementById("ffmGateWrap-" + GATE_ID);
+  const input = document.getElementById("ffmGateInput-" + GATE_ID);
+  const btn = document.getElementById("ffmGateBtn-" + GATE_ID);
+  const error = document.getElementById("ffmGateError-" + GATE_ID);
+
+  function openGate() {
+    if (wrap) {
+      wrap.style.display = "none";
+      wrap.setAttribute("aria-hidden", "true");
+      document.documentElement.classList.remove("ffm-gate-lock");
+      document.body.classList.remove("ffm-gate-lock");
+    }
+  }
+
+  function showError() {
+    if (error) error.style.display = "block";
+    if (input) input.value = "";
+    if (input) input.focus();
+  }
+
+  function attempt() {
+    const val = (input.value || "").trim();
+    if (val === PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, "open");
+      openGate();
+    } else {
+      showError();
+    }
+  }
+
+  if (sessionStorage.getItem(STORAGE_KEY) === "open") {
+    openGate();
+    return;
+  }
+
+  document.documentElement.classList.add("ffm-gate-lock");
+  document.body.classList.add("ffm-gate-lock");
+
+  btn.addEventListener("click", attempt);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") attempt();
+  });
+
+  setTimeout(function () {
+    if (input) input.focus();
+  }, 100);
+})();
+</script>
