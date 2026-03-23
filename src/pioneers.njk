@@ -267,12 +267,11 @@ eleventyExcludeFromCollections: true
 }
 </style>
 
-{% include "partials/ffm-gate.njk", {
-  gateId: "pioneers",
-  gateTitle: "Pioneer Portal",
-  gateMessage: "Private access for pioneers and leadership support.",
-  gatePassword: "SET-YOUR-PIONEER-PASSWORD-HERE"
-} %}
+{% set gateId = "pioneers" %}
+{% set gateTitle = pioneerPortal.heroTitle %}
+{% set gateMessage = "Private access for pioneers and leadership support." %}
+{% set gatePassword = pioneerPortal.password %}
+{% include "partials/ffm-gate.njk" %}
 
 <section class="ffm-page">
   <div class="ffm-shell">
