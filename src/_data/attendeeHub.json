@@ -1,0 +1,65 @@
+{
+  "password": "SET-YOUR-HUB-PASSWORD-HERE",
+  "heroKicker": "Private Resource Hub",
+  "heroTitle": "Attendee / Alumni Hub",
+  "heroText": "This page is for current attendees and recent graduates. Check here for your latest notes, handouts, updates, encouragement, and archived materials from previous weeks.",
+
+  "posts": [
+    {
+      "meta": "Current message",
+      "title": "Stay in the fight this week.",
+      "text": "Use this section for a short written post each week. This can be encouragement, a challenge, a reminder, or a practical word to keep the men leaning in between sessions."
+    },
+    {
+      "meta": "Example post",
+      "title": "Do not coast after a strong week.",
+      "text": "What starts strong often fades when a man goes passive again. Stay alert. Revisit the material. Be honest this week. Stay engaged with what God is exposing and rebuilding."
+    }
+  ],
+
+  "currentWeekHandouts": [
+    {
+      "title": "Session Notes",
+      "text": "Link to the current week's notes or PDF handout.",
+      "url": "#"
+    },
+    {
+      "title": "Discussion Questions",
+      "text": "Optional weekly questions or reflection sheet.",
+      "url": "#"
+    },
+    {
+      "title": "Bonus Resource",
+      "text": "Any extra article, PDF, or video you want them to review.",
+      "url": "#"
+    }
+  ],
+
+  "previousWeeks": [
+    {
+      "title": "Week 1",
+      "text": "Add links to handouts, notes, or recap material."
+    },
+    {
+      "title": "Week 2",
+      "text": "Add links to handouts, notes, or recap material."
+    },
+    {
+      "title": "Week 3",
+      "text": "Add links to handouts, notes, or recap material."
+    }
+  ],
+
+  "extraResources": [
+    {
+      "title": "Previous Notes Archive",
+      "text": "Link to a folder or archive page.",
+      "url": "#"
+    },
+    {
+      "title": "Video Update",
+      "text": "Add an unlisted video link later if you want to do vlog-style updates.",
+      "url": "#"
+    }
+  ]
+}
