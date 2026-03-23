@@ -38,15 +38,41 @@
   "previousWeeks": [
     {
       "title": "Week 1",
-      "text": "Add links to handouts, notes, or recap material."
+      "text": "Notes, handouts, and recap material.",
+      "links": [
+        {
+          "label": "Session Notes",
+          "url": "#"
+        },
+        {
+          "label": "Handout PDF",
+          "url": "#"
+        }
+      ]
     },
     {
       "title": "Week 2",
-      "text": "Add links to handouts, notes, or recap material."
+      "text": "Notes, handouts, and recap material.",
+      "links": [
+        {
+          "label": "Session Notes",
+          "url": "#"
+        },
+        {
+          "label": "Handout PDF",
+          "url": "#"
+        }
+      ]
     },
     {
       "title": "Week 3",
-      "text": "Add links to handouts, notes, or recap material."
+      "text": "Notes, handouts, and recap material.",
+      "links": [
+        {
+          "label": "Session Notes",
+          "url": "#"
+        }
+      ]
     }
   ],
 
