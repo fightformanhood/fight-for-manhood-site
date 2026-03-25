@@ -2,76 +2,228 @@
   "password": "rejectpassivity",
   "heroKicker": "Private Leadership Hub",
   "heroTitle": "Pioneer Portal",
-  "heroText": "This is the working hub for pioneers. Review the weekly material, revisit prior presentations, access the attendee contact list, and watch for leadership notes and updates.",
+  "heroText": "Weekly updates, week-by-week documents, guided notes, and field reports for the men helping hold the line.",
 
-  "thisWeek": [
+  "weeklyUpdates": [
     {
-      "title": "Weekly Questions",
-      "text": "This weeks questions are quite simple:  Tell the group one secret no one else knows about you"
-    },
-    {
-      "title": "Leader Emphasis",
-      "text": "1.  Remember that you go first, then next would be any other graduate.  2.  Once a man tells his secret ask the other men if they respect him more or less.  Emphasize how the enemy tells us people will respect you less if they knew and how that is a lie proven right here"
-    },
-    {
-      "title": "What To Be Ready For",
-      "text": "If you are so led, after the secret you can say something like - Im sorry that happened to you - or - I know what that feels like.  If its appropriate ask the other men if they have struggled with somehting like that."
-    }
-  ],
-
-  "posts": [
-    {
-      "meta": "Latest leadership note",
+      "meta": "Latest Update",
       "title": "Set the tone early.",
-      "text": "Remember to follow up with new guys after this weeks meeting.  This is when a man is most likely to never return"
+      "text": "Draw the room into honesty fast. Do not let the night stay shallow. Watch for the quiet men and help them stay engaged."
     },
     {
-      "meta": "Example post",
-      "title": "Watch for the quiet men.",
-      "text": "Some of the men who say the least up front are often being hit the hardest. Do not confuse quiet with disengaged. Pay attention, stay warm, and keep them in the game."
+      "meta": "This Week",
+      "title": "Be ready to go beneath the surface.",
+      "text": "Some men will speak strongly without really saying much. Stay patient, ask good questions, and help them move from talking around things to bringing things into the light."
     }
   ],
 
-  "reviewMaterials": [
+  "pioneerPosts": [
     {
-      "title": "Past Presentation Deck",
-      "text": "Week 1.",
-      "url": "https://docs.google.com/presentation/d/1AWwDkeU9S2mJfg8E9sP7oo17kV6UP3wo/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
-    },
-    {
-      "title": "Previous Week Handouts",
-      "text": "Week 1",
-      "url": "https://docs.google.com/document/d/1GaAV6dIGfUn-v9RNfU6OvovUxGX-gMQw/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
-    },
-    {
-      "title": "Leader Review Sheet",
-      "text": "Optional one-page guide for pioneers to revisit before the next session.",
-      "url": "#"
+      "meta": "Field Note",
+      "title": "What you are seeing in your group",
+      "text": "Use this area later for pioneer-submitted observations, common struggles, breakthrough moments, or patterns worth watching."
     }
   ],
+
+  "weeklyDocuments": [
+    {
+      "week": "Week 1",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": "https://docs.google.com/presentation/d/1AWwDkeU9S2mJfg8E9sP7oo17kV6UP3wo/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 2",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 3",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 4",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 5",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 6",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 7",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 8",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 9",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    },
+    {
+      "week": "Week 10",
+      "questions": {
+        "label": "Open",
+        "url": ""
+      },
+      "slideDeck": {
+        "label": "Open",
+        "url": ""
+      },
+      "leaderGuides": {
+        "label": "Open",
+        "url": ""
+      },
+      "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      }
+    }
+  ],
+
+  "documentNote": "Add the document links week by week as you build them out. Blank fields will show a dash until a link is added.",
 
   "contactList": {
     "title": "Open Contact Spreadsheet",
-    "text": "Link your Google Sheet, Excel file, or shared contact doc here.",
+    "text": "Names and contact info for current attendees.",
     "url": "#",
-    "note": "Keep this limited to the information pioneers truly need."
-  },
-
-  "downloads": [
-    {
-      "title": "Weekly Question Sheet",
-      "text": "PDF or Doc link.",
-      "url": "#"
-    },
-    {
-      "title": "Session Handout",
-      "text": "PDF or Doc link.",
-      "url": "#"
-    },
-    {
-      "title": "Extra Resource",
-      "text": "Anything else you want pioneers to review.",
-      "url": "#"
-    }
-  ]
+    "note": "Keep this limited to what pioneers actually need."
+  }
 }
