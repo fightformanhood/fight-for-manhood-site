@@ -20,82 +20,253 @@ robots: noindex
   --stroke:rgba(255,255,255,.10);
   --danger:#ffb4b4;
 }
+
 .ffm-gate-lock{ overflow:hidden; }
 .ffm-gate-wrap{ position:fixed; inset:0; z-index:9999; }
 .ffm-gate-backdrop{
-  position:absolute; inset:0; background:rgba(3,7,14,.82); backdrop-filter:blur(8px);
+  position:absolute; inset:0;
+  background:rgba(3,7,14,.82);
+  backdrop-filter:blur(8px);
 }
 .ffm-gate-box{
-  position:relative; z-index:2; width:min(92vw,520px); margin:12vh auto 0; padding:34px 28px;
-  border:1px solid var(--line); border-radius:24px;
+  position:relative; z-index:2;
+  width:min(92vw,520px);
+  margin:12vh auto 0;
+  padding:34px 28px;
+  border:1px solid var(--line);
+  border-radius:24px;
   background:linear-gradient(180deg, rgba(9,16,28,.96), rgba(7,11,18,.96));
-  box-shadow:0 20px 70px rgba(0,0,0,.45); color:var(--text); text-align:center;
+  box-shadow:0 20px 70px rgba(0,0,0,.45);
+  color:var(--text);
+  text-align:center;
 }
 .ffm-gate-kicker{
-  color:var(--gold); letter-spacing:.14em; text-transform:uppercase; font-size:.82rem; margin-bottom:10px;
+  color:var(--gold);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.82rem;
+  margin-bottom:10px;
 }
 .ffm-gate-box h1{ margin:0 0 10px; font-size:2rem; line-height:1.08; }
 .ffm-gate-box p{ margin:0 0 18px; color:var(--muted); }
 .ffm-gate-form{ display:grid; gap:12px; }
 .ffm-gate-input{
-  width:100%; padding:14px 16px; border-radius:14px; border:1px solid var(--stroke);
-  background:rgba(255,255,255,.06); color:var(--text); font-size:1rem;
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  font-size:1rem;
 }
 .ffm-gate-btn{
-  border:none; border-radius:14px; padding:14px 18px;
+  border:none;
+  border-radius:14px;
+  padding:14px 18px;
   background:linear-gradient(180deg, #d2ab52, #b78d35);
-  color:#111; font-weight:800; letter-spacing:.06em; text-transform:uppercase; cursor:pointer;
+  color:#111;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  cursor:pointer;
 }
 .ffm-gate-error{ color:var(--danger); font-size:.95rem; }
+
 .ffm-page{
-  min-height:100vh; color:var(--text);
-  background:radial-gradient(1000px 500px at 50% -10%, rgba(255,255,255,.08), transparent 60%), linear-gradient(180deg, var(--bg1), var(--bg0));
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 500px at 50% -10%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
 }
-.ffm-shell{ width:min(1180px, calc(100% - 32px)); margin:0 auto; padding:42px 0 80px; }
+
+.ffm-shell{
+  width:min(1320px, calc(100% - 28px));
+  margin:0 auto;
+  padding:38px 0 80px;
+}
+
 .ffm-hero{
-  padding:34px 28px; border:1px solid var(--line); border-radius:28px;
+  padding:30px 26px;
+  border:1px solid var(--line);
+  border-radius:28px;
   background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  box-shadow:0 10px 30px rgba(0,0,0,.18); margin-bottom:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+  margin-bottom:22px;
 }
 .ffm-kicker{
-  color:var(--gold); text-transform:uppercase; letter-spacing:.14em; font-size:.82rem; margin-bottom:10px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.82rem;
+  margin-bottom:10px;
 }
-.ffm-hero h1{ margin:0 0 10px; font-size:clamp(2rem, 4vw, 3.5rem); line-height:1.02; }
-.ffm-hero p{ margin:0; color:var(--muted); max-width:760px; font-size:1.05rem; }
-.ffm-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:22px; margin-top:22px; }
-.ffm-stack{ display:grid; gap:22px; }
+.ffm-hero h1{
+  margin:0 0 10px;
+  font-size:clamp(2rem, 4vw, 3.4rem);
+  line-height:1.02;
+}
+.ffm-hero p{
+  margin:0;
+  color:var(--muted);
+  max-width:840px;
+  font-size:1.05rem;
+}
+
+.ffm-main-grid{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap:22px;
+  align-items:start;
+}
+
+.ffm-stack{
+  display:grid;
+  gap:22px;
+}
+
 .ffm-card{
-  border:1px solid var(--stroke); border-radius:24px; background:var(--card); padding:24px;
+  border:1px solid var(--stroke);
+  border-radius:24px;
+  background:var(--card);
+  padding:22px;
   box-shadow:0 10px 30px rgba(0,0,0,.16);
 }
-.ffm-card h2{ margin:0 0 14px; font-size:1.35rem; }
-.ffm-card p{ color:var(--muted); }
-.ffm-list{ display:grid; gap:12px; }
-.ffm-item{
-  border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:16px; background:var(--card2);
+
+.ffm-card-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 14px;
 }
-.ffm-item strong{ display:block; margin-bottom:4px; }
-.ffm-item span{ color:var(--muted); font-size:.96rem; }
-.ffm-links{ display:grid; gap:12px; }
-.ffm-link{
-  display:block; text-decoration:none; color:var(--text); padding:16px 18px; border-radius:18px;
-  border:1px solid rgba(202,162,70,.22); background:rgba(202,162,70,.07);
+.ffm-card-title h2{
+  margin:0;
+  font-size:1.3rem;
+}
+.ffm-card-tag{
+  color:var(--gold);
+  font-size:.78rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.ffm-post{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:16px;
+  margin-top:16px;
+}
+.ffm-post:first-of-type{
+  border-top:none;
+  padding-top:0;
+  margin-top:0;
+}
+.ffm-post-meta{
+  color:var(--gold);
+  font-size:.8rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.ffm-post h3{
+  margin:0 0 8px;
+  font-size:1.04rem;
+}
+.ffm-post p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.55;
+}
+
+.ffm-doc-table-wrap{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  overflow:hidden;
+  background:rgba(255,255,255,.03);
+}
+
+.ffm-doc-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.ffm-doc-table thead th{
+  background:rgba(202,162,70,.10);
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.76rem;
+  text-align:left;
+  padding:14px 12px;
+  border-bottom:1px solid rgba(202,162,70,.20);
+}
+
+.ffm-doc-table tbody td{
+  padding:14px 12px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  vertical-align:top;
+}
+
+.ffm-doc-table tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.ffm-week-cell{
+  min-width:84px;
+  font-weight:700;
+  color:var(--text);
+}
+
+.ffm-doc-link{
+  display:inline-block;
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 11px;
+  border-radius:999px;
+  border:1px solid rgba(202,162,70,.24);
+  background:rgba(202,162,70,.08);
+  font-size:.9rem;
+  line-height:1.2;
   transition:transform .15s ease, border-color .15s ease, background .15s ease;
 }
-.ffm-link:hover{
-  transform:translateY(-1px); border-color:rgba(202,162,70,.44); background:rgba(202,162,70,.11);
+.ffm-doc-link:hover{
+  transform:translateY(-1px);
+  border-color:rgba(202,162,70,.45);
+  background:rgba(202,162,70,.13);
 }
-.ffm-link strong{ display:block; margin-bottom:4px; }
-.ffm-link span{ color:var(--muted); font-size:.95rem; }
-.ffm-note{ border-left:3px solid var(--gold); padding-left:14px; color:var(--muted); }
-.ffm-post{ border-top:1px solid rgba(255,255,255,.08); padding-top:16px; margin-top:16px; }
-.ffm-post:first-of-type{ border-top:none; padding-top:0; margin-top:0; }
-.ffm-post h3{ margin:0 0 8px; font-size:1.05rem; }
-.ffm-post-meta{
-  color:var(--gold); font-size:.84rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px;
+.ffm-doc-empty{
+  color:rgba(169,179,199,.55);
+  font-size:.92rem;
 }
-@media (max-width: 900px){
-  .ffm-grid{ grid-template-columns:1fr; }
+
+.ffm-note{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+@media (max-width: 1080px){
+  .ffm-main-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 760px){
+  .ffm-shell{
+    width:min(100%, calc(100% - 16px));
+  }
+  .ffm-hero{
+    padding:24px 18px;
+  }
+  .ffm-card{
+    padding:18px;
+  }
+  .ffm-doc-table-wrap{
+    overflow-x:auto;
+  }
+  .ffm-doc-table{
+    min-width:760px;
+  }
 }
 </style>
 
@@ -114,24 +285,16 @@ robots: noindex
       <p>{{ pioneerPortal.heroText }}</p>
     </div>
 
-    <div class="ffm-grid">
+    <div class="ffm-main-grid">
+
       <div class="ffm-stack">
-
         <div class="ffm-card">
-          <h2>This Week</h2>
-          <div class="ffm-list">
-            {% for item in pioneerPortal.thisWeek %}
-              <div class="ffm-item">
-                <strong>{{ item.title }}</strong>
-                <span>{{ item.text }}</span>
-              </div>
-            {% endfor %}
+          <div class="ffm-card-title">
+            <h2>Weekly Updates</h2>
+            <div class="ffm-card-tag">Leadership Feed</div>
           </div>
-        </div>
 
-        <div class="ffm-card">
-          <h2>Posts From You</h2>
-          {% for post in pioneerPortal.posts %}
+          {% for post in pioneerPortal.weeklyUpdates %}
             <div class="ffm-post">
               <div class="ffm-post-meta">{{ post.meta }}</div>
               <h3>{{ post.title }}</h3>
@@ -140,47 +303,107 @@ robots: noindex
           {% endfor %}
         </div>
 
+        <div class="ffm-card">
+          <div class="ffm-card-title">
+            <h2>Pioneer Posts</h2>
+            <div class="ffm-card-tag">Field Notes</div>
+          </div>
+
+          {% for post in pioneerPortal.pioneerPosts %}
+            <div class="ffm-post">
+              <div class="ffm-post-meta">{{ post.meta }}</div>
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.text }}</p>
+            </div>
+          {% endfor %}
+        </div>
       </div>
 
       <div class="ffm-stack">
-
         <div class="ffm-card">
-          <h2>Review Materials</h2>
-          <div class="ffm-links">
-            {% for item in pioneerPortal.reviewMaterials %}
-              <a class="ffm-link" href="{{ item.url }}" target="_blank" rel="noopener">
-                <strong>{{ item.title }}</strong>
-                <span>{{ item.text }}</span>
-              </a>
-            {% endfor %}
+          <div class="ffm-card-title">
+            <h2>Week-by-Week Documents</h2>
+            <div class="ffm-card-tag">Links To Documents</div>
           </div>
+
+          <div class="ffm-doc-table-wrap">
+            <table class="ffm-doc-table">
+              <thead>
+                <tr>
+                  <th>Week</th>
+                  <th>Questions</th>
+                  <th>Slide Deck</th>
+                  <th>Leader Guides</th>
+                  <th>Guided Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for week in pioneerPortal.weeklyDocuments %}
+                  <tr>
+                    <td class="ffm-week-cell">{{ week.week }}</td>
+
+                    <td>
+                      {% if week.questions and week.questions.url %}
+                        <a class="ffm-doc-link" href="{{ week.questions.url }}" target="_blank" rel="noopener">
+                          {{ week.questions.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+
+                    <td>
+                      {% if week.slideDeck and week.slideDeck.url %}
+                        <a class="ffm-doc-link" href="{{ week.slideDeck.url }}" target="_blank" rel="noopener">
+                          {{ week.slideDeck.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+
+                    <td>
+                      {% if week.leaderGuides and week.leaderGuides.url %}
+                        <a class="ffm-doc-link" href="{{ week.leaderGuides.url }}" target="_blank" rel="noopener">
+                          {{ week.leaderGuides.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+
+                    <td>
+                      {% if week.guidedNotes and week.guidedNotes.url %}
+                        <a class="ffm-doc-link" href="{{ week.guidedNotes.url }}" target="_blank" rel="noopener">
+                          {{ week.guidedNotes.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+          <p class="ffm-note">{{ pioneerPortal.documentNote }}</p>
         </div>
 
         <div class="ffm-card">
-          <h2>Attendee Contact List</h2>
-          <div class="ffm-links">
-            <a class="ffm-link" href="{{ pioneerPortal.contactList.url }}" target="_blank" rel="noopener">
-              <strong>{{ pioneerPortal.contactList.title }}</strong>
-              <span>{{ pioneerPortal.contactList.text }}</span>
-            </a>
+          <div class="ffm-card-title">
+            <h2>Attendee Contact List</h2>
+            <div class="ffm-card-tag">Current Men</div>
           </div>
+
+          <a class="ffm-doc-link" href="{{ pioneerPortal.contactList.url }}" target="_blank" rel="noopener">
+            {{ pioneerPortal.contactList.title }}
+          </a>
+          <p class="ffm-note">{{ pioneerPortal.contactList.text }}</p>
           <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
         </div>
-
-        <div class="ffm-card">
-          <h2>Quick Downloads</h2>
-          <div class="ffm-links">
-            {% for item in pioneerPortal.downloads %}
-              <a class="ffm-link" href="{{ item.url }}" target="_blank" rel="noopener">
-                <strong>{{ item.title }}</strong>
-                <span>{{ item.text }}</span>
-              </a>
-            {% endfor %}
-          </div>
-        </div>
-
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
