@@ -218,12 +218,11 @@
     }
   ],
 
-  "documentNote": "Add the document links week by week as you build them out. Blank fields will show a dash until a link is added.",
+
 
     "contactList": {
     "title": "Open Contact Spreadsheet",
     "text": "Names and contact info for current attendees.",
     "url": "https://docs.google.com/spreadsheets/d/1C-KS2Lc26QuAhQO2rGROsecNAKM5mgvh/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true",
-    "note": "Keep this limited to what pioneers actually need."
   }
 }
