@@ -47,9 +47,19 @@ robots: noindex
   font-size:.82rem;
   margin-bottom:10px;
 }
-.ffm-gate-box h1{ margin:0 0 10px; font-size:2rem; line-height:1.08; }
-.ffm-gate-box p{ margin:0 0 18px; color:var(--muted); }
-.ffm-gate-form{ display:grid; gap:12px; }
+.ffm-gate-box h1{
+  margin:0 0 10px;
+  font-size:2rem;
+  line-height:1.08;
+}
+.ffm-gate-box p{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.ffm-gate-form{
+  display:grid;
+  gap:12px;
+}
 .ffm-gate-input{
   width:100%;
   padding:14px 16px;
@@ -70,7 +80,10 @@ robots: noindex
   text-transform:uppercase;
   cursor:pointer;
 }
-.ffm-gate-error{ color:var(--danger); font-size:.95rem; }
+.ffm-gate-error{
+  color:var(--danger);
+  font-size:.95rem;
+}
 
 .ffm-page{
   min-height:100vh;
@@ -115,10 +128,11 @@ robots: noindex
 
 .ffm-main-grid{
   display:grid;
-  grid-template-columns: 1.35fr .9fr;
+  grid-template-columns:1.35fr .9fr;
   gap:22px;
   align-items:start;
 }
+
 .ffm-stack{
   display:grid;
   gap:22px;
@@ -214,7 +228,7 @@ robots: noindex
   min-width:84px;
   font-weight:700;
   color:var(--text);
-  font-size:.85rem;
+  font-size:.92rem;
 }
 
 .ffm-doc-link{
@@ -287,50 +301,50 @@ robots: noindex
 
     <div class="ffm-main-grid">
 
-     <div class="ffm-stack">
-  <div class="ffm-card">
-    <div class="ffm-card-title">
-      <h2>Attendee Contact List</h2>
-      <div class="ffm-card-tag">Current Men</div>
-    </div>
+      <div class="ffm-stack">
+        <div class="ffm-card">
+          <div class="ffm-card-title">
+            <h2>Attendee Contact List</h2>
+            <div class="ffm-card-tag">Current Men</div>
+          </div>
 
-    <a class="ffm-doc-link" href="{{ pioneerPortal.contactList.url }}" target="_blank" rel="noopener">
-      {{ pioneerPortal.contactList.title }}
-    </a>
-    <p class="ffm-note">{{ pioneerPortal.contactList.text }}</p>
-    <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
-  </div>
+          <a class="ffm-doc-link" href="{{ pioneerPortal.contactList.url }}" target="_blank" rel="noopener">
+            {{ pioneerPortal.contactList.title }}
+          </a>
+          <p class="ffm-note">{{ pioneerPortal.contactList.text }}</p>
+          <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
+        </div>
 
-  <div class="ffm-card">
-    <div class="ffm-card-title">
-      <h2>Weekly Updates</h2>
-      <div class="ffm-card-tag">Leadership Feed</div>
-    </div>
+        <div class="ffm-card">
+          <div class="ffm-card-title">
+            <h2>Weekly Updates</h2>
+            <div class="ffm-card-tag">Leadership Feed</div>
+          </div>
 
-    {% for post in pioneerPortal.weeklyUpdates %}
-      <div class="ffm-post">
-        <div class="ffm-post-meta">{{ post.meta }}</div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.text }}</p>
+          {% for post in pioneerPortal.weeklyUpdates %}
+            <div class="ffm-post">
+              <div class="ffm-post-meta">{{ post.meta }}</div>
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.text }}</p>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="ffm-card">
+          <div class="ffm-card-title">
+            <h2>Pioneer Posts</h2>
+            <div class="ffm-card-tag">Field Notes</div>
+          </div>
+
+          {% for post in pioneerPortal.pioneerPosts %}
+            <div class="ffm-post">
+              <div class="ffm-post-meta">{{ post.meta }}</div>
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.text }}</p>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-    {% endfor %}
-  </div>
-
-  <div class="ffm-card">
-    <div class="ffm-card-title">
-      <h2>Pioneer Posts</h2>
-      <div class="ffm-card-tag">Field Notes</div>
-    </div>
-
-    {% for post in pioneerPortal.pioneerPosts %}
-      <div class="ffm-post">
-        <div class="ffm-post-meta">{{ post.meta }}</div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.text }}</p>
-      </div>
-    {% endfor %}
-  </div>
-</div>
 
       <div class="ffm-stack">
         <div class="ffm-card">
@@ -402,6 +416,7 @@ robots: noindex
 
           <p class="ffm-note">{{ pioneerPortal.documentNote }}</p>
         </div>
+      </div>
 
     </div>
   </div>
