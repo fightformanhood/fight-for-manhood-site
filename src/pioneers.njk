@@ -12,7 +12,6 @@ robots: noindex
   --bg0:#070b12;
   --bg1:#0b1324;
   --card:rgba(255,255,255,.05);
-  --card2:rgba(255,255,255,.07);
   --text:#e8edf6;
   --muted:#a9b3c7;
   --gold:#caa246;
@@ -24,12 +23,14 @@ robots: noindex
 .ffm-gate-lock{ overflow:hidden; }
 .ffm-gate-wrap{ position:fixed; inset:0; z-index:9999; }
 .ffm-gate-backdrop{
-  position:absolute; inset:0;
+  position:absolute;
+  inset:0;
   background:rgba(3,7,14,.82);
   backdrop-filter:blur(8px);
 }
 .ffm-gate-box{
-  position:relative; z-index:2;
+  position:relative;
+  z-index:2;
   width:min(92vw,520px);
   margin:12vh auto 0;
   padding:34px 28px;
@@ -164,33 +165,6 @@ robots: noindex
   text-transform:uppercase;
 }
 
-.ffm-post{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top:16px;
-  margin-top:16px;
-}
-.ffm-post:first-of-type{
-  border-top:none;
-  padding-top:0;
-  margin-top:0;
-}
-.ffm-post-meta{
-  color:var(--gold);
-  font-size:.8rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:8px;
-}
-.ffm-post h3{
-  margin:0 0 8px;
-  font-size:1.04rem;
-}
-.ffm-post p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.55;
-}
-
 .ffm-doc-table-wrap{
   border:1px solid rgba(255,255,255,.08);
   border-radius:24px;
@@ -312,37 +286,9 @@ robots: noindex
             {{ pioneerPortal.contactList.title }}
           </a>
           <p class="ffm-note">{{ pioneerPortal.contactList.text }}</p>
-          <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
-        </div>
-
-        <div class="ffm-card">
-          <div class="ffm-card-title">
-            <h2>Weekly Updates</h2>
-            <div class="ffm-card-tag">Leadership Feed</div>
-          </div>
-
-          {% for post in pioneerPortal.weeklyUpdates %}
-            <div class="ffm-post">
-              <div class="ffm-post-meta">{{ post.meta }}</div>
-              <h3>{{ post.title }}</h3>
-              <p>{{ post.text }}</p>
-            </div>
-          {% endfor %}
-        </div>
-
-        <div class="ffm-card">
-          <div class="ffm-card-title">
-            <h2>Pioneer Posts</h2>
-            <div class="ffm-card-tag">Field Notes</div>
-          </div>
-
-          {% for post in pioneerPortal.pioneerPosts %}
-            <div class="ffm-post">
-              <div class="ffm-post-meta">{{ post.meta }}</div>
-              <h3>{{ post.title }}</h3>
-              <p>{{ post.text }}</p>
-            </div>
-          {% endfor %}
+          {% if pioneerPortal.contactList.note %}
+            <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
+          {% endif %}
         </div>
       </div>
 
