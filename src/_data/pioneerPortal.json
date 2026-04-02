@@ -30,19 +30,19 @@
       "week": "Week 1",
       "questions": {
         "label": "Open",
-        "url": "https://docs.google.com/document/d/1A013EyTyC-fDZlOwa2tDz5m3Z1UZnXIq/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
+        "url": "src/files/week1/Week 1 Questions.pdf"
       },
       "slideDeck": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1jUdjWL1-Hyk3NdBo2KZxbQn9vhKImsjJ/view?usp=drive_link"
+        "url": "src/files/week1/Week 1 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": ""
+        "url": "src/files/week1/Fight_for_Manhood_Week_1_Group_Leader_Guide.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "https://docs.google.com/document/d/1GaAV6dIGfUn-v9RNfU6OvovUxGX-gMQw/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
+        "url": "src/files/week1/fight_for_manhood_week1_guided_notes.pdf"
       }
     },
     {
@@ -53,34 +53,34 @@
       },
       "slideDeck": {
         "label": "Open",
-        "url": ""
+        "url": "src/files/week2/Week 2 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1qu_25k0UHJ2kzcXRkuz32YzNd4iiwu0A/view?usp=drive_link"
+        "url": "src/files/week2/Week 2 Group Leader Guide.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1b-4mKaN1iTO6AxljKMhA6iAntkwrJYSZ/view?usp=drive_link"
+        "url": "src/files/week2/fight_for_manhood_week2_guided_notes.pdf"
       }
     },
     {
       "week": "Week 3",
       "questions": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1FDiiZnYn3lm1wy_5WfD7tL0JlhL5DUTk/view?usp=drive_link"
+        "url": "src/files/week3/Week_3_Breakout_Questions_Quick_Sheet_Updated.pdf"
       },
       "slideDeck": {
         "label": "Open",
-        "url": ""
+        "url": "src/files/week3/Week 3 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1j-QT0VK60eHHVu_8n3xUxKjrk0L-b5dS/view?usp=drive_link"
+        "url": "src/files/week3/Week_3_Group_Leader_Guide_Father_Figures.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "https://drive.google.com/file/d/1QUxAVvfW-_xpT0lIZoshZdF9EQKXTXTM/view?usp=drive_link"
+        "url": "src/files/week3/Week_3_Guided_Notes_Father_Figures (3).pdf"
       }
     },
     {
