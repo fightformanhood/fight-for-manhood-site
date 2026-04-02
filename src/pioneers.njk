@@ -253,7 +253,7 @@ robots: noindex
     overflow-x:auto;
   }
   .ffm-doc-table{
-    min-width:760px;
+    min-width:1080px;
   }
 }
 </style>
@@ -308,6 +308,8 @@ robots: noindex
                   <th>Slide Deck</th>
                   <th>Leader Guides</th>
                   <th>Guided Notes</th>
+                  <th>Scripture Page</th>
+                  <th>Teaching Video</th>
                 </tr>
               </thead>
               <tbody>
@@ -354,13 +356,31 @@ robots: noindex
                         <span class="ffm-doc-empty">—</span>
                       {% endif %}
                     </td>
+
+                    <td>
+                      {% if week.scripturePage and week.scripturePage.url %}
+                        <a class="ffm-doc-link" href="{{ week.scripturePage.url }}" target="_blank" rel="noopener">
+                          {{ week.scripturePage.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+
+                    <td>
+                      {% if week.teachingVideo and week.teachingVideo.url %}
+                        <a class="ffm-doc-link" href="{{ week.teachingVideo.url }}" target="_blank" rel="noopener">
+                          {{ week.teachingVideo.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
                   </tr>
                 {% endfor %}
               </tbody>
             </table>
           </div>
-
-          <p class="ffm-note">{{ pioneerPortal.documentNote }}</p>
         </div>
       </div>
 
