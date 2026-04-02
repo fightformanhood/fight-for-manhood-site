@@ -30,19 +30,19 @@
       "week": "Week 1",
       "questions": {
         "label": "Open",
-        "url": "src/files/week1/Week 1 Questions.pdf"
+        "url": "/files/week1/Week 1 Questions.pdf"
       },
       "slideDeck": {
         "label": "Open",
-        "url": "src/files/week1/Week 1 Slide Deck.pdf"
+        "url": "/files/week1/Week 1 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": "src/files/week1/Fight_for_Manhood_Week_1_Group_Leader_Guide.pdf"
+        "url": "/files/week1/Fight_for_Manhood_Week_1_Group_Leader_Guide.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "src/files/week1/fight_for_manhood_week1_guided_notes.pdf"
+        "url": "/files/week1/fight_for_manhood_week1_guided_notes.pdf"
       }
     },
     {
@@ -53,34 +53,34 @@
       },
       "slideDeck": {
         "label": "Open",
-        "url": "src/files/week2/Week 2 Slide Deck.pdf"
+        "url": "/files/week2/Week 2 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": "src/files/week2/Week 2 Group Leader Guide.pdf"
+        "url": "/files/week2/Week 2 Group Leader Guide.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "src/files/week2/fight_for_manhood_week2_guided_notes.pdf"
+        "url": "/files/week2/fight_for_manhood_week2_guided_notes.pdf"
       }
     },
     {
       "week": "Week 3",
       "questions": {
         "label": "Open",
-        "url": "src/files/week3/Week_3_Breakout_Questions_Quick_Sheet_Updated.pdf"
+        "url": "/files/week3/Week_3_Breakout_Questions_Quick_Sheet_Updated.pdf"
       },
       "slideDeck": {
         "label": "Open",
-        "url": "src/files/week3/Week 3 Slide Deck.pdf"
+        "url": "/files/week3/Week 3 Slide Deck.pdf"
       },
       "leaderGuides": {
         "label": "Open",
-        "url": "src/files/week3/Week_3_Group_Leader_Guide_Father_Figures.pdf"
+        "url": "/files/week3/Week_3_Group_Leader_Guide_Father_Figures.pdf"
       },
       "guidedNotes": {
         "label": "Open",
-        "url": "src/files/week3/Week_3_Guided_Notes_Father_Figures (3).pdf"
+        "url": "/files/week3/Week_3_Guided_Notes_Father_Figures (3).pdf"
       }
     },
     {
