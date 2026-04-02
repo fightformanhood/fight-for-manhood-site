@@ -43,6 +43,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": "/files/week1/fight_for_manhood_week1_guided_notes.pdf"
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -62,6 +70,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": "/files/week2/fight_for_manhood_week2_guided_notes.pdf"
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -81,6 +97,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": "https://drive.google.com/file/d/1SQwZLbCNc3pIlP0W2kodYx9HcRAH4Y7x/view?usp=sharing"
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -98,6 +122,14 @@
         "url": ""
       },
       "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
         "label": "Open",
         "url": ""
       }
@@ -119,6 +151,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -136,6 +176,14 @@
         "url": ""
       },
       "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
         "label": "Open",
         "url": ""
       }
@@ -157,6 +205,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -174,6 +230,14 @@
         "url": ""
       },
       "guidedNotes": {
+        "label": "Open",
+        "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
         "label": "Open",
         "url": ""
       }
@@ -195,6 +259,14 @@
       "guidedNotes": {
         "label": "Open",
         "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     },
     {
@@ -214,13 +286,19 @@
       "guidedNotes": {
         "label": "Open",
         "url": ""
+      },
+      "scripturePage": {
+        "label": "Open",
+        "url": ""
+      },
+      "teachingVideo": {
+        "label": "Open",
+        "url": ""
       }
     }
   ],
 
-
-
-    "contactList": {
+  "contactList": {
     "title": "Open Contact Spreadsheet",
     "text": "Names and contact info for current attendees.",
     "url": "https://docs.google.com/spreadsheets/d/1C-KS2Lc26QuAhQO2rGROsecNAKM5mgvh/edit?usp=drive_link&ouid=114777643976200086461&rtpof=true&sd=true"
