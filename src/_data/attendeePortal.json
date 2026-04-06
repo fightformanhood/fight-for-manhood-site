@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "eyebrow": "Fight for Manhood",
+    "title": "Attendee Portal",
+    "subtitle": "Weekly notes, downloads, videos, and small-group links."
+  },
+  "announcement": {
+    "label": "Current Update",
+    "headline": "Week 1 resources are live",
+    "body": "Use the week cards below to download notes, open the scripture page, and watch the teaching video. Group links are at the bottom."
+  },
+  "weeks": [
+    {
+      "week": "Week 1",
+      "title": "How Did We Get Here?",
+      "date": "March 17, 2026",
+      "summary": "Session materials and follow-up resources for Week 1.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week1/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week1/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week1-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week1/leader-guide.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "title": "Wounds and Shame",
+      "date": "March 24, 2026",
+      "summary": "Add your Week 2 materials here when ready.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week2/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week2/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week2-video"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "Group A",
+      "leaders": "Leader Name / Co-Leader Name",
+      "description": "Use this link for your group interaction and follow-up.",
+      "interactionLabel": "Open Group A",
+      "interactionUrl": "https://example.com/group-a"
+    },
+    {
+      "name": "Group B",
+      "leaders": "Leader Name / Co-Leader Name",
+      "description": "Use this link for your group interaction and follow-up.",
+      "interactionLabel": "Open Group B",
+      "interactionUrl": "https://example.com/group-b"
+    },
+    {
+      "name": "Group C",
+      "leaders": "Leader Name / Co-Leader Name",
+      "description": "Use this link for your group interaction and follow-up.",
+      "interactionLabel": "Open Group C",
+      "interactionUrl": "https://example.com/group-c"
+    }
+  ]
+}
