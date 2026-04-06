@@ -7,7 +7,7 @@
   "announcement": {
     "label": "Current Update",
     "headline": "Week 1–3 resources are live",
-    "body": "Each week’s session notes, scripture page, teaching videos, slide deck, and additional documents will be posted here. Use the group section at the bottom to connect with your small group."
+    "body": "Each week’s session notes, scripture page, teaching videos, and slide deck will be posted here. Use the group section at the bottom to connect with your small group."
   },
   "weeks": [
     {
@@ -31,10 +31,6 @@
         {
           "label": "Slide Deck",
           "url": "https://drive.google.com/file/d/10meJunUdRrSNocAchnBkFex3hC1zfYnd/view?usp=sharing"
-        },
-        {
-          "label": "Additional Documents",
-          "url": "https://drive.google.com/file/d/1AVofF3XqMOdoQQn7yDwjET0A5fUeVWBh/view?usp=sharing"
         }
       ]
     },
@@ -59,10 +55,6 @@
         {
           "label": "Slide Deck",
           "url": "https://drive.google.com/file/d/1aLnptTB4m_VtNSJGyL4bbZV9Hw53cXx1/view?usp=sharing"
-        },
-        {
-          "label": "Additional Documents",
-          "url": "https://docs.google.com/document/d/1KeDxw3U2uLUWemt0VsI947y2Exo-Zl6b/edit?usp=sharing&ouid=114777643976200086461&rtpof=true&sd=true"
         }
       ]
     },
@@ -87,10 +79,6 @@
         {
           "label": "Slide Deck",
           "url": "https://drive.google.com/file/d/1MhF6udH-0FFYNRiAF6iAAogI_toDdxPR/view?usp=sharing"
-        },
-        {
-          "label": "Additional Documents",
-          "url": "https://drive.google.com/file/d/1HgKj2s2kjB4iYoJIiu1i2gObNv9erpbz/view?usp=sharing"
         }
       ]
     },
@@ -114,10 +102,6 @@
         },
         {
           "label": "Slide Deck",
-          "url": ""
-        },
-        {
-          "label": "Additional Documents",
           "url": ""
         }
       ]
@@ -143,10 +127,6 @@
         {
           "label": "Slide Deck",
           "url": ""
-        },
-        {
-          "label": "Additional Documents",
-          "url": ""
         }
       ]
     },
@@ -170,10 +150,6 @@
         },
         {
           "label": "Slide Deck",
-          "url": ""
-        },
-        {
-          "label": "Additional Documents",
           "url": ""
         }
       ]
@@ -199,10 +175,6 @@
         {
           "label": "Slide Deck",
           "url": ""
-        },
-        {
-          "label": "Additional Documents",
-          "url": ""
         }
       ]
     },
@@ -226,10 +198,6 @@
         },
         {
           "label": "Slide Deck",
-          "url": ""
-        },
-        {
-          "label": "Additional Documents",
           "url": ""
         }
       ]
@@ -255,10 +223,6 @@
         {
           "label": "Slide Deck",
           "url": ""
-        },
-        {
-          "label": "Additional Documents",
-          "url": ""
         }
       ]
     },
@@ -282,10 +246,6 @@
         },
         {
           "label": "Slide Deck",
-          "url": ""
-        },
-        {
-          "label": "Additional Documents",
           "url": ""
         }
       ]
