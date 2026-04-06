@@ -7,7 +7,7 @@
   "announcement": {
     "label": "Current Update",
     "headline": "Welcome to the Attendee Portal",
-    "body": "Each week’s notes, scripture page, teaching video, and bonus materials will be posted here. Use the group section at the bottom to connect with your small group."
+    "body": "Each week’s notes, scripture page, teaching videos, and additional documents will be posted here. Use the group section at the bottom to connect with your small group."
   },
   "weeks": [
     {
@@ -25,12 +25,8 @@
           "url": "/files/attendees/week1/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week1-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week1/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -53,12 +49,8 @@
           "url": "/files/attendees/week2/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week2-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week2/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -81,12 +73,8 @@
           "url": "/files/attendees/week3/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week3-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week3/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -109,12 +97,8 @@
           "url": "/files/attendees/week4/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week4-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week4/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -137,12 +121,8 @@
           "url": "/files/attendees/week5/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week5-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week5/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -165,12 +145,8 @@
           "url": "/files/attendees/week6/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week6-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week6/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -193,12 +169,8 @@
           "url": "/files/attendees/week7/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week7-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week7/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -221,12 +193,8 @@
           "url": "/files/attendees/week8/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week8-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week8/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -249,12 +217,8 @@
           "url": "/files/attendees/week9/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week9-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week9/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
@@ -277,12 +241,8 @@
           "url": "/files/attendees/week10/scripture-page.pdf"
         },
         {
-          "label": "Teaching Video",
+          "label": "Teaching Videos",
           "url": "https://example.com/week10-video"
-        },
-        {
-          "label": "Leader Guide",
-          "url": "/files/attendees/week10/leader-guide.pdf"
         },
         {
           "label": "Additional Documents",
