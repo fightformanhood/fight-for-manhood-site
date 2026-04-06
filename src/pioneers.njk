@@ -253,7 +253,7 @@ robots: noindex
     overflow-x:auto;
   }
   .ffm-doc-table{
-    min-width:1080px;
+    min-width:1220px;
   }
 }
 </style>
@@ -310,6 +310,7 @@ robots: noindex
                   <th>Guided Notes</th>
                   <th>Scripture Page</th>
                   <th>Teaching Video</th>
+                  <th>Book Chapters</th>
                 </tr>
               </thead>
               <tbody>
@@ -371,6 +372,16 @@ robots: noindex
                       {% if week.teachingVideo and week.teachingVideo.url %}
                         <a class="ffm-doc-link" href="{{ week.teachingVideo.url }}" target="_blank" rel="noopener">
                           {{ week.teachingVideo.label or "Open" }}
+                        </a>
+                      {% else %}
+                        <span class="ffm-doc-empty">—</span>
+                      {% endif %}
+                    </td>
+
+                    <td>
+                      {% if week.bookChapters and week.bookChapters.url %}
+                        <a class="ffm-doc-link" href="{{ week.bookChapters.url }}" target="_blank" rel="noopener">
+                          {{ week.bookChapters.label or "Open" }}
                         </a>
                       {% else %}
                         <span class="ffm-doc-empty">—</span>
