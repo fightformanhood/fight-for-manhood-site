@@ -276,15 +276,19 @@ permalink: "/attendees/"
 
             {% if item.resources and item.resources.length %}
               <div class="portal-links">
+                {% set firstVisible = true %}
                 {% for resource in item.resources %}
-                  <a
-                    class="portal-btn {% if loop.first %}portal-btn-primary{% else %}portal-btn-secondary{% endif %}"
-                    href="{{ resource.url }}"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {{ resource.label }}
-                  </a>
+                  {% if resource.url %}
+                    <a
+                      class="portal-btn {% if firstVisible %}portal-btn-primary{% else %}portal-btn-secondary{% endif %}"
+                      href="{{ resource.url }}"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {{ resource.label }}
+                    </a>
+                    {% set firstVisible = false %}
+                  {% endif %}
                 {% endfor %}
               </div>
             {% endif %}
