@@ -1,1 +1,322 @@
+---
+title: "Attendee Portal"
+description: "Weekly notes, downloads, teaching videos, and group links."
+layout: "base.njk"
+permalink: "/attendees/"
+---
 
+<style>
+:root{
+  --ffm-bg0:#070b12;
+  --ffm-bg1:#0b1324;
+  --ffm-bg2:#101a31;
+  --ffm-card:#0e1628;
+  --ffm-text:#e8edf6;
+  --ffm-muted:#a9b3c7;
+  --ffm-gold:#caa246;
+  --ffm-gold-soft:rgba(202,162,70,.18);
+  --ffm-line:rgba(202,162,70,.22);
+}
+
+.ffm-portal{
+  background:
+    radial-gradient(circle at top, rgba(202,162,70,.08), transparent 30%),
+    linear-gradient(180deg, var(--ffm-bg1), var(--ffm-bg0));
+  color:var(--ffm-text);
+  padding:72px 20px 90px;
+}
+
+.ffm-wrap{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.ffm-hero{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.ffm-eyebrow{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid var(--ffm-line);
+  border-radius:999px;
+  color:var(--ffm-gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:12px;
+  margin-bottom:18px;
+}
+
+.ffm-hero h1{
+  margin:0 0 14px;
+  font-size:clamp(38px, 5vw, 64px);
+  line-height:1.02;
+  letter-spacing:-.02em;
+}
+
+.ffm-subtitle{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--ffm-muted);
+  font-size:18px;
+  line-height:1.65;
+}
+
+.ffm-announcement{
+  background:linear-gradient(180deg, rgba(202,162,70,.10), rgba(202,162,70,.04));
+  border:1px solid var(--ffm-line);
+  border-radius:22px;
+  padding:28px;
+  margin:0 auto 42px;
+  max-width:980px;
+  box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+
+.ffm-announcement-label{
+  color:var(--ffm-gold);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.ffm-announcement h2{
+  margin:0 0 10px;
+  font-size:30px;
+}
+
+.ffm-announcement p{
+  margin:0;
+  color:var(--ffm-muted);
+  line-height:1.7;
+}
+
+.ffm-section{
+  margin-top:50px;
+}
+
+.ffm-section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+.ffm-section-head h2{
+  margin:0;
+  font-size:30px;
+}
+
+.ffm-section-head p{
+  margin:0;
+  color:var(--ffm-muted);
+}
+
+.ffm-grid{
+  display:grid;
+  grid-template-columns:repeat( auto-fit, minmax(290px, 1fr) );
+  gap:22px;
+}
+
+.ffm-card{
+  background:linear-gradient(180deg, var(--ffm-card), rgba(8,12,20,.96));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 14px 36px rgba(0,0,0,.24);
+}
+
+.ffm-week{
+  color:var(--ffm-gold);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.ffm-card h3{
+  margin:0 0 10px;
+  font-size:26px;
+  line-height:1.15;
+}
+
+.ffm-date{
+  color:var(--ffm-muted);
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+.ffm-summary{
+  color:var(--ffm-muted);
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+.ffm-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.ffm-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  line-height:1;
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.ffm-btn:hover{
+  transform:translateY(-1px);
+}
+
+.ffm-btn-primary{
+  background:var(--ffm-gold);
+  color:#111;
+  border:1px solid var(--ffm-gold);
+}
+
+.ffm-btn-secondary{
+  background:transparent;
+  color:var(--ffm-text);
+  border:1px solid var(--ffm-line);
+}
+
+.ffm-groups{
+  display:grid;
+  grid-template-columns:repeat( auto-fit, minmax(260px, 1fr) );
+  gap:20px;
+}
+
+.ffm-group-card{
+  background:linear-gradient(180deg, rgba(18,28,48,.96), rgba(9,14,23,.96));
+  border:1px solid rgba(202,162,70,.18);
+  border-radius:22px;
+  padding:22px;
+}
+
+.ffm-group-card h3{
+  margin:0 0 8px;
+  font-size:24px;
+}
+
+.ffm-group-leaders{
+  color:var(--ffm-gold);
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+.ffm-group-card p{
+  color:var(--ffm-muted);
+  line-height:1.7;
+  margin:0 0 18px;
+}
+
+@media (max-width: 700px){
+  .ffm-portal{
+    padding:54px 16px 70px;
+  }
+
+  .ffm-section-head{
+    display:block;
+  }
+
+  .ffm-section-head h2{
+    margin-bottom:8px;
+  }
+}
+</style>
+
+<section class="ffm-portal">
+  <div class="ffm-wrap">
+
+    <header class="ffm-hero">
+      <div class="ffm-eyebrow">{{ attendeePortal.hero.eyebrow }}</div>
+      <h1>{{ attendeePortal.hero.title }}</h1>
+      <p class="ffm-subtitle">{{ attendeePortal.hero.subtitle }}</p>
+    </header>
+
+    <section class="ffm-announcement">
+      <div class="ffm-announcement-label">{{ attendeePortal.announcement.label }}</div>
+      <h2>{{ attendeePortal.announcement.headline }}</h2>
+      <p>{{ attendeePortal.announcement.body }}</p>
+    </section>
+
+    <section class="ffm-section">
+      <div class="ffm-section-head">
+        <div>
+          <h2>Weekly Resources</h2>
+          <p>Update the JSON file and this page updates automatically.</p>
+        </div>
+      </div>
+
+      <div class="ffm-grid">
+        {% for item in attendeePortal.weeks %}
+          <article class="ffm-card">
+            <div class="ffm-week">{{ item.week }}</div>
+            <h3>{{ item.title }}</h3>
+
+            {% if item.date %}
+              <div class="ffm-date">{{ item.date }}</div>
+            {% endif %}
+
+            {% if item.summary %}
+              <div class="ffm-summary">{{ item.summary }}</div>
+            {% endif %}
+
+            {% if item.resources and item.resources.length %}
+              <div class="ffm-links">
+                {% for resource in item.resources %}
+                  <a class="ffm-btn {% if loop.first %}ffm-btn-primary{% else %}ffm-btn-secondary{% endif %}" href="{{ resource.url }}" target="_blank" rel="noopener">
+                    {{ resource.label }}
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if attendeePortal.groups and attendeePortal.groups.length %}
+      <section class="ffm-section">
+        <div class="ffm-section-head">
+          <div>
+            <h2>Small Groups</h2>
+            <p>Each group can have its own private link for chat, discussion, follow-up, or scheduling.</p>
+          </div>
+        </div>
+
+        <div class="ffm-groups">
+          {% for group in attendeePortal.groups %}
+            <article class="ffm-group-card">
+              <h3>{{ group.name }}</h3>
+
+              {% if group.leaders %}
+                <div class="ffm-group-leaders">{{ group.leaders }}</div>
+              {% endif %}
+
+              {% if group.description %}
+                <p>{{ group.description }}</p>
+              {% endif %}
+
+              {% if group.interactionUrl %}
+                <a class="ffm-btn ffm-btn-primary" href="{{ group.interactionUrl }}" target="_blank" rel="noopener">
+                  {{ group.interactionLabel or "Open Group" }}
+                </a>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+  </div>
+</section>
