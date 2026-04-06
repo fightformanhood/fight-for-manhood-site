@@ -2,19 +2,19 @@
   "hero": {
     "eyebrow": "Fight for Manhood",
     "title": "Attendee Portal",
-    "subtitle": "Weekly notes, downloads, videos, and small-group links."
+    "subtitle": "Weekly notes, downloads, teaching videos, and small-group links."
   },
   "announcement": {
     "label": "Current Update",
-    "headline": "Week 1 resources are live",
-    "body": "Use the week cards below to download notes, open the scripture page, and watch the teaching video. Group links are at the bottom."
+    "headline": "Welcome to the Attendee Portal",
+    "body": "Each week’s notes, scripture page, teaching video, and bonus materials will be posted here. Use the group section at the bottom to connect with your small group."
   },
   "weeks": [
     {
       "week": "Week 1",
       "title": "How Did We Get Here?",
-      "date": "March 17, 2026",
-      "summary": "Session materials and follow-up resources for Week 1.",
+      "date": "",
+      "summary": "Week 1 session materials and follow-up resources.",
       "resources": [
         {
           "label": "Session Notes",
@@ -31,14 +31,18 @@
         {
           "label": "Leader Guide",
           "url": "/files/attendees/week1/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week1/additional-documents.pdf"
         }
       ]
     },
     {
       "week": "Week 2",
       "title": "Wounds and Shame",
-      "date": "March 24, 2026",
-      "summary": "Add your Week 2 materials here when ready.",
+      "date": "",
+      "summary": "Week 2 session materials and follow-up resources.",
       "resources": [
         {
           "label": "Session Notes",
@@ -51,6 +55,238 @@
         {
           "label": "Teaching Video",
           "url": "https://example.com/week2-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week2/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week2/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "title": "Father Figures",
+      "date": "",
+      "summary": "Week 3 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week3/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week3/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week3-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week3/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week3/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "title": "Momma’s Boy",
+      "date": "",
+      "summary": "Week 4 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week4/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week4/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week4-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week4/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week4/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "title": "Finding Healing",
+      "date": "",
+      "summary": "Week 5 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week5/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week5/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week5-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week5/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week5/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 6",
+      "title": "Biblical Manhood",
+      "date": "",
+      "summary": "Week 6 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week6/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week6/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week6-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week6/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week6/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 7",
+      "title": "Law vs. Grace",
+      "date": "",
+      "summary": "Week 7 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week7/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week7/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week7-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week7/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week7/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 8",
+      "title": "Obedience, Fear & Faith",
+      "date": "",
+      "summary": "Week 8 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week8/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week8/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week8-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week8/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week8/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 9",
+      "title": "Relationships and Rage",
+      "date": "",
+      "summary": "Week 9 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week9/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week9/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week9-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week9/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week9/additional-documents.pdf"
+        }
+      ]
+    },
+    {
+      "week": "Week 10",
+      "title": "A Real Man",
+      "date": "",
+      "summary": "Week 10 session materials and follow-up resources.",
+      "resources": [
+        {
+          "label": "Session Notes",
+          "url": "/files/attendees/week10/session-notes.pdf"
+        },
+        {
+          "label": "Scripture Page",
+          "url": "/files/attendees/week10/scripture-page.pdf"
+        },
+        {
+          "label": "Teaching Video",
+          "url": "https://example.com/week10-video"
+        },
+        {
+          "label": "Leader Guide",
+          "url": "/files/attendees/week10/leader-guide.pdf"
+        },
+        {
+          "label": "Additional Documents",
+          "url": "/files/attendees/week10/additional-documents.pdf"
         }
       ]
     }
@@ -58,24 +294,45 @@
   "groups": [
     {
       "name": "Group A",
-      "leaders": "Leader Name / Co-Leader Name",
-      "description": "Use this link for your group interaction and follow-up.",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
       "interactionLabel": "Open Group A",
       "interactionUrl": "https://example.com/group-a"
     },
     {
       "name": "Group B",
-      "leaders": "Leader Name / Co-Leader Name",
-      "description": "Use this link for your group interaction and follow-up.",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
       "interactionLabel": "Open Group B",
       "interactionUrl": "https://example.com/group-b"
     },
     {
       "name": "Group C",
-      "leaders": "Leader Name / Co-Leader Name",
-      "description": "Use this link for your group interaction and follow-up.",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
       "interactionLabel": "Open Group C",
       "interactionUrl": "https://example.com/group-c"
+    },
+    {
+      "name": "Group D",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
+      "interactionLabel": "Open Group D",
+      "interactionUrl": "https://example.com/group-d"
+    },
+    {
+      "name": "Group E",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
+      "interactionLabel": "Open Group E",
+      "interactionUrl": "https://example.com/group-e"
+    },
+    {
+      "name": "Group F",
+      "leaders": "Facilitator / Co-Facilitator",
+      "description": "Use this link for discussion, follow-up, and communication with your group.",
+      "interactionLabel": "Open Group F",
+      "interactionUrl": "https://example.com/group-f"
     }
   ]
 }
