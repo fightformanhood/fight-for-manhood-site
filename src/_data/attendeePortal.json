@@ -6,8 +6,8 @@
   },
   "announcement": {
     "label": "Current Update",
-    "headline": "Welcome to the Attendee Portal",
-    "body": "Each week’s notes, scripture page, teaching videos, and additional documents will be posted here. Use the group section at the bottom to connect with your small group."
+    "headline": "Week 1–3 resources are live",
+    "body": "Each week’s session notes, scripture page, teaching videos, slide deck, and additional documents will be posted here. Use the group section at the bottom to connect with your small group."
   },
   "weeks": [
     {
@@ -18,19 +18,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week1/session-notes.pdf"
+          "url": "https://drive.google.com/file/d/1HuP_PJIu4JNLj1z7xckLxjBmUFuPny-4/view?usp=sharing"
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week1/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week1-video"
+          "url": "https://drive.google.com/file/d/1YhDBk5cZiVVjm-0mGTcUxpaR7pzKUyXC/view?usp=sharing"
+        },
+        {
+          "label": "Slide Deck",
+          "url": "https://drive.google.com/file/d/10meJunUdRrSNocAchnBkFex3hC1zfYnd/view?usp=sharing"
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week1/additional-documents.pdf"
+          "url": "https://drive.google.com/file/d/1AVofF3XqMOdoQQn7yDwjET0A5fUeVWBh/view?usp=sharing"
         }
       ]
     },
@@ -42,19 +46,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week2/session-notes.pdf"
+          "url": "https://drive.google.com/file/d/1WjkLaZBi0CDje3ux0nEOYql-v_kf1Ps6/view?usp=sharing"
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week2/scripture-page.pdf"
+          "url": "https://drive.google.com/file/d/1iqqW3cpEaiAV17Vx94P9XMvS6oq7fmGR/view?usp=sharing"
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week2-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": "https://drive.google.com/file/d/1aLnptTB4m_VtNSJGyL4bbZV9Hw53cXx1/view?usp=sharing"
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week2/additional-documents.pdf"
+          "url": "https://docs.google.com/document/d/1KeDxw3U2uLUWemt0VsI947y2Exo-Zl6b/edit?usp=sharing&ouid=114777643976200086461&rtpof=true&sd=true"
         }
       ]
     },
@@ -66,19 +74,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week3/session-notes.pdf"
+          "url": "https://drive.google.com/file/d/1SQwZLbCNc3pIlP0W2kodYx9HcRAH4Y7x/view?usp=sharing"
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week3/scripture-page.pdf"
+          "url": "https://drive.google.com/file/d/1uKe332uZZzRJXEnCAcwNIU7ZFgVeJ7FV/view?usp=sharing"
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week3-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": "https://drive.google.com/file/d/1MhF6udH-0FFYNRiAF6iAAogI_toDdxPR/view?usp=sharing"
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week3/additional-documents.pdf"
+          "url": "https://drive.google.com/file/d/1HgKj2s2kjB4iYoJIiu1i2gObNv9erpbz/view?usp=sharing"
         }
       ]
     },
@@ -90,19 +102,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week4/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week4/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week4-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week4/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -114,19 +130,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week5/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week5/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week5-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week5/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -138,19 +158,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week6/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week6/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week6-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week6/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -162,19 +186,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week7/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week7/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week7-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week7/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -186,19 +214,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week8/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week8/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week8-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week8/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -210,19 +242,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week9/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week9/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week9-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week9/additional-documents.pdf"
+          "url": ""
         }
       ]
     },
@@ -234,19 +270,23 @@
       "resources": [
         {
           "label": "Session Notes",
-          "url": "/files/attendees/week10/session-notes.pdf"
+          "url": ""
         },
         {
           "label": "Scripture Page",
-          "url": "/files/attendees/week10/scripture-page.pdf"
+          "url": ""
         },
         {
           "label": "Teaching Videos",
-          "url": "https://example.com/week10-video"
+          "url": ""
+        },
+        {
+          "label": "Slide Deck",
+          "url": ""
         },
         {
           "label": "Additional Documents",
-          "url": "/files/attendees/week10/additional-documents.pdf"
+          "url": ""
         }
       ]
     }
