@@ -35,9 +35,13 @@ for (const route of requiredRoutes) {
 }
 
 const stalePatterns = [/March 17/i, /Spring 2026/i, /Wednesdays/i, /37 men registered/i, /example\.com\/group/i, /Best Western/i, /420 N Peters/i, /Cedar Bluff/i];
+const encodingErrorPatterns = [/Â/u, /Ã/u, /â(?:€|‚|„|™|œ|ž|†|‡)/u, /ðŸ/u, /ï¿½/u, /�/u];
 for (const { file, html } of pages) {
   for (const pattern of stalePatterns) {
     if (pattern.test(html)) failures.push(`${relative(root, file)} contains stale content matching ${pattern}`);
+  }
+  for (const pattern of encodingErrorPatterns) {
+    if (pattern.test(html)) failures.push(`${relative(root, file)} contains malformed text encoding matching ${pattern}`);
   }
 
   const hrefs = [...html.matchAll(/href=["']([^"']+)["']/g)].map((match) => match[1]);
@@ -71,4 +75,3 @@ if (failures.length) {
 }
 
 console.log(`Verified ${htmlFiles.length} HTML pages, all internal links, both Netlify forms, and Fall 2026 cohort messaging.`);
-
