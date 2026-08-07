@@ -7,15 +7,15 @@ description: Apply for the Fall 2026 Fight for Manhood cohort in Knoxville.
 <div class="page-shell">
   <div class="container">
     <header class="hero">
-      <span class="eyebrow">{{ site.cohort.status }} Ã‚Â· {{ site.cohort.cost }}</span>
+      <span class="eyebrow">{{ site.cohort.status }} &middot; {{ site.cohort.cost }}</span>
       <h1>Step into <span class="gold">the fight</span></h1>
       <p class="lead">{{ site.cohort.name }} begins {{ site.cohort.startDate | isoDate }}. Ten weeks of brotherhood, responsibility, and growth in the light.</p>
-      <p class="venue"><a href="{{ site.cohort.mapUrl }}" target="_blank" rel="noopener">{{ site.cohort.venue }} Ã‚Â· {{ site.cohort.address1 }}, {{ site.cohort.cityStateZip }}</a></p>
+      <p class="venue"><a href="{{ site.cohort.mapUrl }}" target="_blank" rel="noopener">{{ site.cohort.venue }} &middot; {{ site.cohort.address1 }}, {{ site.cohort.cityStateZip }}</a></p>
     </header>
 
     <form class="form-card" action="/success/" method="POST" name="ffm-register" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="ffm-register">
-      <input type="hidden" name="cohort" value="Fall 2026 Ã¢â‚¬â€ September 15 to November 17">
+      <input type="hidden" name="cohort" value="Fall 2026 - September 15 to November 17">
       <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
 
       <div class="form-section">Core info</div>
@@ -28,7 +28,7 @@ description: Apply for the Fall 2026 Fight for Manhood cohort in Knoxville.
         <div class="field">
           <label for="marital">Marital status</label>
           <select id="marital" name="marital" required>
-            <option value="">SelectÃ¢â‚¬Â¦</option><option>Single</option><option>Married</option><option>Engaged</option><option>Divorced</option><option>Widowed</option>
+            <option value="">Select...</option><option>Single</option><option>Married</option><option>Engaged</option><option>Divorced</option><option>Widowed</option>
           </select>
         </div>
       </div>

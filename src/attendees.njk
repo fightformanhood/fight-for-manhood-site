@@ -7,7 +7,7 @@ description: Fall 2026 Fight for Manhood attendee schedule and weekly resources.
 <div class="page-shell">
   <div class="container">
     <header class="portal-hero">
-      <span class="eyebrow">{{ site.name }} Ã‚Â· {{ site.cohort.name }}</span>
+      <span class="eyebrow">{{ site.name }} &middot; {{ site.cohort.name }}</span>
       <h1>Attendee Portal</h1>
       <p class="section-lead">Weekly dates, curriculum focus, session notes, Scripture pages, teaching videos, and slide decks.</p>
     </header>
@@ -23,7 +23,7 @@ description: Fall 2026 Fight for Manhood attendee schedule and weekly resources.
         {% for item in curriculum %}
           {% set resource = resources[loop.index0] %}
           <article class="portal-card">
-            <div class="week-label">Week {{ item.week }} Ã‚Â· {{ item.date | isoDate }}</div>
+            <div class="week-label">Week {{ item.week }} &middot; {{ item.date | isoDate }}</div>
             <h3>{{ item.title }}</h3>
             <p>{{ item.summary }}</p>
             <div class="resource-links">
