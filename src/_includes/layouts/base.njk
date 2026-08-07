@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description or 'A 10-week crucible for men ready to confront shame, fear, passivity, and the double life.' }}">
+    <meta name="theme-color" content="#070b12">
+    <title>{{ title }}{% if title != site.name %} | {{ site.name }}{% endif %}</title>
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Fight for Manhood home">Fight for Manhood</a>
+      <nav aria-label="Primary navigation">
+        {% for item in site.navigation %}
+          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </header>
+
+    <main id="main-content">{{ content | safe }}</main>
+
+    <footer class="site-footer">
+      <strong>{{ site.name }}</strong>
+      <span>{{ site.cohort.name }} Ã‚Â· {{ site.cohort.day }} Ã‚Â· {{ site.cohort.time }} Ã‚Â· Knoxville</span>
+      <span>Ã‚Â© {{ site.year }} {{ site.name }}</span>
+    </footer>
+  </body>
+</html>
+
+

@@ -1,400 +1,46 @@
 ---
-title: "Pioneer Portal"
-description: "Private pioneer resources for Fight for Manhood."
-layout: "base.njk"
-permalink: "/pioneers/"
-eleventyExcludeFromCollections: true
-robots: noindex
+layout: layouts/base.njk
+title: Pioneer Portal
+permalink: /pioneers/index.html
+description: Fall 2026 Fight for Manhood leader schedule and teaching resources.
 ---
+<div class="page-shell">
+  <div class="container">
+    <header class="portal-hero">
+      <span class="eyebrow">{{ site.name }} Ã‚Â· Leadership</span>
+      <h1>Pioneer Portal</h1>
+      <p class="section-lead">Fall 2026 leader documents, guided notes, teaching resources, and the week-by-week schedule.</p>
+    </header>
 
-<style>
-:root{
-  --bg0:#070b12;
-  --bg1:#0b1324;
-  --card:rgba(255,255,255,.05);
-  --text:#e8edf6;
-  --muted:#a9b3c7;
-  --gold:#caa246;
-  --line:rgba(202,162,70,.28);
-  --stroke:rgba(255,255,255,.10);
-  --danger:#ffb4b4;
-}
+    <section class="portal-update" aria-labelledby="pioneer-update-heading">
+      <h2 id="pioneer-update-heading">Fall 2026 curriculum is set</h2>
+      <p>The cohort runs Tuesday, September 15 through Tuesday, November 17 at {{ site.cohort.time }}. The uploaded ten chapters are the content authority. Supplemental resources for Weeks 9 and 10 still need to be posted.</p>
+    </section>
 
-.ffm-gate-lock{ overflow:hidden; }
-.ffm-gate-wrap{ position:fixed; inset:0; z-index:9999; }
-.ffm-gate-backdrop{
-  position:absolute;
-  inset:0;
-  background:rgba(3,7,14,.82);
-  backdrop-filter:blur(8px);
-}
-.ffm-gate-box{
-  position:relative;
-  z-index:2;
-  width:min(92vw,520px);
-  margin:12vh auto 0;
-  padding:34px 28px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(180deg, rgba(9,16,28,.96), rgba(7,11,18,.96));
-  box-shadow:0 20px 70px rgba(0,0,0,.45);
-  color:var(--text);
-  text-align:center;
-}
-.ffm-gate-kicker{
-  color:var(--gold);
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:.82rem;
-  margin-bottom:10px;
-}
-.ffm-gate-box h1{
-  margin:0 0 10px;
-  font-size:2rem;
-  line-height:1.08;
-}
-.ffm-gate-box p{
-  margin:0 0 18px;
-  color:var(--muted);
-}
-.ffm-gate-form{
-  display:grid;
-  gap:12px;
-}
-.ffm-gate-input{
-  width:100%;
-  padding:14px 16px;
-  border-radius:14px;
-  border:1px solid var(--stroke);
-  background:rgba(255,255,255,.06);
-  color:var(--text);
-  font-size:1rem;
-}
-.ffm-gate-btn{
-  border:none;
-  border-radius:14px;
-  padding:14px 18px;
-  background:linear-gradient(180deg, #d2ab52, #b78d35);
-  color:#111;
-  font-weight:800;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-.ffm-gate-error{
-  color:var(--danger);
-  font-size:.95rem;
-}
-
-.ffm-page{
-  min-height:100vh;
-  color:var(--text);
-  background:
-    radial-gradient(1000px 500px at 50% -10%, rgba(255,255,255,.08), transparent 60%),
-    linear-gradient(180deg, var(--bg1), var(--bg0));
-}
-
-.ffm-shell{
-  width:min(1320px, calc(100% - 28px));
-  margin:0 auto;
-  padding:38px 0 80px;
-}
-
-.ffm-hero{
-  padding:30px 26px;
-  border:1px solid var(--line);
-  border-radius:28px;
-  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  box-shadow:0 10px 30px rgba(0,0,0,.18);
-  margin-bottom:22px;
-}
-.ffm-kicker{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-size:.82rem;
-  margin-bottom:10px;
-}
-.ffm-hero h1{
-  margin:0 0 10px;
-  font-size:clamp(2rem, 4vw, 3.4rem);
-  line-height:1.02;
-}
-.ffm-hero p{
-  margin:0;
-  color:var(--muted);
-  max-width:840px;
-  font-size:1.05rem;
-}
-
-.ffm-main-grid{
-  display:grid;
-  grid-template-columns:1.35fr .9fr;
-  gap:22px;
-  align-items:start;
-}
-
-.ffm-stack{
-  display:grid;
-  gap:22px;
-}
-
-.ffm-card{
-  border:1px solid var(--stroke);
-  border-radius:24px;
-  background:var(--card);
-  padding:22px;
-  box-shadow:0 10px 30px rgba(0,0,0,.16);
-}
-
-.ffm-card-title{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  margin:0 0 14px;
-}
-.ffm-card-title h2{
-  margin:0;
-  font-size:1.3rem;
-}
-.ffm-card-tag{
-  color:var(--gold);
-  font-size:.78rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.ffm-doc-table-wrap{
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  overflow:hidden;
-  background:rgba(255,255,255,.03);
-}
-
-.ffm-doc-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-.ffm-doc-table thead th{
-  background:rgba(202,162,70,.10);
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  font-size:.76rem;
-  text-align:left;
-  padding:14px 12px;
-  border-bottom:1px solid rgba(202,162,70,.20);
-}
-
-.ffm-doc-table tbody td{
-  padding:14px 12px;
-  border-bottom:1px solid rgba(255,255,255,.07);
-  vertical-align:top;
-}
-
-.ffm-doc-table tbody tr:last-child td{
-  border-bottom:none;
-}
-
-.ffm-week-cell{
-  min-width:84px;
-  font-weight:700;
-  color:var(--text);
-  font-size:.92rem;
-}
-
-.ffm-doc-link{
-  display:inline-block;
-  text-decoration:none;
-  color:var(--text);
-  padding:8px 11px;
-  border-radius:999px;
-  border:1px solid rgba(202,162,70,.24);
-  background:rgba(202,162,70,.08);
-  font-size:.9rem;
-  line-height:1.2;
-  transition:transform .15s ease, border-color .15s ease, background .15s ease;
-}
-.ffm-doc-link:hover{
-  transform:translateY(-1px);
-  border-color:rgba(202,162,70,.45);
-  background:rgba(202,162,70,.13);
-}
-.ffm-doc-empty{
-  color:rgba(169,179,199,.55);
-  font-size:.92rem;
-}
-
-.ffm-note{
-  margin-top:12px;
-  color:var(--muted);
-  font-size:.95rem;
-}
-
-@media (max-width: 1080px){
-  .ffm-main-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media (max-width: 760px){
-  .ffm-shell{
-    width:min(100%, calc(100% - 16px));
-  }
-  .ffm-hero{
-    padding:24px 18px;
-  }
-  .ffm-card{
-    padding:18px;
-  }
-  .ffm-doc-table-wrap{
-    overflow-x:auto;
-  }
-  .ffm-doc-table{
-    min-width:1220px;
-  }
-}
-</style>
-
-{% set gateId = "pioneers-v2" %}
-{% set gateTitle = pioneerPortal.heroTitle %}
-{% set gateMessage = "Private access for pioneers and leadership support." %}
-{% set gatePassword = pioneerPortal.password %}
-{% include "partials/ffm-gate.njk" %}
-
-<section class="ffm-page">
-  <div class="ffm-shell">
-
-    <div class="ffm-hero">
-      <div class="ffm-kicker">{{ pioneerPortal.heroKicker }}</div>
-      <h1>{{ pioneerPortal.heroTitle }}</h1>
-      <p>{{ pioneerPortal.heroText }}</p>
+    <div class="button-row">
+      <a class="button primary" href="https://docs.google.com/spreadsheets/d/1C-KS2Lc26QuAhQO2rGROsecNAKM5mgvh/edit?usp=drive_link" target="_blank" rel="noopener">Attendee contact list</a>
+      <a class="button" href="/program/">Review curriculum</a>
     </div>
 
-    <div class="ffm-main-grid">
-
-      <div class="ffm-stack">
-        <div class="ffm-card">
-          <div class="ffm-card-title">
-            <h2>Attendee Contact List</h2>
-            <div class="ffm-card-tag">Current Men</div>
-          </div>
-
-          <a class="ffm-doc-link" href="{{ pioneerPortal.contactList.url }}" target="_blank" rel="noopener">
-            {{ pioneerPortal.contactList.title }}
-          </a>
-          <p class="ffm-note">{{ pioneerPortal.contactList.text }}</p>
-          {% if pioneerPortal.contactList.note %}
-            <p class="ffm-note">{{ pioneerPortal.contactList.note }}</p>
-          {% endif %}
-        </div>
-      </div>
-
-      <div class="ffm-stack">
-        <div class="ffm-card">
-          <div class="ffm-card-title">
-            <h2>Week-by-Week Documents</h2>
-            <div class="ffm-card-tag">Links To Documents</div>
-          </div>
-
-          <div class="ffm-doc-table-wrap">
-            <table class="ffm-doc-table">
-              <thead>
-                <tr>
-                  <th>Week</th>
-                  <th>Questions</th>
-                  <th>Slide Deck</th>
-                  <th>Leader Guides</th>
-                  <th>Guided Notes</th>
-                  <th>Scripture Page</th>
-                  <th>Teaching Video</th>
-                  <th>Book Chapters</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for week in pioneerPortal.weeklyDocuments %}
-                  <tr>
-                    <td class="ffm-week-cell">{{ week.week }}</td>
-
-                    <td>
-                      {% if week.questions and week.questions.url %}
-                        <a class="ffm-doc-link" href="{{ week.questions.url }}" target="_blank" rel="noopener">
-                          {{ week.questions.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.slideDeck and week.slideDeck.url %}
-                        <a class="ffm-doc-link" href="{{ week.slideDeck.url }}" target="_blank" rel="noopener">
-                          {{ week.slideDeck.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.leaderGuides and week.leaderGuides.url %}
-                        <a class="ffm-doc-link" href="{{ week.leaderGuides.url }}" target="_blank" rel="noopener">
-                          {{ week.leaderGuides.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.guidedNotes and week.guidedNotes.url %}
-                        <a class="ffm-doc-link" href="{{ week.guidedNotes.url }}" target="_blank" rel="noopener">
-                          {{ week.guidedNotes.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.scripturePage and week.scripturePage.url %}
-                        <a class="ffm-doc-link" href="{{ week.scripturePage.url }}" target="_blank" rel="noopener">
-                          {{ week.scripturePage.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.teachingVideo and week.teachingVideo.url %}
-                        <a class="ffm-doc-link" href="{{ week.teachingVideo.url }}" target="_blank" rel="noopener">
-                          {{ week.teachingVideo.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-
-                    <td>
-                      {% if week.bookChapters and week.bookChapters.url %}
-                        <a class="ffm-doc-link" href="{{ week.bookChapters.url }}" target="_blank" rel="noopener">
-                          {{ week.bookChapters.label or "Open" }}
-                        </a>
-                      {% else %}
-                        <span class="ffm-doc-empty">—</span>
-                      {% endif %}
-                    </td>
-                  </tr>
+    <section class="section" aria-labelledby="leader-schedule-heading">
+      <h2 class="section-title" id="leader-schedule-heading">Week-by-week documents</h2>
+      <p class="section-lead">The first column remains visible while you scroll the document table on smaller screens.</p>
+      <div class="resource-panel">
+        <table>
+          <thead><tr><th>Week</th><th>Questions</th><th>Slide deck</th><th>Leader guide</th><th>Guided notes</th><th>Scripture</th><th>Video</th><th>Chapter</th></tr></thead>
+          <tbody>
+            {% for item in curriculum %}
+              {% set resource = resources[loop.index0] %}
+              <tr>
+                <td><strong>Week {{ item.week }}</strong><br><span class="muted">{{ item.date | isoDate }}<br>{{ item.title }}</span></td>
+                {% for key in ["questions", "slides", "leader", "notes", "scripture", "video", "chapter"] %}
+                  <td>{% if resource[key] %}<a href="{{ resource[key] }}" target="_blank" rel="noopener">Open</a>{% else %}<span class="status">Pending</span>{% endif %}</td>
                 {% endfor %}
-              </tbody>
-            </table>
-          </div>
-        </div>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
-
-    </div>
+    </section>
   </div>
-</section>
+</div>

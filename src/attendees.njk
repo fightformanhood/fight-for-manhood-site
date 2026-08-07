@@ -1,337 +1,46 @@
 ---
-title: "Attendee Portal"
-description: "Weekly notes, downloads, teaching videos, and group links."
-layout: "base.njk"
-permalink: "/attendees/"
+layout: layouts/base.njk
+title: Attendee Portal
+permalink: /attendees/index.html
+description: Fall 2026 Fight for Manhood attendee schedule and weekly resources.
 ---
-
-<style>
-  :root{
-    --ffm-bg0:#070b12;
-    --ffm-bg1:#0b1324;
-    --ffm-bg2:#101a31;
-    --ffm-card:#0f182b;
-    --ffm-card2:#121d33;
-    --ffm-text:#ffffff;
-    --ffm-muted:rgba(255,255,255,.75);
-    --ffm-gold:#caa246;
-    --ffm-line:rgba(202,162,70,.24);
-  }
-
-  .portal-shell{
-    padding:64px 22px 90px;
-    background:
-      radial-gradient(circle at top, rgba(202,162,70,.08), transparent 30%),
-      linear-gradient(180deg,var(--ffm-bg1) 0%,var(--ffm-bg0) 100%);
-  }
-
-  .portal-wrap{
-    max-width:1180px;
-    margin:0 auto;
-  }
-
-  .portal-hero{
-    text-align:center;
-    margin-bottom:34px;
-  }
-
-  .portal-eyebrow{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid var(--ffm-line);
-    border-radius:999px;
-    color:var(--ffm-gold);
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:18px;
-  }
-
-  .portal-hero h1{
-    margin:0 0 14px;
-    font-size:clamp(38px,5vw,64px);
-    line-height:1.02;
-    letter-spacing:-.02em;
-  }
-
-  .portal-subtitle{
-    max-width:760px;
-    margin:0 auto;
-    color:var(--ffm-muted);
-    font-size:18px;
-    line-height:1.7;
-  }
-
-  .portal-announcement{
-    max-width:980px;
-    margin:0 auto 44px;
-    background:linear-gradient(180deg, rgba(202,162,70,.12), rgba(202,162,70,.05));
-    border:1px solid var(--ffm-line);
-    border-radius:22px;
-    padding:28px;
-    box-shadow:0 12px 30px rgba(0,0,0,.22);
-  }
-
-  .portal-announcement-label{
-    color:var(--ffm-gold);
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:10px;
-  }
-
-  .portal-announcement h2{
-    margin:0 0 10px;
-    font-size:30px;
-    line-height:1.12;
-  }
-
-  .portal-announcement p{
-    margin:0;
-    color:var(--ffm-muted);
-    line-height:1.75;
-  }
-
-  .portal-section{
-    margin-top:52px;
-  }
-
-  .portal-section-head{
-    margin-bottom:22px;
-  }
-
-  .portal-section-head h2{
-    margin:0 0 8px;
-    font-size:30px;
-    line-height:1.1;
-  }
-
-  .portal-section-head p{
-    margin:0;
-    color:var(--ffm-muted);
-  }
-
-  .portal-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
-    gap:22px;
-  }
-
-  .portal-card{
-    background:linear-gradient(180deg,var(--ffm-card2),var(--ffm-card));
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:22px;
-    padding:24px;
-    box-shadow:0 14px 34px rgba(0,0,0,.24);
-  }
-
-  .portal-week{
-    color:var(--ffm-gold);
-    text-transform:uppercase;
-    letter-spacing:.13em;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:10px;
-  }
-
-  .portal-card h3{
-    margin:0 0 10px;
-    font-size:26px;
-    line-height:1.15;
-  }
-
-  .portal-date{
-    color:var(--ffm-muted);
-    font-size:14px;
-    margin-bottom:14px;
-  }
-
-  .portal-summary{
-    color:var(--ffm-muted);
-    line-height:1.72;
-    margin-bottom:18px;
-  }
-
-  .portal-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
-  .portal-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:42px;
-    padding:10px 16px;
-    border-radius:999px;
-    font-weight:800;
-    font-size:14px;
-    line-height:1;
-    text-decoration:none;
-    transition:transform .15s ease, opacity .15s ease, border-color .15s ease;
-  }
-
-  .portal-btn:hover{
-    transform:translateY(-1px);
-    opacity:1;
-  }
-
-  .portal-btn-primary{
-    background:var(--ffm-gold);
-    color:#111;
-    border:1px solid var(--ffm-gold);
-  }
-
-  .portal-btn-secondary{
-    background:transparent;
-    color:var(--ffm-text);
-    border:1px solid var(--ffm-line);
-  }
-
-  .portal-groups{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-  }
-
-  .portal-group-card{
-    background:linear-gradient(180deg,#15213a,#0d1525);
-    border:1px solid var(--ffm-line);
-    border-radius:22px;
-    padding:22px;
-  }
-
-  .portal-group-card h3{
-    margin:0 0 8px;
-    font-size:24px;
-    line-height:1.15;
-  }
-
-  .portal-group-leaders{
-    color:var(--ffm-gold);
-    font-size:14px;
-    margin-bottom:12px;
-    font-weight:700;
-  }
-
-  .portal-group-card p{
-    margin:0 0 18px;
-    color:var(--ffm-muted);
-    line-height:1.72;
-  }
-
-  @media(max-width:700px){
-    .portal-shell{
-      padding:46px 16px 70px;
-    }
-
-    .portal-announcement{
-      padding:22px;
-    }
-
-    .portal-card,
-    .portal-group-card{
-      padding:20px;
-    }
-  }
-</style>
-
-<section class="portal-shell">
-  <div class="portal-wrap">
-
+<div class="page-shell">
+  <div class="container">
     <header class="portal-hero">
-      <div class="portal-eyebrow">{{ attendeePortal.hero.eyebrow }}</div>
-      <h1>{{ attendeePortal.hero.title }}</h1>
-      <p class="portal-subtitle">{{ attendeePortal.hero.subtitle }}</p>
+      <span class="eyebrow">{{ site.name }} Ã‚Â· {{ site.cohort.name }}</span>
+      <h1>Attendee Portal</h1>
+      <p class="section-lead">Weekly dates, curriculum focus, session notes, Scripture pages, teaching videos, and slide decks.</p>
     </header>
 
-    <section class="portal-announcement">
-      <div class="portal-announcement-label">{{ attendeePortal.announcement.label }}</div>
-      <h2>{{ attendeePortal.announcement.headline }}</h2>
-      <p>{{ attendeePortal.announcement.body }}</p>
+    <section class="portal-update" aria-labelledby="attendee-update-heading">
+      <h2 id="attendee-update-heading">Fall 2026 begins Tuesday, September 15</h2>
+      <p>We meet every Tuesday at {{ site.cohort.time }} through November 17 at {{ site.cohort.venue }}. Existing resources remain available below; updated Fall materials will replace them as each session is finalized.</p>
     </section>
 
-    <section class="portal-section">
-      <div class="portal-section-head">
-        <h2>Weekly Resources</h2>
-        <p>Notes, scripture pages, videos, and anything else you want to post each week.</p>
-      </div>
-
+    <section class="section" aria-labelledby="weekly-resources-heading">
+      <h2 class="section-title" id="weekly-resources-heading">Weekly resources</h2>
       <div class="portal-grid">
-        {% for item in attendeePortal.weeks %}
+        {% for item in curriculum %}
+          {% set resource = resources[loop.index0] %}
           <article class="portal-card">
-            <div class="portal-week">{{ item.week }}</div>
+            <div class="week-label">Week {{ item.week }} Ã‚Â· {{ item.date | isoDate }}</div>
             <h3>{{ item.title }}</h3>
-
-            {% if item.date %}
-              <div class="portal-date">{{ item.date }}</div>
-            {% endif %}
-
-            {% if item.summary %}
-              <div class="portal-summary">{{ item.summary }}</div>
-            {% endif %}
-
-            {% if item.resources and item.resources.length %}
-              <div class="portal-links">
-                {% set firstVisible = true %}
-                {% for resource in item.resources %}
-                  {% if resource.url %}
-                    <a
-                      class="portal-btn {% if firstVisible %}portal-btn-primary{% else %}portal-btn-secondary{% endif %}"
-                      href="{{ resource.url }}"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      {{ resource.label }}
-                    </a>
-                    {% set firstVisible = false %}
-                  {% endif %}
-                {% endfor %}
-              </div>
-            {% endif %}
+            <p>{{ item.summary }}</p>
+            <div class="resource-links">
+              {% if resource.notes %}<a class="button small primary" href="{{ resource.notes }}" target="_blank" rel="noopener">Session notes</a>{% endif %}
+              {% if resource.scripture %}<a class="button small" href="{{ resource.scripture }}" target="_blank" rel="noopener">Scripture page</a>{% endif %}
+              {% if resource.video %}<a class="button small" href="{{ resource.video }}" target="_blank" rel="noopener">Teaching video</a>{% endif %}
+              {% if resource.slides %}<a class="button small" href="{{ resource.slides }}" target="_blank" rel="noopener">Slide deck</a>{% endif %}
+              {% if not resource.notes and not resource.scripture and not resource.video and not resource.slides %}<span class="status">Materials will be posted before this session</span>{% endif %}
+            </div>
           </article>
         {% endfor %}
       </div>
     </section>
 
-    {% if attendeePortal.groups and attendeePortal.groups.length %}
-      <section class="portal-section">
-        <div class="portal-section-head">
-          <h2>Small Groups</h2>
-          <p>Each group can have its own private discussion or interaction link.</p>
-        </div>
-
-        <div class="portal-groups">
-          {% for group in attendeePortal.groups %}
-            <article class="portal-group-card">
-              <h3>{{ group.name }}</h3>
-
-              {% if group.leaders %}
-                <div class="portal-group-leaders">{{ group.leaders }}</div>
-              {% endif %}
-
-              {% if group.description %}
-                <p>{{ group.description }}</p>
-              {% endif %}
-
-              {% if group.interactionUrl %}
-                <a
-                  class="portal-btn portal-btn-primary"
-                  href="{{ group.interactionUrl }}"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {{ group.interactionLabel or "Open Group" }}
-                </a>
-              {% endif %}
-            </article>
-          {% endfor %}
-        </div>
-      </section>
-    {% endif %}
-
+    <section class="section" aria-labelledby="groups-heading">
+      <h2 class="section-title" id="groups-heading">Small groups</h2>
+      <p class="section-lead">Fall 2026 group assignments and private communication links will be sent directly to registered attendees. Public placeholder links have been removed.</p>
+    </section>
   </div>
-</section>
+</div>

@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: The Program
+permalink: /program/index.html
+description: Explore the authoritative 10-week Fight for Manhood curriculum for Fall 2026.
+---
+<div class="page-shell">
+  <div class="container">
+    <header class="hero">
+      <span class="eyebrow">{{ site.cohort.duration }} Ã‚Â· {{ site.cohort.day }} Ã‚Â· {{ site.cohort.time }} Ã‚Â· Knoxville</span>
+      <h1>The Fight for <span class="gold">Manhood</span></h1>
+      <p class="lead">Ten weeks to confront wounds and shame, dismantle fear and false religion, recover responsibility, and learn to lead from relationship with the Father.</p>
+      <p class="sublead">The Fall 2026 battle plan below follows the uploaded curriculum chapter by chapter.</p>
+      <div class="button-row"><a class="button primary" href="/register/">Apply now</a><a class="button" href="/contact/">Ask a question</a></div>
+    </header>
+
+    <div class="divider"></div>
+    <h2 class="section-title">10-week battle plan</h2>
+    <p class="section-lead">Each week builds on the last. We expose, rebuild, reconcile, and advance.</p>
+
+    <div class="curriculum-grid">
+      {% for item in curriculum %}
+        <article class="curriculum-item" data-week="{{ item.week }}">
+          <div class="week-label">Week {{ item.week }}</div>
+          <h2>{{ item.title }}</h2>
+          <div class="date">{{ item.date | isoDate }} Ã‚Â· {{ site.cohort.time }}</div>
+          <p>{{ item.summary }}</p>
+          <div class="verse">Key Scripture: {{ item.verse }}</div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="divider"></div>
+    <section class="center">
+      <h2 class="section-title">Ready?</h2>
+      <p class="section-lead">Stop negotiating with weakness. Step into the light and fight like a man who belongs to God.</p>
+      <div class="button-row"><a class="button primary" href="/register/">Apply for Fall 2026</a><a class="button" href="/contact/">Talk to us first</a></div>
+    </section>
+  </div>
+</div>
+
+
