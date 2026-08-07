@@ -1,0 +1,28 @@
+{
+  "name": "Fight for Manhood",
+  "year": 2026,
+  "cohort": {
+    "name": "Fall 2026 Cohort",
+    "startDate": "2026-09-15",
+    "endDate": "2026-11-17",
+    "day": "Tuesdays",
+    "time": "6:00 PM",
+    "duration": "10 weeks",
+    "cost": "No cost",
+    "status": "Registration open",
+    "venue": "Highland Place",
+    "address1": "6223 Highland Place Way",
+    "cityStateZip": "Knoxville, TN 37919",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=6223%20Highland%20Place%20Way%2C%20Knoxville%2C%20TN%2037919"
+  },
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "Program", "url": "/program/" },
+    { "label": "Apply", "url": "/register/" },
+    { "label": "Contact", "url": "/contact/" },
+    { "label": "Attendees", "url": "/attendees/" },
+    { "label": "Pioneers", "url": "/pioneers/" }
+  ]
+}
+
+

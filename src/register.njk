@@ -1,488 +1,73 @@
 ---
-title: "Register"
-description: "Register for the Fight for Manhood 10-week program."
-layout: "base.njk"
-permalink: "/register/"
+layout: layouts/base.njk
+title: Apply for Fall 2026
+permalink: /register/index.html
+description: Apply for the Fall 2026 Fight for Manhood cohort in Knoxville.
 ---
+<div class="page-shell">
+  <div class="container">
+    <header class="hero">
+      <span class="eyebrow">{{ site.cohort.status }} Ã‚Â· {{ site.cohort.cost }}</span>
+      <h1>Step into <span class="gold">the fight</span></h1>
+      <p class="lead">{{ site.cohort.name }} begins {{ site.cohort.startDate | isoDate }}. Ten weeks of brotherhood, responsibility, and growth in the light.</p>
+      <p class="venue"><a href="{{ site.cohort.mapUrl }}" target="_blank" rel="noopener">{{ site.cohort.venue }} Ã‚Â· {{ site.cohort.address1 }}, {{ site.cohort.cityStateZip }}</a></p>
+    </header>
 
-<style>
-:root{
-  --bg0:#070b12;
-  --bg1:#0b1324;
-  --text:#e8edf6;
-  --muted:#a9b3c7;
-  --gold:#caa246;
-  --line: rgba(202,162,70,.28);
-  --stroke: rgba(255,255,255,.10);
-  --stroke2: rgba(255,255,255,.14);
-}
+    <form class="form-card" action="/success/" method="POST" name="ffm-register" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="ffm-register">
+      <input type="hidden" name="cohort" value="Fall 2026 Ã¢â‚¬â€ September 15 to November 17">
+      <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
 
-.ffm-register{
-  min-height:100vh;
-  background:
-    radial-gradient(1000px 700px at 50% -10%, rgba(255,255,255,.10), transparent 60%),
-    radial-gradient(900px 700px at 50% 15%, rgba(202,162,70,.10), transparent 65%),
-    linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 55%, var(--bg0) 100%);
-  color:var(--text);
-  padding:40px 20px 90px;
-}
-
-.ffm-container{ max-width:1000px; margin:0 auto; }
-.ffm-gold{ color:var(--gold); }
-.ffm-muted{ color:var(--muted); }
-
-.ffm-pills{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-bottom:24px;
-}
-
-.ffm-pill{
-  border:1px solid rgba(202,162,70,.35);
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:22px; /* 3x */
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  background:rgba(0,0,0,.22);
-}
-
-.ffm-pill-link{
-  color:var(--text);
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-}
-
-.ffm-pill-link:hover{
-  opacity:.92;
-  transform:translateY(-1px);
-}
-
-.ffm-hero{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.ffm-hero h1{
-  margin:0;
-  font-size:clamp(48px,5vw,74px); /* NOT scaled */
-  font-weight:900;
-  letter-spacing:-0.02em;
-  text-transform:uppercase;
-  line-height:1.02;
-}
-
-.ffm-hero .subline{
-  margin-top:12px;
-  font-size:34px; /* 3x */
-  line-height:1.25;
-  color:rgba(232,237,246,.9);
-}
-
-.ffm-divider{
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--line),transparent);
-  margin:30px auto;
-  width:90%;
-}
-
-.ffm-card{
-  border:1px solid var(--stroke);
-  border-radius:20px;
-  padding:36px;
-  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-  box-shadow:0 14px 36px rgba(0,0,0,.28);
-}
-
-/* Section Titles (3x) */
-.ffm-sectionTitle{
-  margin:30px 0 18px;
-  font-size:30px; /* 3x */
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:900;
-  color:var(--gold);
-}
-
-/* CORE INFO — tight vertical spacing */
-.ffm-core{
-  display:flex;
-  flex-direction:column;
-  gap:8px; /* tight */
-}
-
-.ffm-field{
-  display:flex;
-  flex-direction:column;
-}
-
-.ffm-field label{
-  margin-bottom:6px;
-  font-weight:900;
-  text-transform:uppercase;
-  font-size:22px; /* 3x */
-}
-
-.ffm-field input,
-.ffm-field select,
-.ffm-field textarea{
-  padding:14px 18px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.18);
-  background:rgba(0,0,0,.28);
-  color:var(--text);
-  font-size:24px; /* 3x */
-}
-
-.ffm-field input,
-.ffm-field select{ height:64px; }
-
-.ffm-field textarea{
-  min-height:170px;
-  resize:vertical;
-}
-
-.ffm-field input:focus,
-.ffm-field select:focus,
-.ffm-field textarea:focus{
-  border-color:var(--gold);
-  box-shadow:0 0 0 4px rgba(202,162,70,.15);
-}
-
-/* Blocks below core info */
-.ffm-block{
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(0,0,0,.20);
-  border-radius:20px;
-  padding:26px;
-  margin:0 0 22px;
-}
-
-.ffm-blockLabel{
-  font-size:26px; /* 3x */
-  font-weight:900;
-  margin:0 0 16px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-}
-
-.ffm-checkboxGroup{
-  display:grid;
-  gap:14px;
-  margin:0;
-}
-
-.ffm-check{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-size:24px; /* 3x */
-  line-height:1.2;
-}
-
-.ffm-check input{
-  width:26px;
-  height:26px;
-  accent-color:var(--gold);
-}
-
-.ffm-callout{
-  border:1px solid rgba(202,162,70,.28);
-  background:rgba(0,0,0,.18);
-  border-radius:20px;
-  padding:22px;
-  margin-top:22px;
-}
-
-.ffm-calloutTitle{
-  margin:0 0 10px;
-  font-size:26px; /* 3x */
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  color:rgba(232,237,246,.95);
-}
-
-.ffm-callout p{
-  margin:0;
-  font-size:22px; /* 3x */
-  line-height:1.45;
-  color:rgba(232,237,246,.86);
-}
-
-.ffm-list{
-  margin:14px 0 0;
-  padding-left:26px;
-  font-size:22px; /* 3x */
-  line-height:1.55;
-  color:rgba(232,237,246,.86);
-}
-.ffm-list li{ margin:8px 0; }
-
-/* Actions */
-.ffm-actions{
-  margin-top:34px;
-  text-align:center;
-}
-
-.ffm-btn{
-  padding:24px 46px;
-  border-radius:20px;
-  font-weight:900;
-  text-transform:uppercase;
-  font-size:26px; /* 3x */
-  letter-spacing:.06em;
-  border:1px solid var(--stroke2);
-  color:#0a0f18;
-  background:linear-gradient(180deg,rgba(202,162,70,.95),rgba(202,162,70,.80));
-  min-width:420px;
-  cursor:pointer;
-}
-
-.ffm-btn:hover{ transform:translateY(-2px); }
-
-.ffm-fine{
-  margin:18px auto 0;
-  font-size:22px; /* 3x */
-  color:rgba(169,179,199,.9);
-  text-align:center;
-  max-width:900px;
-  line-height:1.4;
-}
-
-.ffm-back{
-  display:inline-block;
-  margin-top:14px;
-  font-size:22px; /* 3x */
-  color:rgba(232,237,246,.85);
-  text-decoration:none;
-  border-bottom:1px solid rgba(202,162,70,.35);
-  padding-bottom:3px;
-}
-.ffm-back:hover{ opacity:.85; }
-
-.ffm-updateBox,
-.ffm-locationCard{
-  margin:0 0 24px;
-  padding:22px 24px;
-  border-radius:20px;
-  border:1px solid rgba(202,162,70,.28);
-  background:linear-gradient(180deg, rgba(20,28,44,.92), rgba(8,12,20,.88));
-  box-shadow:
-    0 10px 26px rgba(0,0,0,.26),
-    0 0 0 1px rgba(202,162,70,.06),
-    0 0 18px rgba(202,162,70,.08);
-}
-
-.ffm-updateTitle,
-.ffm-locationCard h3{
-  margin:0 0 10px;
-  font-size:24px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  color:var(--gold);
-}
-
-.ffm-updateBox p,
-.ffm-locationCard p{
-  margin:0 0 10px;
-  font-size:22px;
-  line-height:1.5;
-  color:rgba(232,237,246,.90);
-}
-
-.ffm-locationCard a{
-  color:rgba(202,162,70,.95);
-  text-decoration:none;
-  border-bottom:1px solid rgba(202,162,70,.35);
-  padding-bottom:2px;
-}
-
-.ffm-locationCard a:hover{ opacity:.88; }
-
-@media(max-width:720px){
-  .ffm-card{ padding:22px; }
-  .ffm-btn{ width:100%; min-width:0; }
-  .ffm-pill{ font-size:18px; }
-  .ffm-hero .subline{ font-size:26px; }
-  .ffm-sectionTitle{ font-size:24px; }
-  .ffm-field label{ font-size:18px; }
-  .ffm-field input, .ffm-field select, .ffm-field textarea{ font-size:18px; }
-  .ffm-check{ font-size:18px; }
-  .ffm-calloutTitle{ font-size:20px; }
-  .ffm-callout p, .ffm-list{ font-size:18px; }
-  .ffm-fine, .ffm-back{ font-size:16px; }
-}
-</style>
-
-<div class="ffm-register">
-  <div class="ffm-container">
-
-  <div class="ffm-pills">
-  <div class="ffm-pill">Knoxville • Tuesdays • 6:00 PM • No cost</div>
-  <a
-  class="ffm-pill ffm-pill-link"
-  href="https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Knoxville%20Cedar%20Bluff%2C%20420%20N%20Peters%20Rd%2C%20Knoxville%2C%20TN%2037922"
-  target="_blank"
-  rel="noopener"
->Best Western Plus Cedar Bluff</a>
-</div>
-
-    <div class="ffm-hero">
-      <h1>STEP INTO <span class="ffm-gold">THE FIGHT</span></h1>
-      <div class="subline">Ten weeks. Brotherhood. Responsibility. Growth in the light. Now meeting at our larger Cedar Bluff venue.</div>
-    </div>
-
-    <div class="ffm-divider"></div>
-
-    <section class="ffm-card">
-
-<div class="ffm-updateBox">
-  <div class="ffm-updateTitle">Registration Update</div>
-  <p>
-    This cohort was originally planned for 25 men, but response exceeded the size of our original room.
-    Fight for Manhood has now moved to a larger venue.
-  </p>
-  <p>
-    Registration remains open, but space is still limited.
-  </p>
-</div>
-
-<div class="ffm-locationCard">
-  <h3>Meeting Location</h3>
-  <p><strong>Best Western Plus Knoxville Cedar Bluff</strong></p>
-  <p>420 N Peters Rd<br>Knoxville, TN 37922</p>
-  <p>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Best%20Western%20Plus%20Knoxville%20Cedar%20Bluff%2C%20420%20N%20Peters%20Rd%2C%20Knoxville%2C%20TN%2037922"
-      target="_blank"
-      rel="noopener"
-    >Open in Maps</a>
-  </p>
-</div>
-      <form name="ffm-register"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/success/">
-
-        <input type="hidden" name="form-name" value="ffm-register" />
-
-        <p style="display:none;">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <div class="ffm-sectionTitle">Core Info</div>
-
-        <div class="ffm-core">
-          <div class="ffm-field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-
-          <div class="ffm-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-
-          <div class="ffm-field">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-          </div>
-
-          <div class="ffm-field">
-            <label for="church">Church attended (if any)</label>
-            <input id="church" name="church" type="text" />
-          </div>
-
-          <div class="ffm-field">
-            <label for="invited">Who invited you</label>
-            <input id="invited" name="invited" type="text" />
-          </div>
-
-          <div class="ffm-field">
-            <label for="marital">Marital Status</label>
-            <select id="marital" name="marital" required>
-              <option value="">Select…</option>
-              <option>Single</option>
-              <option>Married</option>
-              <option>Engaged</option>
-              <option>Divorced</option>
-              <option>Widowed</option>
-            </select>
-          </div>
+      <div class="form-section">Core info</div>
+      <div class="form-grid">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="church">Church attended (if any)</label><input id="church" name="church" type="text"></div>
+        <div class="field"><label for="invited">Who invited you</label><input id="invited" name="invited" type="text"></div>
+        <div class="field">
+          <label for="marital">Marital status</label>
+          <select id="marital" name="marital" required>
+            <option value="">SelectÃ¢â‚¬Â¦</option><option>Single</option><option>Married</option><option>Engaged</option><option>Divorced</option><option>Widowed</option>
+          </select>
         </div>
+      </div>
 
-        <!-- EVERYTHING BELOW CORE INFO (RESTORED) -->
-
-        <div class="ffm-sectionTitle">Family</div>
-        <div class="ffm-block">
-          <div class="ffm-blockLabel">Children (check all that apply)</div>
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Young Children"> Young Children</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Teenagers"> Teenagers</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="College Age"> College Age</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="Adult"> Adult</label>
-            <label class="ffm-check"><input type="checkbox" name="kids" value="No Children"> No Children</label>
-          </div>
+      <div class="form-section">Family</div>
+      <fieldset class="fieldset">
+        <legend>Children (check all that apply)</legend>
+        <div class="checkbox-list">
+          <label class="check"><input type="checkbox" name="kids" value="Young Children"> Young children</label>
+          <label class="check"><input type="checkbox" name="kids" value="Teenagers"> Teenagers</label>
+          <label class="check"><input type="checkbox" name="kids" value="College Age"> College age</label>
+          <label class="check"><input type="checkbox" name="kids" value="Adult"> Adult children</label>
+          <label class="check"><input type="checkbox" name="kids" value="No Children"> No children</label>
         </div>
+      </fieldset>
 
-        <div class="ffm-sectionTitle">Prior Involvement</div>
-        <div class="ffm-block">
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check"><input type="checkbox" name="past_graduate" value="Yes"> Past Graduate</label>
-            <label class="ffm-check"><input type="checkbox" name="attended_before" value="Yes"> Attended Before</label>
-          </div>
+      <div class="form-section">Prior involvement</div>
+      <fieldset class="fieldset">
+        <legend>Fight for Manhood experience</legend>
+        <div class="checkbox-list">
+          <label class="check"><input type="checkbox" name="past_graduate" value="Yes"> Past graduate</label>
+          <label class="check"><input type="checkbox" name="attended_before" value="Yes"> Attended before</label>
         </div>
+      </fieldset>
 
-        <div class="ffm-sectionTitle">Commitment</div>
-        <div class="ffm-block">
-          <div class="ffm-checkboxGroup">
-            <label class="ffm-check">
-              <input type="checkbox" name="commitment_attendance" value="Yes" required>
-              I understand this is a 10-week commitment and I will prioritize attendance.
-            </label>
-            <label class="ffm-check">
-              <input type="checkbox" name="commitment_confidential" value="Yes" required>
-              I understand this requires honesty and confidentiality.
-            </label>
-          </div>
+      <div class="form-section">Commitment</div>
+      <fieldset class="fieldset">
+        <legend>Confirm both commitments</legend>
+        <div class="checkbox-list">
+          <label class="check"><input type="checkbox" name="commitment_attendance" value="Yes" required> I understand this runs every Tuesday from September 15 through November 17, 2026, and I will prioritize attendance.</label>
+          <label class="check"><input type="checkbox" name="commitment_confidential" value="Yes" required> I understand this requires honesty and confidentiality. No stories leave the room.</label>
         </div>
+      </fieldset>
 
-        <div class="ffm-sectionTitle">Notes</div>
-        <div class="ffm-field">
-          <label for="notes">Anything we should know? (optional)</label>
-          <textarea id="notes" name="notes" placeholder="Questions, schedule conflicts, anything you want us to know."></textarea>
-        </div>
+      <div class="form-section">Notes</div>
+      <div class="field"><label for="notes">Anything we should know? (optional)</label><textarea id="notes" name="notes" placeholder="Questions, schedule conflicts, or anything you want us to know."></textarea></div>
 
-        <div class="ffm-callout">
-          <div class="ffm-calloutTitle">What Happens After You Register</div>
-     <p>
-  You’ll get a confirmation after registering.
-  Week 1 begins at Best Western Plus Knoxville Cedar Bluff. Come ready. Come honest. Come all in.
-</p>
-          <ul class="ffm-list">
-            <li>We protect confidentiality. No stories leave the room.</li>
-            <li>We expect attendance. Men drift when they disappear.</li>
-            <li>We fight for truth, not image.</li>
-          </ul>
-        </div>
-
-        <div class="ffm-actions">
-          <button class="ffm-btn" type="submit">Step Into the Fight</button>
-        <div class="ffm-fine">
-  Confidential. Men only. No cost. This cohort was originally planned for 25 men, but response exceeded the first room and we secured a larger venue. Registration remains open while space lasts.
-</div>
-          <a class="ffm-back" href="/contact/">Questions first? Contact us.</a>
-        </div>
-
-      </form>
-
-    </section>
-
+      <div class="form-note"><strong class="gold">What happens next:</strong> You will receive a confirmation after registering. Week 1 begins Tuesday, September 15 at {{ site.cohort.venue }}. Come ready. Come honest. Come all in.</div>
+      <div class="form-actions"><button class="button primary" type="submit">Step into the fight</button><p class="muted">Confidential. Men only. No cost. Registration is open for Fall 2026.</p><a href="/contact/">Questions first? Contact us.</a></div>
+    </form>
   </div>
 </div>
