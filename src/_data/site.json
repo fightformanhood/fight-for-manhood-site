@@ -19,9 +19,7 @@
     { "label": "Home", "url": "/" },
     { "label": "Program", "url": "/program/" },
     { "label": "Apply", "url": "/register/" },
-    { "label": "Contact", "url": "/contact/" },
-    { "label": "Attendees", "url": "/attendees/" },
-    { "label": "Pioneers", "url": "/pioneers/" }
+    { "label": "Contact", "url": "/contact/" }
   ]
 }
 
