@@ -34,7 +34,7 @@ for (const route of requiredRoutes) {
   if (!existsSync(join(root, route))) failures.push(`Missing route: /${route}`);
 }
 
-const stalePatterns = [/March 17/i, /Spring 2026/i, /Wednesdays/i, /37 men registered/i, /example\.com\/group/i, /Best Western/i, /420 N Peters/i, /Cedar Bluff/i];
+const stalePatterns = [/March 17/i, /Spring 2026/i, /Wednesdays/i, /37 men registered/i, /example\.com\/group/i, /Best Western/i, /420 N Peters/i, /Cedar Bluff/i, /6:00 PM/i];
 const encodingErrorPatterns = [/Â/u, /Ã/u, /â(?:€|‚|„|™|œ|ž|†|‡)/u, /ðŸ/u, /ï¿½/u, /�/u];
 for (const { file, html } of pages) {
   for (const pattern of stalePatterns) {
@@ -64,7 +64,7 @@ for (const [name, html] of [["ffm-register", register], ["ffm-contact", contact]
 }
 
 const allHtml = pages.map(({ html }) => html).join("\n");
-for (const requiredText of ["Fall 2026", "September 15", "November 17", "Tuesdays", "6:00 PM", "6223 Highland Place Way"]) {
+for (const requiredText of ["Fall 2026", "September 15", "November 17", "Tuesdays", "6:30 PM", "6223 Highland Place Way"]) {
   if (!allHtml.includes(requiredText)) failures.push(`Missing required cohort text: ${requiredText}`);
 }
 
