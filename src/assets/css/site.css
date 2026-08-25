@@ -226,6 +226,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .voices-subtitle { margin: 42px 0 0; color: var(--text); font-size: clamp(22px, 3vw, 30px); text-align: center; }
 .testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
 .testimonial blockquote { margin: 0; }
+.testimonial-quote blockquote + blockquote { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--stroke); }
 .testimonial-quote { position: relative; overflow: hidden; border-top: 2px solid var(--gold); }
 .testimonial-quote::before { content: "\201C"; position: absolute; top: -22px; right: 12px; color: rgba(202, 162, 70, 0.1); font-family: Georgia, serif; font-size: 112px; line-height: 1; }
 .testimonial-quote p, .testimonial-quote .attribution { position: relative; z-index: 1; }
