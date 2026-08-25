@@ -22,6 +22,7 @@ const pages = htmlFiles.map((file) => ({ file, html: readFileSync(file, "utf8") 
 const requiredRoutes = [
   "index.html",
   "program/index.html",
+  "stories/index.html",
   "register/index.html",
   "contact/index.html",
   "attendees/index.html",
@@ -54,6 +55,13 @@ for (const { file, html } of pages) {
   }
 }
 
+const homepage = readFileSync(join(root, "index.html"), "utf8");
+const stories = readFileSync(join(root, "stories/index.html"), "utf8");
+const homepageTestimonials = (homepage.match(/class="card testimonial testimonial-quote"/g) || []).length;
+const storyTestimonials = (stories.match(/class="card testimonial testimonial-quote"/g) || []).length;
+if (homepageTestimonials !== 6) failures.push("Homepage should contain 6 testimonials; found " + homepageTestimonials + ".");
+if (storyTestimonials !== 21) failures.push("Stories page should contain 21 testimonials; found " + storyTestimonials + ".");
+if (!homepage.includes('href="/stories/"')) failures.push("Homepage is missing the Read more stories link.");
 const register = readFileSync(join(root, "register/index.html"), "utf8");
 const contact = readFileSync(join(root, "contact/index.html"), "utf8");
 for (const [name, html] of [["ffm-register", register], ["ffm-contact", contact]]) {

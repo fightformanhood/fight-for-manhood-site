@@ -16,11 +16,25 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=6223%20Highland%20Place%20Way%2C%20Knoxville%2C%20TN%2037919"
   },
   "navigation": [
-    { "label": "Home", "url": "/" },
-    { "label": "Program", "url": "/program/" },
-    { "label": "Apply", "url": "/register/" },
-    { "label": "Contact", "url": "/contact/" }
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Program",
+      "url": "/program/"
+    },
+    {
+      "label": "Stories",
+      "url": "/stories/"
+    },
+    {
+      "label": "Apply",
+      "url": "/register/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
   ]
 }
-
-

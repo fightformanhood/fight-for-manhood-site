@@ -69,38 +69,17 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
     <section class="section" aria-labelledby="voices-heading">
       <h2 class="section-title" id="voices-heading">What other men say</h2>
       <p class="section-lead">Real men. Real change. These are voices from the brotherhood.</p>
-      <div class="grid-2">
-        <article class="card testimonial">
-          <p>&ldquo;The Fight for Manhood quite simply blew me away. Its curriculum is so different and fresh.&rdquo;</p>
-          <details><summary>Read more</summary><p>The Truth and brotherly bonds I received helped me walk through the darkest time of my life. I am not the same as I was.</p></details>
-          <div class="attribution"><strong>A.J. Caulineau</strong> &middot; Mechanical Designer</div>
-        </article>
-        <article class="card testimonial">
-          <p>&ldquo;I've gained a better appreciation that God is seeking a real relationship with us, not just compliant behavior.&rdquo;</p>
-          <details><summary>Read more</summary><p>Talking with other men at a deeper level showed me they share the same concerns and struggles. The insights are helping me be a better husband and father.</p></details>
-          <div class="attribution"><strong>Greg Butler</strong> &middot; Accountant</div>
-        </article>
-        <article class="card testimonial">
-          <p>&ldquo;I now have new confidence and understanding of who I am and of how much power I have as a man.&rdquo;</p>
-          <details><summary>Read more</summary><p>My life, the life of my family, and generations to follow have been blessed.</p></details>
-          <div class="attribution"><strong>Jim Cook</strong> &middot; Business Owner</div>
-        </article>
-        <article class="card testimonial">
-          <p>&ldquo;The Fight was a life-changing resource to me as God drew me out of a life of shame and fear.&rdquo;</p>
-          <details><summary>Read more</summary><p>The material helped me understand what it means to call God my Father while affirming who I really am as a man and Christ-follower.</p></details>
-          <div class="attribution"><strong>Nick Smith</strong> &middot; Consultant</div>
-        </article>
-      </div>
-
-      <h3 class="voices-subtitle">More voices from the brotherhood</h3>
-      <div class="testimonial-grid">
+      <div class="testimonial-grid homepage-testimonials">
         {% for testimonial in communityTestimonials %}
+          {% if testimonial.homepage %}
           <article class="card testimonial testimonial-quote">
             <blockquote><p>&ldquo;{{ testimonial.quote }}&rdquo;</p></blockquote>
-            <div class="attribution"><strong>{{ testimonial.author }}</strong>{% if testimonial.title %} &middot; {{ testimonial.title }}{% endif %}</div>
+            <div class="attribution"><strong>{{ testimonial.author }}</strong> &middot; {{ testimonial.title }}</div>
           </article>
+          {% endif %}
         {% endfor %}
       </div>
+      <div class="button-row"><a class="button primary" href="/stories/">Read More Stories</a></div>
     </section>
 
     <section class="section center" aria-labelledby="apply-heading">
