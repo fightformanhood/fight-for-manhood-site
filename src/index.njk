@@ -73,7 +73,7 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
         {% for testimonial in communityTestimonials %}
           {% if testimonial.homepage %}
           <article class="card testimonial testimonial-quote">
-            <blockquote><p>&ldquo;{{ testimonial.quote }}&rdquo;</p></blockquote>
+            <blockquote class="testimonial-entry"><p>&ldquo;{{ testimonial.homepageQuote }}&rdquo;</p></blockquote>
             <div class="attribution"><strong>{{ testimonial.author }}</strong> &middot; {{ testimonial.title }}</div>
           </article>
           {% endif %}

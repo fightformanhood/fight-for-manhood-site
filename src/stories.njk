@@ -21,7 +21,9 @@ description: Read stories from men transformed through Fight for Manhood.
       <div class="testimonial-grid stories-grid">
         {% for testimonial in communityTestimonials %}
           <article class="card testimonial testimonial-quote">
-            <blockquote><p>&ldquo;{{ testimonial.quote }}{% if testimonial.details %} {{ testimonial.details }}{% endif %}&rdquo;</p></blockquote>
+            {% for quote in testimonial.quotes %}
+              <blockquote class="testimonial-entry"><p>&ldquo;{{ quote }}&rdquo;</p></blockquote>
+            {% endfor %}
             <div class="attribution"><strong>{{ testimonial.author }}</strong> &middot; {{ testimonial.title }}</div>
           </article>
         {% endfor %}

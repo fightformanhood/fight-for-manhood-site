@@ -1,117 +1,131 @@
 [
   {
-    "quote": "The Fight was a life-changing resource to me as God drew me out of a life of shame and fear.",
-    "details": "The material helped me understand what it means to call God my Father while affirming who I really am as a man and Christ-follower.",
     "author": "Nick Smith",
     "title": "Consultant",
-    "homepage": true
+    "quotes": [
+      "The Fight was a life-changing resource to me as God drew me out of a life of shame and fear. The material helped me understand what it means to call God my Father while affirming who I really am as a man and Christ-follower."
+    ],
+    "homepage": true,
+    "homepageQuote": "The Fight was a life-changing resource to me as God drew me out of a life of shame and fear."
   },
   {
-    "quote": "After The Fight, I finally understood the masculinity of Jesus. As a man of God, I am charged to lead courageously, expect God's blessings, accept responsibility, and reject passivity.",
     "author": "David Sparks",
     "title": "Retired Engineer",
-    "homepage": true
+    "quotes": [
+      "After The Fight, I finally understood the masculinity of Jesus. As a man of God, I am charged to lead courageously, expect God's blessings, accept responsibility, and reject passivity."
+    ],
+    "homepage": true,
+    "homepageQuote": "After The Fight, I finally understood the masculinity of Jesus. As a man of God, I am charged to lead courageously, expect God's blessings, accept responsibility, and reject passivity."
   },
   {
-    "quote": "The knowledge and understanding I gained from The Fight made me a better manager, husband, and father.",
     "author": "Jason \"Bru\" Bourgoyne",
     "title": "Director of Operations",
-    "homepage": true
+    "quotes": [
+      "The knowledge and understanding I gained from The Fight made me a better manager, husband, and father.",
+      "The Fight answered the 'Why I keep doing...' questions by giving me understanding. I found a brotherhood of godly men that I didn't know I needed!"
+    ],
+    "homepage": true,
+    "homepageQuote": "The knowledge and understanding I gained from The Fight made me a better manager, husband, and father."
   },
   {
-    "quote": "The Fight for Manhood - yes! But praise Jesus Christ: I fight as a victorious son of the King, and I don't fight alone!",
     "author": "Mark Beeler",
     "title": "Cattle Farmer and Business Owner",
-    "homepage": true
+    "quotes": [
+      "The Fight for Manhood - yes! But praise Jesus Christ: I fight as a victorious son of the King, and I don't fight alone!"
+    ],
+    "homepage": true,
+    "homepageQuote": "The Fight for Manhood - yes! But praise Jesus Christ: I fight as a victorious son of the King, and I don't fight alone!"
   },
   {
-    "quote": "I've gained a better appreciation that God is seeking a real relationship with us, not just compliant behavior.",
-    "details": "Talking with other men at a deeper level showed me they share the same concerns and struggles. The insights are helping me be a better husband and father.",
     "author": "Greg Butler",
     "title": "Accountant",
-    "homepage": true
+    "quotes": [
+      "I've gained a better appreciation that God is seeking a real relationship with us, not just compliant behavior. Talking with other men at a deeper level showed me they share the same concerns and struggles. The insights are helping me be a better husband and father."
+    ],
+    "homepage": true,
+    "homepageQuote": "I've gained a better appreciation that God is seeking a real relationship with us, not just compliant behavior."
   },
   {
-    "quote": "Since becoming a believer in Christ, this was the first time I felt heard and understood, as well as gained an understanding of who Jesus is and who I am as a man because of Him.",
     "author": "Jody Griffin",
     "title": "Dentist",
-    "homepage": true
+    "quotes": [
+      "Since becoming a believer in Christ, this was the first time I felt heard and understood, as well as gained an understanding of who Jesus is and who I am as a man because of Him."
+    ],
+    "homepage": true,
+    "homepageQuote": "Since becoming a believer in Christ, this was the first time I felt heard and understood, as well as gained an understanding of who Jesus is and who I am as a man because of Him."
   },
   {
-    "quote": "The Fight for Manhood quite simply blew me away. Its curriculum is so different and fresh.",
-    "details": "The Truth and brotherly bonds I received helped me walk through the darkest time of my life. I am not the same as I was.",
     "author": "A.J. Caulineau",
-    "title": "Mechanical Designer"
+    "title": "Mechanical Designer",
+    "quotes": [
+      "The Fight for Manhood quite simply blew me away. Its curriculum is so different and fresh. The Truth and brotherly bonds I received helped me walk through the darkest time of my life. I am not the same as I was."
+    ]
   },
   {
-    "quote": "In a world where real manhood is constantly being challenged, Fight for Manhood has given me and my fellow graduates sound, biblically based guidance on what it means to live as men of character, live with purpose, and leave a lasting legacy.",
     "author": "Tom Franklin",
-    "title": "Retired Coach"
+    "title": "Retired Coach",
+    "quotes": [
+      "In a world where real manhood is constantly being challenged, Fight for Manhood has given me and my fellow graduates sound, biblically based guidance on what it means to live as men of character, live with purpose, and leave a lasting legacy."
+    ]
   },
   {
-    "quote": "The Fight gave me the playbook I was always looking for - how to be the husband, father, and man I wanted to be.",
     "author": "Greg Horton",
-    "title": "Entrepreneur"
+    "title": "Entrepreneur",
+    "quotes": [
+      "The Fight gave me the playbook I was always looking for - how to be the husband, father, and man I wanted to be.",
+      "I was a grown man by the world's standards. After The Fight, I realized I am a real man by God's standard.",
+      "Boys look in the mirror and pretend. A man looks in the mirror and faces what he sees."
+    ]
   },
   {
-    "quote": "The Fight introduced me to true masculinity, a brotherhood of men, and true intimacy with God because I could trust Him.",
     "author": "John Sharp",
-    "title": "CEO, Business Owner"
+    "title": "CEO, Business Owner",
+    "quotes": [
+      "The Fight introduced me to true masculinity, a brotherhood of men, and true intimacy with God because I could trust Him."
+    ]
   },
   {
-    "quote": "The Fight revealed to me that my testimony was not just about the day I got saved, but my entire life's journey - and it is God's to use like a tool belt full of tools to reach other men through the unique experiences He gave me.",
     "author": "Brent Knox",
-    "title": "Contractor"
+    "title": "Contractor",
+    "quotes": [
+      "The Fight revealed to me that my testimony was not just about the day I got saved, but my entire life's journey - and it is God's to use like a tool belt full of tools to reach other men through the unique experiences He gave me."
+    ]
   },
   {
-    "quote": "The Fight answered the 'Why I keep doing...' questions by giving me understanding. I found a brotherhood of godly men that I didn't know I needed!",
-    "author": "Jason \"Bru\" Bourgoyne",
-    "title": "Director of Operations"
-  },
-  {
-    "quote": "Understanding the difference between guilt - a truth about a wrong - and shame - a lie about who I am - was a life changer for me.",
     "author": "Robby Martin",
-    "title": "Process Consultant"
+    "title": "Process Consultant",
+    "quotes": [
+      "Understanding the difference between guilt - a truth about a wrong - and shame - a lie about who I am - was a life changer for me.",
+      "The Fight taught me that I am not the only one.",
+      "Dealing with Law and Grace finally helped me understand the New Creation Scripture promises."
+    ]
   },
   {
-    "quote": "I now have new confidence and understanding of who I am and of how much power I have as a man.",
-    "details": "My life, the life of my family, and generations to follow have been blessed.",
     "author": "Jim Cook",
-    "title": "Business Owner"
+    "title": "Business Owner",
+    "quotes": [
+      "I now have new confidence and understanding of who I am and of how much power I have as a man. My life, the life of my family, and generations to follow have been blessed."
+    ]
   },
   {
-    "quote": "I was a grown man by the world's standards. After The Fight, I realized I am a real man by God's standard.",
-    "author": "Greg Horton",
-    "title": "Entrepreneur"
-  },
-  {
-    "quote": "A transformational perspective of our ideal role model as a man, Jesus Christ. This continues to change my life.",
     "author": "Dick Hash",
-    "title": "CEO"
+    "title": "CEO",
+    "quotes": [
+      "A transformational perspective of our ideal role model as a man, Jesus Christ. This continues to change my life."
+    ]
   },
   {
-    "quote": "Boys look in the mirror and pretend. A man looks in the mirror and faces what he sees.",
-    "author": "Greg Horton",
-    "title": "Entrepreneur"
-  },
-  {
-    "quote": "The Fight helped me understand who I really am... a son of the King of kings.",
     "author": "Brian Bradley",
-    "title": "Corporate Finance"
+    "title": "Corporate Finance",
+    "quotes": [
+      "The Fight helped me understand who I really am... a son of the King of kings."
+    ]
   },
   {
-    "quote": "In The Fight, we are as a herd protecting one another through Christ.",
     "author": "Mike Bailey",
-    "title": "CEO, Business Owner"
-  },
-  {
-    "quote": "The Fight taught me that I am not the only one.",
-    "author": "Robby Martin",
-    "title": "Process Consultant"
-  },
-  {
-    "quote": "Dealing with Law and Grace finally helped me understand the New Creation Scripture promises.",
-    "author": "Robby Martin",
-    "title": "Process Consultant"
+    "title": "CEO, Business Owner",
+    "quotes": [
+      "In The Fight, we are as a herd protecting one another through Christ."
+    ]
   }
 ]
