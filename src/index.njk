@@ -68,6 +68,7 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
 
     <section class="section" aria-labelledby="voices-heading">
       <h2 class="section-title" id="voices-heading">What other men say</h2>
+      <p class="section-lead">Real men. Real change. These are voices from the brotherhood.</p>
       <div class="grid-2">
         <article class="card testimonial">
           <p>&ldquo;The Fight for Manhood quite simply blew me away. Its curriculum is so different and fresh.&rdquo;</p>
@@ -89,6 +90,16 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
           <details><summary>Read more</summary><p>The material helped me understand what it means to call God my Father while affirming who I really am as a man and Christ-follower.</p></details>
           <div class="attribution"><strong>Nick Smith</strong> &middot; Consultant</div>
         </article>
+      </div>
+
+      <h3 class="voices-subtitle">More voices from the brotherhood</h3>
+      <div class="testimonial-grid">
+        {% for testimonial in communityTestimonials %}
+          <article class="card testimonial testimonial-quote">
+            <blockquote><p>&ldquo;{{ testimonial.quote }}&rdquo;</p></blockquote>
+            <div class="attribution"><strong>{{ testimonial.author }}</strong></div>
+          </article>
+        {% endfor %}
       </div>
     </section>
 
