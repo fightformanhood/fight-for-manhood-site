@@ -64,6 +64,12 @@ if (homepageTestimonials !== 6) failures.push("Homepage should contain 6 testimo
 if (storyTestimonials !== 16) failures.push("Stories page should contain 16 people; found " + storyTestimonials + ".");
 if (storyQuotes !== 21) failures.push("Stories page should contain all 21 quotes; found " + storyQuotes + ".");
 if (!homepage.includes('href="/stories/"')) failures.push("Homepage is missing the Read more stories link.");
+if (!homepage.includes("A formation experience for men")) failures.push("Homepage is missing the universal program positioning.");
+if (!homepage.includes('id="cohorts"')) failures.push("Homepage is missing the current cohort section.");
+if (!homepage.includes("Coming soon")) failures.push("Homepage is missing the coming-soon expansion section.");
+for (const location of ["Columbus, Ohio", "Destin, Florida", "Nashville, Tennessee", "Chattanooga, Tennessee", "Greenville, South Carolina"]) {
+  if (!homepage.includes(location)) failures.push(`Homepage is missing coming-soon location: ${location}.`);
+}
 const register = readFileSync(join(root, "register/index.html"), "utf8");
 const contact = readFileSync(join(root, "contact/index.html"), "utf8");
 for (const [name, html] of [["ffm-register", register], ["ffm-contact", contact]]) {
@@ -84,4 +90,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${htmlFiles.length} HTML pages, all internal links, both Netlify forms, and Fall 2026 cohort messaging.`);
+console.log(`Verified ${htmlFiles.length} HTML pages, all internal links, both Netlify forms, universal program messaging, current cohort details, and five coming-soon locations.`);

@@ -1,6 +1,11 @@
 {
   "name": "Fight for Manhood",
   "year": 2026,
+  "tagline": "Stand as a son. Fight like a man.",
+  "program": {
+    "duration": "10 weeks",
+    "description": "A biblical formation experience for men built on truth, brotherhood, grace, and responsibility."
+  },
   "cohort": {
     "name": "Fall 2026 Cohort",
     "startDate": "2026-09-15",
@@ -13,8 +18,16 @@
     "venue": "Highland Place",
     "address1": "6223 Highland Place Way",
     "cityStateZip": "Knoxville, TN 37919",
+    "locationLabel": "Knoxville, Tennessee",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=6223%20Highland%20Place%20Way%2C%20Knoxville%2C%20TN%2037919"
   },
+  "comingSoon": [
+    "Columbus, Ohio",
+    "Destin, Florida",
+    "Nashville, Tennessee",
+    "Chattanooga, Tennessee",
+    "Greenville, South Carolina"
+  ],
   "navigation": [
     {
       "label": "Home",
@@ -29,8 +42,8 @@
       "url": "/stories/"
     },
     {
-      "label": "Apply",
-      "url": "/register/"
+      "label": "Cohorts",
+      "url": "/#cohorts"
     },
     {
       "label": "Contact",

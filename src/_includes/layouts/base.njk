@@ -3,9 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ description or 'A 10-week crucible for men ready to confront shame, fear, passivity, and the double life.' }}">
+    <meta name="description" content="{{ description or site.program.description }}">
     <meta name="theme-color" content="#070b12">
     <title>{{ title }}{% if title != site.name %} | {{ site.name }}{% endif %}</title>
+    <link rel="canonical" href="https://fightformanhood.com{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ title }}{% if title != site.name %} | {{ site.name }}{% endif %}">
+    <meta property="og:description" content="{{ description or site.program.description }}">
+    <meta property="og:url" content="https://fightformanhood.com{{ page.url }}">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="/assets/css/site.css">
   </head>
   <body>
@@ -23,7 +30,9 @@
 
     <footer class="site-footer">
       <strong>{{ site.name }}</strong>
-      <span>{{ site.cohort.name }} &middot; {{ site.cohort.day }} &middot; {{ site.cohort.time }} &middot; Knoxville</span>
+      <span>{{ site.tagline }}</span>
+      <span>A biblical formation experience for men &middot; Cohorts and communities</span>
+      <span>Presented by <a href="https://fightlikeamanministries.com/" rel="noopener">Fight Like a Man Ministries</a></span>
       <span>&copy; {{ site.year }} {{ site.name }}</span>
     </footer>
   </body>

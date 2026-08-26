@@ -2,25 +2,27 @@
 layout: layouts/base.njk
 title: Contact
 permalink: /contact/index.html
-description: Ask a question about the Fall 2026 Fight for Manhood cohort.
+description: Ask about the Fight for Manhood program, the current Knoxville cohort, an upcoming city, or bringing the Fight to your community.
 ---
 <div class="page-shell">
   <div class="container narrow">
     <header class="hero">
-      <span class="eyebrow">{{ site.cohort.name }}</span>
+      <span class="eyebrow">Questions &middot; Cohorts &middot; Community partnerships</span>
       <h1>Contact <span class="gold">us</span></h1>
-      <p class="lead">Ask directly. We will answer directly. Questions about the commitment, confidentiality, schedule, venue, or fit are welcome.</p>
+      <p class="lead">Ask about the program, the current Knoxville cohort, a future location, or what it would take to bring Fight for Manhood to your church or community.</p>
     </header>
 
     <form class="form-card" action="/success/" method="POST" name="ffm-contact" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="ffm-contact">
-      <input type="hidden" name="cohort" value="Fall 2026">
+      <input type="hidden" name="source" value="Fight for Manhood website">
       <p class="honeypot"><label>Do not fill this out: <input name="bot-field"></label></p>
       <div class="form-section">Send a message</div>
       <div class="form-grid">
         <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="field full"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="city">City and state</label><input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Columbus, Ohio"></div>
+        <div class="field full"><label for="interest">What are you interested in?</label><select id="interest" name="interest" required><option value="">Select one...</option><option>Joining the current Knoxville cohort</option><option>A future cohort near me</option><option>Bringing the Fight to my church or community</option><option>Serving, supporting, or partnering</option><option>Media or speaking</option><option>Something else</option></select></div>
         <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Ask your question. Say what you mean." required></textarea></div>
       </div>
       <div class="form-actions"><button class="button primary" type="submit">Send message</button></div>
@@ -29,8 +31,10 @@ description: Ask a question about the Fall 2026 Fight for Manhood cohort.
     <section class="section" aria-labelledby="details-heading">
       <h2 class="section-title" id="details-heading">Details</h2>
       <div class="grid-2">
-        <article class="card"><h3>Fast path</h3><p>Ready to commit? Go straight to the <a href="/register/">Fall 2026 application</a>.</p></article>
+        <article class="card"><h3>Current cohort</h3><p>Ready to commit in Knoxville? Go straight to the <a href="/register/">Fall 2026 application</a>.</p></article>
+        <article class="card"><h3>Future locations</h3><p>Ask about Columbus, Destin, Nashville, Chattanooga, Greenville, or another community.</p></article>
         <article class="card"><h3>Confidential</h3><p>Your message and your participation are treated with discretion. This program is for men and built on trust.</p></article>
+        <article class="card"><h3>Bring the Fight</h3><p>Churches and community leaders can use this form to start a conversation about hosting a future cohort.</p></article>
       </div>
     </section>
   </div>

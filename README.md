@@ -1,4 +1,4 @@
-# Fight for Manhood — Website Starter (Eleventy + Decap CMS)
+# Fight for Manhood — Program Website (Eleventy + Decap CMS)
 
 This repo is a clean, fast, low-maintenance website that you can edit in a browser without touching code.
 
@@ -38,10 +38,12 @@ When you have an idea, do one of these:
 - Or paste text to ChatGPT and say: “Update the Programs page with this copy” — then copy/paste the updated Markdown into the CMS.
 
 ## 5) Content model
-- Hero headline
-- 3 pillars
-- Program details (12 weeks, Wednesday nights, Knoxville, no cost)
-- “Join / Apply” call-to-action
+- Evergreen Fight for Manhood program story
+- Ten-week curriculum and transformation pathway
+- Graduate stories
+- Current cohort details and registration
+- Coming-soon cohort locations
+- General questions, future-location interest, and community partnership inquiries
 
 ---
 If you want *me* (ChatGPT) to “update the website” automatically, the clean path is connecting the CMS through an automation (API key + webhook). We can set that up later once you pick hosting and want secure access.

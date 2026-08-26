@@ -1,30 +1,39 @@
 ---
 layout: layouts/base.njk
 title: Fight for Manhood
-description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxville. Ten weeks of brotherhood, truth, responsibility, and growth in the light.
+description: Fight for Manhood is a ten-week biblical formation experience helping men confront shame, fear, passivity, and isolation through truth, brotherhood, grace, and responsibility.
 ---
 <div class="page-shell">
   <div class="container">
     <div class="announcement">
-      <strong>{{ site.cohort.name }} registration is open</strong>
-      <span>{{ site.cohort.startDate | isoDate }} &middot; {{ site.cohort.time }} &middot; {{ site.cohort.venue }}</span>
+      <strong>The Fight is growing</strong>
+      <span>One proven journey &middot; More communities preparing to enter the fight</span>
     </div>
 
     <div class="pill-row">
-      <span class="pill">Knoxville &middot; {{ site.cohort.day }} &middot; {{ site.cohort.time }}</span>
-      <span class="pill">{{ site.cohort.duration }} &middot; {{ site.cohort.cost }}</span>
+      <span class="pill">{{ site.program.duration }} &middot; Biblical formation</span>
+      <span class="pill">Truth &middot; Brotherhood &middot; Grace &middot; Responsibility</span>
     </div>
 
     <header class="hero">
-      <span class="eyebrow">{{ site.cohort.name }}</span>
+      <span class="eyebrow">A formation experience for men</span>
       <h1><span class="hero-line">Stand as a son.</span><span class="hero-line gold">Fight like a man.</span></h1>
-      <p class="lead">A 10-week crucible for men who are done drifting. We go after the real enemy: <span class="gold">shame, fear, passivity, and the double life.</span></p>
-      <p class="sublead">High challenge. High support. Confidential. Men only. If you are ready to be forged, show up honestly and stay in the fight.</p>
+      <p class="lead">A ten-week biblical journey for men who are done drifting&mdash;built to confront <span class="gold">shame, fear, passivity, isolation, and the double life.</span></p>
+      <p class="sublead">High challenge. High support. Honest brotherhood. A clear path toward healing, responsibility, and life as a son of God.</p>
+      <div class="button-row hero-actions"><a class="button primary" href="/program/">Explore the program</a><a class="button" href="#cohorts">Find a cohort</a></div>
+    </header>
 
-      <section class="cohort-card" aria-labelledby="cohort-heading">
-        <h2 id="cohort-heading">{{ site.cohort.name }} begins {{ site.cohort.startDate | isoDate }}</h2>
+    <section class="section cohort-section" id="cohorts" aria-labelledby="cohorts-heading">
+      <div class="section-kicker">Current cohort</div>
+      <h2 class="section-title" id="cohorts-heading">{{ site.cohort.locationLabel }}</h2>
+      <p class="section-lead">The next Fight for Manhood experience is open for registration now.</p>
+      <div class="cohort-card">
+        <div class="cohort-card-heading">
+          <span class="eyebrow">{{ site.cohort.name }}</span>
+          <h3>Come as you are. Leave ready to lead.</h3>
+        </div>
         <div class="cohort-meta">
-          <span>{{ site.cohort.day }}</span><span>{{ site.cohort.time }}</span><span>{{ site.cohort.cost }}</span><span>Ends {{ site.cohort.endDate | isoDate }}</span>
+          <span>Begins {{ site.cohort.startDate | isoDate }}</span><span>{{ site.cohort.day }}</span><span>{{ site.cohort.time }}</span><span>{{ site.cohort.cost }}</span><span>Ends {{ site.cohort.endDate | isoDate }}</span>
         </div>
         <p class="venue"><a href="{{ site.cohort.mapUrl }}" target="_blank" rel="noopener">{{ site.cohort.venue }}<br>{{ site.cohort.address1 }}, {{ site.cohort.cityStateZip }}</a></p>
         <p class="muted">The cost is not money. The cost is honesty and commitment. Men procrastinate. Leaders decide.</p>
@@ -32,8 +41,18 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
           <a class="button primary" href="/register/">Reserve your place</a>
           <a class="button" href="/program/">See the battle plan</a>
         </div>
-      </section>
-    </header>
+      </div>
+
+      <div class="coming-soon" aria-labelledby="coming-soon-heading">
+        <span class="eyebrow">The Fight is expanding</span>
+        <h3 id="coming-soon-heading">Coming soon</h3>
+        <p>Future Fight for Manhood cohorts are being developed in these communities.</p>
+        <ul class="location-list">
+          {% for location in site.comingSoon %}<li>{{ location }}</li>{% endfor %}
+        </ul>
+        <a class="text-link" href="/contact/">Ask about a future cohort &rarr;</a>
+      </div>
+    </section>
 
     <div class="divider"></div>
 
@@ -105,10 +124,11 @@ description: The Fall 2026 Fight for Manhood cohort begins September 15 in Knoxv
       <div class="button-row"><a class="button primary" href="/stories/">Read More Stories</a></div>
     </section>
 
-    <section class="section center" aria-labelledby="apply-heading">
-      <h2 class="section-title" id="apply-heading">Apply for Fall 2026</h2>
-      <p class="section-lead">The next cohort begins {{ site.cohort.startDate | isoDate }} at {{ site.cohort.time }}. Registration is open now.</p>
-      <div class="button-row"><a class="button primary" href="/register/">Reserve your place</a><a class="button" href="/contact/">Ask a question</a></div>
+    <section class="section center final-invitation" aria-labelledby="apply-heading">
+      <span class="eyebrow">Your next step</span>
+      <h2 class="section-title" id="apply-heading">The fight is bigger than one city.</h2>
+      <p class="section-lead">Join the current Knoxville cohort, ask about a future location, or start a conversation about bringing Fight for Manhood to your community.</p>
+      <div class="button-row"><a class="button primary" href="#cohorts">View current cohorts</a><a class="button" href="/contact/">Start a conversation</a></div>
     </section>
   </div>
 </div>
