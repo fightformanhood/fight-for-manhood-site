@@ -3,6 +3,17 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/files");
 
+  eleventyConfig.addTransform("firstPartyAnalytics", function (content, outputPath) {
+    if (!outputPath?.endsWith(".html") || outputPath.includes("\\admin\\") || outputPath.includes("/admin/")) {
+      return content;
+    }
+
+    const script = '<script src="/assets/js/analytics.js" defer></script>';
+    if (content.includes(script)) return content;
+    if (content.includes("</head>")) return content.replace("</head>", `  ${script}\n</head>`);
+    return `${script}\n${content}`;
+  });
+
   eleventyConfig.addFilter("isoDate", (value) => {
     const date = new Date(`${value}T12:00:00`);
     return new Intl.DateTimeFormat("en-US", {

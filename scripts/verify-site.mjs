@@ -80,6 +80,14 @@ for (const [name, html] of [["ffm-register", register], ["ffm-contact", contact]
 }
 
 const allHtml = pages.map(({ html }) => html).join("\n");
+for (const { file, html } of pages) {
+  if (relative(root, file).replaceAll("\\", "/") === "admin/index.html") continue;
+  if (!html.includes('src="/assets/js/analytics.js"')) {
+    failures.push(`${relative(root, file)} is missing the first-party analytics script.`);
+  }
+}
+if (!existsSync(join(root, "assets/js/analytics.js"))) failures.push("Missing built analytics script.");
+
 for (const requiredText of ["Fall 2026", "September 15", "November 17", "Tuesdays", "6:30 PM", "6223 Highland Place Way"]) {
   if (!allHtml.includes(requiredText)) failures.push(`Missing required cohort text: ${requiredText}`);
 }

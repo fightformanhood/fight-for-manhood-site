@@ -45,5 +45,14 @@ When you have an idea, do one of these:
 - Coming-soon cohort locations
 - General questions, future-location interest, and community partnership inquiries
 
+## 6) First-party traffic reporting
+
+Public pageviews are stored privately in the Netlify Blobs store named `ffm-analytics`.
+Records are organized by Eastern date and hour (`YYYY-MM-DD/HH/`) so a future
+traffic report can compare a radio or campaign window with its surrounding baseline.
+The tracker excludes the admin and participant portals, honors browser privacy
+signals, filters common automated agents, and does not store IP addresses or
+persistent visitor identifiers.
+
 ---
 If you want *me* (ChatGPT) to “update the website” automatically, the clean path is connecting the CMS through an automation (API key + webhook). We can set that up later once you pick hosting and want secure access.
